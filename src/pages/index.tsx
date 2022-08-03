@@ -1,5 +1,15 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import styled from 'styled-components';
+import NavigationBar from '../features/NavigationBar';
+import GlobalStyles from '../GlobalStyles';
+
+const StyledHome = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+`;
 
 const Home: NextPage = () => {
   return (
@@ -9,8 +19,11 @@ const Home: NextPage = () => {
         <meta name="description" content="My personal portfolio website" />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
+      <GlobalStyles />
 
-      <main>Hello</main>
+      <StyledHome>
+        <NavigationBar />
+      </StyledHome>
     </div>
   );
 };
