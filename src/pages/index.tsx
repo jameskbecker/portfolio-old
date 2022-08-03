@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import styled from 'styled-components';
+import HeroSection from '../features/HeroSection';
 import NavigationBar from '../features/NavigationBar';
 import GlobalStyles from '../GlobalStyles';
 
@@ -23,6 +24,7 @@ const Home: NextPage = () => {
 
       <StyledHome>
         <NavigationBar />
+        <HeroSection />
       </StyledHome>
     </div>
   );
