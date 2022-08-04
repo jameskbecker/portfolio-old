@@ -15,6 +15,10 @@ const GlobalStyles = createGlobalStyle`
     background: ${lightTheme.background};
   }
 
+  h1 {
+    font-size: 3rem;
+  }
+
   a {
     text-decoration: none;
     color: inherit;

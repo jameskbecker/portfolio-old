@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import lightTheme from '../../theme';
 
-const StyledHeroSection = styled.div`
+const StyledHeroSection = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: min-content auto;
@@ -12,10 +12,6 @@ const StyledHeroSection = styled.div`
 
   background: ${lightTheme.heroSection};
   padding: 0 12rem;
-
-  h1 {
-    font-size: 3rem;
-  }
 
   p {
     font-size: 1.5rem;
@@ -37,7 +33,7 @@ const HeroSection = () => (
       years, intending to use my skills to enhance other people's lives.
     </p>
 
-    <img src="https://avatars.githubusercontent.com/u/48602730?v=4" />
+    <img src="/cover.jpg" />
   </StyledHeroSection>
 );
 
