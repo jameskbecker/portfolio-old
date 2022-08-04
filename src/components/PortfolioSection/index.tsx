@@ -1,21 +1,19 @@
 import styled from 'styled-components';
+import Gallery from '../../features/Gallery';
+import PortfolioCover from './PortfolioCover';
 
 const StyledPortfolioSection = styled.section`
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 200vh;
 
-  padding: 1.5rem 12rem;
-
-  h1 {
-    text-transform: uppercase;
-    text-align: center;
-  }
+  padding: 1.5 0;
 `;
 
 const PortfolioSection = () => (
   <StyledPortfolioSection>
-    <h1>My Portfolio</h1>
+    <PortfolioCover />
+    <Gallery />
   </StyledPortfolioSection>
 );
 
