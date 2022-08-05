@@ -25,7 +25,7 @@ const StyledContactSection = styled.section`
 const ContactSection = () => {
   return (
     <StyledContactSection id="contact">
-      <h1>Let's Work Together!</h1>
+      <h1>Let&apos;s Work Together!</h1>
       <ContactGrid />
     </StyledContactSection>
   );

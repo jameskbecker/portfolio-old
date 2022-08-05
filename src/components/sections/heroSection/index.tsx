@@ -27,9 +27,9 @@ const HeroSection = () => (
   <StyledHeroSection>
     <h1>Hello!</h1>
     <p>
-      My name is James, I'm a full-stack engineer specialising in frontend
+      My name is James, I&apos;m a full-stack engineer specialising in frontend
       development and graduate of KU London. I have been programming for over 4
-      years, intending to use my skills to enhance other people's lives.
+      years, intending to use my skills to enhance other people&apos;s lives.
     </p>
 
     <img src="/cover.jpg" />
