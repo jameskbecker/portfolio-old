@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import lightTheme from '../../theme';
 import NavigationHeader from './NavigationHeader';
 import NavigationMenu from './NavigationMenu';
 import NavigationOptions from './NavigationOptions';
@@ -11,7 +10,7 @@ const StyledNavigationBar = styled.div`
   justify-content: space-evenly;
   height: 10vh;
 
-  background: ${lightTheme.navigation};
+  background: ${({ theme }: any) => theme.navigation};
   padding: 0 2rem;
 `;
 

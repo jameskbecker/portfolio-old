@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-import lightTheme from './theme';
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -7,12 +6,14 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
 
     font: 500 1rem -apple-system, Inter, sans-serif;
+    color: ${({ theme }: any) => theme.text};
+    background: transparent;
    
     appearance: none;
   }
 
   body {
-    background: ${lightTheme.background};
+    background: ${({ theme }: any) => theme.background};
   }
 
   h1 {

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import lightTheme from '../../../theme';
 
 const StyledHeroSection = styled.section`
   display: grid;
@@ -10,7 +9,7 @@ const StyledHeroSection = styled.section`
   grid-gap: 2rem;
   height: 90vh;
 
-  background: ${lightTheme.heroSection};
+  background: ${({ theme }: any) => theme.heroSection};
   padding: 0 12rem;
 
   p {

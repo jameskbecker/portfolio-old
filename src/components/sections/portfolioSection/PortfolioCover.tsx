@@ -14,7 +14,7 @@ const StyledPortfolioCover = styled.div`
   }
 
   h4 {
-    color: #4d4d4d;
+    color: ${({ theme }: any) => theme.subheading};
   }
 `;
 

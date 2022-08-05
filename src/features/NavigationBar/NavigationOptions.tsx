@@ -1,6 +1,5 @@
-import { faSun } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
+import ThemeToggle from '../themeToggle';
 
 const StyledNavigationOptions = styled.div`
   flex: 1 1;
@@ -11,7 +10,7 @@ const StyledNavigationOptions = styled.div`
 
 const NavigationOptions = () => (
   <StyledNavigationOptions>
-    <FontAwesomeIcon icon={faSun} />
+    <ThemeToggle />
   </StyledNavigationOptions>
 );
 

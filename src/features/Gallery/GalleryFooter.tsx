@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { AppDispatch } from '../../app/store';
-import lightTheme from '../../theme';
 import GalleryNavButton from './GalleryNavButton';
 import { nextItem, previousItem } from './gallerySlice';
 

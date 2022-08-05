@@ -1,10 +1,11 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
+import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit';
 
 import galleryReducer from '../features/gallery/gallerySlice';
+import themeReducer from '../features/themeToggle/themeToggleSlice';
 
 export function makeStore() {
   return configureStore({
-    reducer: { gallery: galleryReducer },
+    reducer: { gallery: galleryReducer, theme: themeReducer },
   });
 }
 

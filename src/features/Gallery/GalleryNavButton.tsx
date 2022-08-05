@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import lightTheme from '../../theme';
 
 const GalleryNavButton = styled.div`
   grid-row: span 3;
@@ -16,7 +15,7 @@ const GalleryNavButton = styled.div`
   cursor: pointer;
 
   :hover {
-    background: ${lightTheme.brand};
+    background: ${({ theme }: any) => theme.brand};
     color: #ffffff;
     transition: 250ms ease-in-out;
   }
