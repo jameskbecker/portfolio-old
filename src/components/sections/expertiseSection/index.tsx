@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Marquee from '../marquee';
+import Marquee from '../../marquee';
 import ExpertiseContent from './ExpertiseContent';
 import { other, topFour } from './expertiseData';
 

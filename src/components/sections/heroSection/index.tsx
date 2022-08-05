@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import lightTheme from '../../theme';
+import lightTheme from '../../../theme';
 
 const StyledHeroSection = styled.section`
   display: grid;

@@ -1,9 +1,9 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import styled from 'styled-components';
-import ExpertiseSection from '../components/expertiseSection';
-import HeroSection from '../components/heroSection';
-import PortfolioSection from '../components/portfolioSection';
+import ExpertiseSection from '../components/sections/expertiseSection';
+import HeroSection from '../components/sections/heroSection';
+import PortfolioSection from '../components/sections/portfolioSection';
 import NavigationBar from '../features/navigationBar';
 import GlobalStyles from '../GlobalStyles';
 
