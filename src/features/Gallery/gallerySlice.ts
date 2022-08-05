@@ -14,7 +14,7 @@ export const fetchGalleryData = createAsyncThunk(
   }
 );
 
-export const appearancePanelSlice = createSlice({
+export const gallerySlice = createSlice({
   name: 'gallery',
   initialState,
   reducers: {
@@ -35,5 +35,5 @@ export const appearancePanelSlice = createSlice({
   },
 });
 
-export const { previousItem, nextItem } = appearancePanelSlice.actions;
-export default appearancePanelSlice.reducer;
+export const { previousItem, nextItem } = gallerySlice.actions;
+export default gallerySlice.reducer;
