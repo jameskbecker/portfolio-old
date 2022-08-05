@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import styled from 'styled-components';
+import ContactSection from '../components/sections/contactSection';
 import ExpertiseSection from '../components/sections/expertiseSection';
 import HeroSection from '../components/sections/heroSection';
 import PortfolioSection from '../components/sections/portfolioSection';
@@ -29,6 +30,7 @@ const Home: NextPage = () => {
         <HeroSection />
         <PortfolioSection />
         <ExpertiseSection />
+        <ContactSection />
       </StyledHome>
     </div>
   );
