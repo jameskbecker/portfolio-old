@@ -17,7 +17,7 @@ const Gallery = () => {
 
   useEffect(() => {
     dispatch(fetchGalleryData());
-  }, []);
+  }, [dispatch]);
 
   return (
     <StyledGallery>
