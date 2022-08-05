@@ -11,7 +11,7 @@ const StyledPortfolioSection = styled.section`
 `;
 
 const PortfolioSection = () => (
-  <StyledPortfolioSection>
+  <StyledPortfolioSection id="portfolio">
     <PortfolioCover />
     <Gallery />
   </StyledPortfolioSection>

@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import styled from 'styled-components';
+import ExpertiseSection from '../components/ExpertiseSection';
 import HeroSection from '../components/HeroSection';
 import PortfolioSection from '../components/PortfolioSection';
 import NavigationBar from '../features/NavigationBar';
@@ -27,6 +28,7 @@ const Home: NextPage = () => {
         <NavigationBar />
         <HeroSection />
         <PortfolioSection />
+        <ExpertiseSection />
       </StyledHome>
     </div>
   );
