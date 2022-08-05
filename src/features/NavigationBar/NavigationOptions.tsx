@@ -1,5 +1,5 @@
+import ThemeToggle from '@/features/themeToggle';
 import styled from 'styled-components';
-import ThemeToggle from '../themeToggle';
 
 const StyledNavigationOptions = styled.div`
   flex: 1 1;

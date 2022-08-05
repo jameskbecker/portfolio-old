@@ -1,7 +1,10 @@
+import Marquee from '@/components/marquee';
+import ExpertiseContent from '@/components/sections/expertiseSection/ExpertiseContent';
+import {
+  other,
+  topFour,
+} from '@/components/sections/expertiseSection/expertiseData';
 import styled from 'styled-components';
-import Marquee from '../../marquee';
-import ExpertiseContent from './ExpertiseContent';
-import { other, topFour } from './expertiseData';
 
 const space = '\xA0\xA0\xA0';
 

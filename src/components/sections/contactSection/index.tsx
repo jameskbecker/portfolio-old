@@ -1,5 +1,5 @@
+import ContactGrid from '@/components/sections/contactSection/ContactGrid';
 import styled from 'styled-components';
-import ContactGrid from './ContactGrid';
 
 const StyledContactSection = styled.section`
   display: flex;

@@ -1,6 +1,9 @@
+import {
+  scrollAnimation,
+  scrollReverseAnimation,
+} from '@/components/marquee/animations';
 import { ReactNode } from 'react';
 import styled from 'styled-components';
-import { scrollAnimation, scrollReverseAnimation } from './animations';
 
 type StyledMarqueeProps = {
   reverse?: boolean;

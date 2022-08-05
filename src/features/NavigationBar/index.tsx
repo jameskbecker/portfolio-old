@@ -1,7 +1,7 @@
+import NavigationHeader from '@/features/navigationBar/NavigationHeader';
+import NavigationMenu from '@/features/navigationBar/NavigationMenu';
+import NavigationOptions from '@/features/navigationBar/NavigationOptions';
 import styled from 'styled-components';
-import NavigationHeader from './NavigationHeader';
-import NavigationMenu from './NavigationMenu';
-import NavigationOptions from './NavigationOptions';
 
 const StyledNavigationBar = styled.div`
   display: flex;

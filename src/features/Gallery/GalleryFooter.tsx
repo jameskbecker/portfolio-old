@@ -1,3 +1,6 @@
+import { AppDispatch } from '@/app/store';
+import GalleryNavButton from '@/features/gallery/GalleryNavButton';
+import { nextItem, previousItem } from '@/features/gallery/gallerySlice';
 import {
   faChevronLeft,
   faChevronRight,
@@ -5,9 +8,6 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
-import { AppDispatch } from '../../app/store';
-import GalleryNavButton from './GalleryNavButton';
-import { nextItem, previousItem } from './gallerySlice';
 
 const StyledGalleryFooter = styled.div`
   flex-basis: 15vh;

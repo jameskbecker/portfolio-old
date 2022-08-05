@@ -1,7 +1,7 @@
+import { toggleTheme } from '@/features/themeToggle/themeToggleSlice';
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleTheme } from './themeToggleSlice';
 
 const ThemeToggle = () => {
   const dispatch = useDispatch();
