@@ -10,6 +10,11 @@ const GlobalStyles = createGlobalStyle`
     background: transparent;
    
     appearance: none;
+
+    ::selection {
+      background: ${({ theme }) => theme.brand};
+      color: #FFFFFF;
+    }
   }
 
   body {
