@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Gallery from '../../features/Gallery';
+import Gallery from '../../features/gallery';
 import PortfolioCover from './PortfolioCover';
 
 const StyledPortfolioSection = styled.section`
