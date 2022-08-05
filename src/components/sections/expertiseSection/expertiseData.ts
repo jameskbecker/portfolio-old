@@ -17,6 +17,6 @@ const other = [
   'Swift',
   'Java',
   'Webflow',
-];
+].reverse();
 
 export { topFour, other };

@@ -48,7 +48,7 @@ const ExpertiseSection = () => {
         </Marquee>
         <Marquee reverse>
           <LowerText>
-            {other.reverse().join(space)} {space}
+            {other.join(space)} {space}
           </LowerText>
         </Marquee>
       </ExpertiseContent>
