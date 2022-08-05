@@ -1,7 +1,7 @@
 import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit';
 
-import galleryReducer from '../features/gallery/gallerySlice';
-import themeReducer from '../features/themeToggle/themeToggleSlice';
+import galleryReducer from '@/features/gallery/gallerySlice';
+import themeReducer from '@/features/themeToggle/themeToggleSlice';
 
 export function makeStore() {
   return configureStore({
