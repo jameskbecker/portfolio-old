@@ -1,5 +1,6 @@
 import store from '@/app/store';
 import ThemeProvider from '@/features/themeToggle/ThemeProvider';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 import type { AppProps } from 'next/app';
 import { Provider } from 'react-redux';
 
