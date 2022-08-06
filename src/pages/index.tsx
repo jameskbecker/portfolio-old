@@ -21,7 +21,7 @@ const Home: NextPage = () => {
       <Head>
         <title>James K. Becker</title>
         <meta name="description" content="My personal portfolio website" />
-        {/* <link rel="icon" href="/favicon.ico" /> */}
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <GlobalStyles />
 
