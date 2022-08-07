@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import { ButtonProps } from './types';
 
 const StyledButton = styled.button`
-  color: ${({ theme }: any) => theme.brand};
+  color: ${({ theme }: any) => theme.text};
 
-  border: 1.5px solid ${({ theme }: any) => theme.brand};
+  border: 1.5px solid ${({ theme }: any) => theme.text};
   /* border-radius: 0.25rem; */
   padding: 0.5rem 1rem;
 
@@ -13,7 +13,7 @@ const StyledButton = styled.button`
   cursor: pointer;
 
   :hover {
-    background: ${({ theme }: any) => theme.brand};
+    background: ${({ theme }: any) => theme.text};
     color: #ffffff;
 
     opacity: 1;
