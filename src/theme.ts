@@ -4,8 +4,9 @@ export const lightTheme = {
   background: '#FFFFFF',
   brand: '#4A6FF1',
 
-  text: '#000000',
-  subheading: '#4d4d4d',
+  heading: '#FFFFFF',
+  subheading: '#0D0D0D',
+  text: '#1A1A1A',
 
   shadow: 'rgba(0, 0, 0, .2)',
 };
@@ -16,8 +17,9 @@ export const darkTheme = {
   background: '#000000',
   brand: '#4A6FF1',
 
-  text: '#FFFFFF',
-  subheading: '#B3B3B3',
+  heading: '#FFFFFF',
+  subheading: '#F2F2F2',
+  text: '#E6E6E6',
 
   shadow: 'rgba(255, 255, 255, .2)',
 };

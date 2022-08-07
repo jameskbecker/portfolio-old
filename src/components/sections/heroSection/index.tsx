@@ -1,10 +1,11 @@
+import Button from '@/components/button';
 import Image from 'next/image';
 import styled from 'styled-components';
 
 const StyledHeroSection = styled.section`
   display: grid;
   grid-auto-columns: 1fr 1fr;
-  grid-auto-rows: max-content 1fr;
+  grid-auto-rows: max-content 1fr auto;
   grid-auto-flow: column;
   align-content: center;
   grid-gap: 2rem;
@@ -13,20 +14,25 @@ const StyledHeroSection = styled.section`
   background: ${({ theme }: any) => theme.heroSection};
   padding: 10rem 12rem;
 
+  a {
+    display: flex;
+    flex-direction: column;
+  }
+
   p {
     font-size: 1.5rem;
     font-weight: 300;
+    color: ${({ theme }: any) => theme.text};
   }
 
   img {
     width: 100%;
-    grid-row: span 2;
   }
 `;
 
 const HeroImageContainer = styled.div`
   position: relative;
-  grid-row: span 2;
+  grid-row: span 3;
 `;
 
 const HeroSection = () => (
@@ -37,6 +43,9 @@ const HeroSection = () => (
       development and graduate of KU London. I have been programming for over 4
       years, intending to use my skills to enhance other people&apos;s lives.
     </p>
+    <a href="#contact">
+      <Button label="Get in Touch!" />
+    </a>
     <HeroImageContainer>
       <Image src="/cover.jpg" layout="fill" objectFit="cover" />
     </HeroImageContainer>
