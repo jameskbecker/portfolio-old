@@ -6,6 +6,8 @@ export const lightTheme = {
 
   text: '#000000',
   subheading: '#4d4d4d',
+
+  shadow: 'rgba(0, 0, 0, .2)',
 };
 
 export const darkTheme = {
@@ -16,4 +18,6 @@ export const darkTheme = {
 
   text: '#FFFFFF',
   subheading: '#B3B3B3',
+
+  shadow: 'rgba(255, 255, 255, .2)',
 };
