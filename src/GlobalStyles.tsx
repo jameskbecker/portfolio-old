@@ -5,7 +5,7 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
 
-    font: 500 1rem -apple-system, Inter, sans-serif;
+    font: 500 1rem sans-serif;
     color: ${({ theme }: any) => theme.text};
     background: transparent;
    
