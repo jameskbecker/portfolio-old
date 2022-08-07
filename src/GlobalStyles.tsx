@@ -17,6 +17,10 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background: ${({ theme }: any) => theme.background};
   }
