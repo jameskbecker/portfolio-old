@@ -1,6 +1,6 @@
-import NavigationHeader from '@/features/navigationBar/NavigationHeader';
-import NavigationMenu from '@/features/navigationBar/NavigationMenu';
-import NavigationOptions from '@/features/navigationBar/NavigationOptions';
+import NavigationHeader from '@/components/navigationBar/NavigationHeader';
+import NavigationMenu from '@/components/navigationBar/NavigationMenu';
+import NavigationOptions from '@/components/navigationBar/NavigationOptions';
 import styled from 'styled-components';
 
 const StyledNavigationBar = styled.div`

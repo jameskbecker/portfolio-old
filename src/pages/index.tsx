@@ -2,7 +2,7 @@ import ContactSection from '@/components/sections/contactSection';
 import ExpertiseSection from '@/components/sections/expertiseSection';
 import HeroSection from '@/components/sections/heroSection';
 import PortfolioSection from '@/components/sections/portfolioSection';
-import NavigationBar from '@/features/navigationBar';
+import NavigationBar from '@/components/navigationBar';
 import GlobalStyles from '@/GlobalStyles';
 import type { NextPage } from 'next';
 import Head from 'next/head';
