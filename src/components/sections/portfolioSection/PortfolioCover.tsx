@@ -8,13 +8,18 @@ const StyledPortfolioCover = styled.div`
   align-items: center;
   gap: 0.75rem;
 
+  padding: 0 5vw;
+
   h1 {
+    font-size: 10vw;
     text-transform: uppercase;
     text-align: center;
   }
 
   h4 {
+    font-size: 5vw;
     color: ${({ theme }: any) => theme.subheading};
+    text-align: center;
   }
 `;
 

@@ -14,6 +14,7 @@ const StyledContactGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
   gap: 1rem;
 
   width: 15vw;

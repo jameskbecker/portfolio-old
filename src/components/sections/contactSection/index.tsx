@@ -8,7 +8,7 @@ const StyledContactSection = styled.section`
   align-items: center;
   height: 100vh;
 
-  padding: 1.5 0;
+  padding: 1.5rem 15vw;
   border-top: 1px solid black;
 
   overflow: hidden;

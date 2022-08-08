@@ -1,5 +1,6 @@
 import PortfolioCover from '@/components/sections/portfolioSection/PortfolioCover';
 import Gallery from '@/features/gallery';
+import screens from '@/screens';
 import styled from 'styled-components';
 
 const StyledPortfolioSection = styled.section`
@@ -8,6 +9,10 @@ const StyledPortfolioSection = styled.section`
   height: 200vh;
 
   padding: 1.5 0;
+
+  @media only screen and (max-width: ${screens.mobileMax}) {
+    height: 100vh;
+  }
 `;
 
 const PortfolioSection = () => (

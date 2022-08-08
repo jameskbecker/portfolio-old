@@ -1,4 +1,5 @@
 import ThemeToggle from '@/features/themeToggle';
+import screens from '@/screens';
 import styled from 'styled-components';
 
 const StyledNavigationMenu = styled.ul`
@@ -9,6 +10,10 @@ const StyledNavigationMenu = styled.ul`
 
   font: 500 1rem -apple-system;
   text-transform: uppercase;
+
+  @media only screen and (max-width: ${screens.mobileMax}) {
+    display: none;
+  }
 `;
 
 const NavigationMenu = () => (

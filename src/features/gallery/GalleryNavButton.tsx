@@ -1,3 +1,4 @@
+import screens from '@/screens';
 import styled from 'styled-components';
 
 const GalleryNavButton = styled.div`
@@ -15,6 +16,12 @@ const GalleryNavButton = styled.div`
   cursor: pointer;
 
   :hover {
+    background: ${({ theme }: any) => theme.brand};
+    color: #ffffff;
+    transition: 250ms ease-in-out;
+  }
+
+  @media only screen and (max-width: ${screens.mobileMax}) {
     background: ${({ theme }: any) => theme.brand};
     color: #ffffff;
     transition: 250ms ease-in-out;
