@@ -20,10 +20,9 @@ const StyledNavigationBar = styled.div`
 const NavigationBar = () => (
   <StyledNavigationBar>
     <NavigationHeader />
-    <div>
-      <NavigationMenu />
-      <NavigationOptions />
-    </div>
+
+    <NavigationMenu />
+    <NavigationOptions />
   </StyledNavigationBar>
 );
 
