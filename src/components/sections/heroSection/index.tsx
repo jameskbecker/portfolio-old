@@ -9,8 +9,7 @@ import screens from '@/screens';
 
 const StyledHeroSection = styled.section`
   position: relative;
-
-  height: 90vh;
+  height: 92vh;
 
   background: transparent;
 
@@ -33,7 +32,10 @@ const HeroSectionContent = styled.div`
   grid-auto-flow: column;
   align-content: center;
   grid-gap: 2rem;
+  height: 100%;
+
   padding: 10rem 12vw;
+  box-sizing: border-box;
 
   @media only screen and (max-width: ${screens.mobileMax}) {
     display: flex;

@@ -1,26 +1,22 @@
-import { AppDispatch } from '@/app/store';
-import GalleryNavButton from '@/features/gallery/GalleryNavButton';
-import { nextItem, previousItem } from '@/features/gallery/gallerySlice';
 import screens from '@/screens';
-import {
-  faChevronLeft,
-  faChevronRight,
-} from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 
 const StyledGalleryFooter = styled.div`
   flex-basis: 15vh;
+  grid-area: details;
   display: grid;
   grid-template-columns: 3fr 6fr;
   grid-auto-rows: min-content min-content;
   grid-auto-flow: column;
   grid-gap: 0 1.5rem;
+  align-self: center;
+
   padding: 1rem;
   margin: 0;
+
   overflow: hidden;
-  grid-area: details;
+
   p {
     font-weight: 300;
     grid-row: span 3;

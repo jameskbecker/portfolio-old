@@ -9,6 +9,8 @@ const StyledGalleryItem = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  align-self: center;
+  height: 100%;
 
   overflow: hidden;
 
@@ -39,8 +41,10 @@ const GalleryImage = styled.img`
   position: absolute;
   height: 90%;
   max-width: 100%;
+
+  border-radius: 0.75rem;
+
   object-fit: scale-down;
-  /* filter: drop-shadow(0px 4px 50px rgba(0, 0, 0, 0.25)); */
 
   @media only screen and (max-width: ${screens.mobileMax}) {
     width: 100vh;
