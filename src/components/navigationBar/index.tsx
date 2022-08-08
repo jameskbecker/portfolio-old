@@ -22,7 +22,6 @@ const NavigationBar = () => (
     <NavigationHeader />
 
     <NavigationMenu />
-    <NavigationOptions />
   </StyledNavigationBar>
 );
 
