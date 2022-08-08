@@ -36,7 +36,7 @@ const description =
 
 const HeroSection = () => (
   <StyledHeroSection>
-    <HeroBanner src="/hero-banner.png" layout="fill" objectFit="cover" />
+    <HeroBanner />
     <motion.h1 {...textAnimation} transition={{ duration: 0.5, delay: 0 }}>
       Hello!
     </motion.h1>

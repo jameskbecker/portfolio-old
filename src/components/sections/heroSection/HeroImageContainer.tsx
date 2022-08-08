@@ -5,7 +5,7 @@ const HeroImageContainer = styled(motion.div)`
   position: relative;
   grid-row: span 3;
 
-  border-radius: 0.25rem;
+  border-radius: 0.75rem;
   overflow: hidden;
 `;
 
