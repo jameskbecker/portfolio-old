@@ -24,6 +24,7 @@ const StyledGallery = styled.div`
     'view view view'
     'view view view'
     'prev details next';
+  grid-template-rows: 1fr 4fr 2fr;
   padding: 0 10vw;
 
   @media only screen and (max-width: ${screens.mobileMax}) {

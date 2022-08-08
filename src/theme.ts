@@ -2,7 +2,7 @@ export const lightTheme = {
   navigation: 'transparent',
   heroSection: 'transparent',
   background: '#FFFFFF',
-  brand: '#4A6FF1',
+  brand: '#d55347',
 
   heading: '#FFFFFF',
   subheading: '#0D0D0D',
@@ -15,7 +15,7 @@ export const darkTheme = {
   navigation: 'transparent  ',
   heroSection: 'transparent',
   background: '#000000',
-  brand: '#4A6FF1',
+  brand: '#d55347',
 
   heading: '#FFFFFF',
   subheading: '#F2F2F2',

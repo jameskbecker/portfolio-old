@@ -17,7 +17,7 @@ const StyledPortfolioCover = styled.div`
   }
 
   h4 {
-    font-size: 5vw;
+    font-size: 1.5rem;
     color: ${({ theme }: any) => theme.subheading};
     text-align: center;
   }
