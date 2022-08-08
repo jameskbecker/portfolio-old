@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 const StyledHeroSection = styled.section`
+  position: relative;
   display: grid;
   grid-auto-columns: 1fr 1fr;
   grid-auto-rows: max-content 1fr auto;
@@ -12,7 +13,11 @@ const StyledHeroSection = styled.section`
   grid-gap: 2rem;
   height: calc(90vh - 20rem);
 
-  background: ${({ theme }: any) => theme.heroSection};
+  background: transparent;
+  object-fit: scale-down;
+  object-position: bottom;
+  padding-left: 10px;
+  margin-left: -10px;
   padding: 10rem 12rem;
 
   a {
@@ -31,13 +36,25 @@ const StyledHeroSection = styled.section`
   }
 `;
 
+const HeroBanner = styled(Image)`
+  position: absolute;
+  opacity: 0.4;
+  background: linear-gradient(to top, #fff 0%, #fff 100%);
+
+  z-index: -1;
+`;
+
 const HeroImageContainer = styled(motion.div)`
   position: relative;
   grid-row: span 3;
+
+  border-radius: 0.25rem;
+  overflow: hidden;
 `;
 
 const HeroSection = () => (
   <StyledHeroSection>
+    <HeroBanner src="/hero-banner.png" layout="fill" objectFit="cover" />
     <motion.h1
       initial={{ opacity: 0, transform: 'translate(-100%, 0)' }}
       animate={{ opacity: 1, transform: 'translate(0%, 0)' }}
