@@ -21,5 +21,5 @@ export const darkTheme = {
   subheading: '#F2F2F2',
   text: '#E6E6E6',
 
-  shadow: 'rgba(255, 255, 255, .2)',
+  shadow: 'rgba(128, 128, 128, .2)',
 };

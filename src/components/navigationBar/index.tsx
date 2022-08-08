@@ -12,8 +12,8 @@ const StyledNavigationBar = styled.div`
 
   background: ${({ theme }: any) => theme.navigation};
   padding: 0 2rem;
-  border-bottom: 1px solid black;
-  /* box-shadow: 1px 1px 3px ${({ theme }: any) => theme.shadow}; */
+  /* border-bottom: 1px solid black; */
+  box-shadow: 1px 1px 3px ${({ theme }: any) => theme.shadow};
   z-index: 1;
 `;
 
