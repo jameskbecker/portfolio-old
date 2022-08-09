@@ -22,8 +22,8 @@ const GalleryImage = (props: any) => (
     <Image
       layout="fill"
       className="rounded-full"
-      objectFit="cover"
-      objectPosition="top left"
+      objectFit="contain"
+      objectPosition="center"
       draggable="false"
       {...props}
     />
