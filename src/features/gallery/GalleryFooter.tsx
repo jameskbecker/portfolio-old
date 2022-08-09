@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const StyledGalleryFooter = styled.div`
   flex-basis: 15vh;
   grid-area: details;
+
   display: grid;
   grid-template-columns: 3fr 6fr;
   grid-auto-rows: min-content min-content;
@@ -17,24 +18,28 @@ const StyledGalleryFooter = styled.div`
 
   overflow: hidden;
 
-  p {
-    font-weight: 300;
-    grid-row: span 3;
-
-    @media only screen and (max-width: ${screens.mobileMax}) {
-      display: none;
-    }
-  }
-
   h4,
   h5 {
     text-transform: uppercase;
+  }
+
+  h4 {
+    font-weight: 600;
   }
 
   @media only screen and (max-width: ${screens.mobileMax}) {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+`;
+
+const Description = styled.p`
+  font-weight: 300;
+  grid-row: span 3;
+
+  @media only screen and (max-width: ${screens.mobileMax}) {
+    display: none;
   }
 `;
 
@@ -51,8 +56,7 @@ const GalleryFooter = () => {
     <StyledGalleryFooter>
       <h4>{data[position].name}</h4>
       <h5>{data[position].type.join(' • ')}</h5>
-
-      <p>{data[position].description}</p>
+      <Description>{data[position].description}</Description>
     </StyledGalleryFooter>
   );
 };

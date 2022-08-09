@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const GalleryNavButton = styled.div`
   grid-row: span 3;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
