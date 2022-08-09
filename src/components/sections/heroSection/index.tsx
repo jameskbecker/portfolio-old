@@ -1,11 +1,11 @@
 import Button from '@/components/button';
+import screens from '@/screens';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import { heroImageAnimation, textAnimation } from './animations';
 import HeroBanner from './HeroBanner';
 import HeroImageContainer from './HeroImageContainer';
-import { heroImageAnimation, textAnimation } from './animations';
-import screens from '@/screens';
 
 const StyledHeroSection = styled.section`
   position: relative;
@@ -67,7 +67,12 @@ const HeroSection = () => (
         {...heroImageAnimation}
         transition={{ duration: 0.8 }}
       >
-        <Image src="/cover.jpg" layout="fill" objectFit="cover" />
+        <Image
+          src="/cover.jpg"
+          layout="fill"
+          objectFit="cover"
+          draggable="false"
+        />
       </HeroImageContainer>
     </HeroSectionContent>
   </StyledHeroSection>

@@ -31,6 +31,7 @@ const HeroBanner = () => (
       src="/hero-banner.png"
       layout="fill"
       objectFit="cover"
+      draggable="false"
     />
     <Overlay />
   </StyledHeroBanner>

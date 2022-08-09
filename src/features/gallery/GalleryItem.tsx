@@ -1,4 +1,5 @@
 import screens from '@/screens';
+import Image from 'next/image';
 import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import GalleryBackdrop from './GalleryBackdrop';
@@ -15,6 +16,8 @@ const StyledGalleryItem = styled.div`
   align-self: center;
   height: 100%;
 
+  border: box solid red;
+  box-sizing: border-box;
   overflow: hidden;
 
   @media only screen and (max-width: ${screens.mobileMax}) {
@@ -34,6 +37,7 @@ const GalleryItem = () => {
   return (
     <StyledGalleryItem>
       {/* <GalleryBackdrop src={data[position].image} /> */}
+
       <GalleryImage src={data[position].image} />
     </StyledGalleryItem>
   );

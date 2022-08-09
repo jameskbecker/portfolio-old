@@ -1,21 +1,33 @@
 import screens from '@/screens';
+import Image from 'next/image';
 import styled from 'styled-components';
 
-const GalleryImage = styled.img`
-  position: absolute;
-  height: 90%;
-  max-width: 100%;
+const GalleryImageContainer = styled.div`
+  position: relative;
+  flex: 1 1;
+  height: 100%;
+  width: auto;
 
   border-radius: 0.75rem;
-
-  object-fit: scale-down;
+  overflow: hidden;
 
   @media only screen and (max-width: ${screens.mobileMax}) {
     width: 100vh;
     height: auto;
-    aspect-ratio: 1 /1;
-    object-position: bottom;
   }
 `;
+
+const GalleryImage = (props: any) => (
+  <GalleryImageContainer>
+    <Image
+      layout="fill"
+      className="rounded-full"
+      objectFit="cover"
+      objectPosition="top left"
+      draggable="false"
+      {...props}
+    />
+  </GalleryImageContainer>
+);
 
 export default GalleryImage;
