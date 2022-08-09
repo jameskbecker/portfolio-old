@@ -11,7 +11,7 @@ const StyledNavigationMenu = styled.ul`
   font: 500 1rem -apple-system;
   text-transform: uppercase;
 
-  @media only screen and (max-width: ${screens.mobileMax}) {
+  @media only screen and (max-width: ${screens.tabletMax}) {
     display: none;
   }
 `;

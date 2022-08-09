@@ -27,7 +27,7 @@ const StyledGalleryFooter = styled.div`
     font-weight: 600;
   }
 
-  @media only screen and (max-width: ${screens.mobileMax}) {
+  @media only screen and (max-width: ${screens.tabletMax}) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,7 +38,7 @@ const Description = styled.p`
   font-weight: 300;
   grid-row: span 3;
 
-  @media only screen and (max-width: ${screens.mobileMax}) {
+  @media only screen and (max-width: ${screens.tabletMax}) {
     display: none;
   }
 `;

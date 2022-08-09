@@ -11,9 +11,9 @@ const GalleryImageContainer = styled.div`
   border-radius: 0.75rem;
   overflow: hidden;
 
-  @media only screen and (max-width: ${screens.mobileMax}) {
-    width: 100vh;
-    height: auto;
+  @media only screen and (max-width: ${screens.tabletMax}) {
+    width: 100%;
+    /* height: auto; */
   }
 `;
 

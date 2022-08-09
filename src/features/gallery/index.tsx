@@ -31,7 +31,7 @@ const StyledGallery = styled.div`
   grid-gap: 0 1rem;
   padding: 0 10vw;
 
-  @media only screen and (max-width: ${screens.mobileMax}) {
+  @media only screen and (max-width: ${screens.tabletMax}) {
     grid-template-areas:
       'details details details'
       'view view view'

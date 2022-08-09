@@ -37,7 +37,7 @@ const HeroSectionContent = styled.div`
   padding: 10rem 12vw;
   box-sizing: border-box;
 
-  @media only screen and (max-width: ${screens.mobileMax}) {
+  @media only screen and (max-width: ${screens.tabletMax}) {
     display: flex;
     flex-direction: column;
   }
