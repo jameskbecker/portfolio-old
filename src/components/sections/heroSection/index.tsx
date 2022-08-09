@@ -60,6 +60,7 @@ const HeroSection = () => (
         {...textAnimation}
         transition={{ duration: 0.5, delay: 0.3 }}
         href="#contact"
+        draggable="false"
       >
         <Button label="Get in Touch!" />
       </motion.a>
