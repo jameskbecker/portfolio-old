@@ -21,10 +21,14 @@ const StyledGallery = styled.div`
   flex: 1 1;
   display: grid;
   grid-template-areas:
-    'view view view'
-    'view view view'
-    'prev details next';
-  grid-template-rows: 1fr 4fr 2fr;
+    'prev view next'
+    'prev view next'
+    '. details .';
+  grid-auto-columns: 4rem auto 4rem;
+  grid-auto-rows: auto;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 0 1rem;
   padding: 0 10vw;
 
   @media only screen and (max-width: ${screens.mobileMax}) {
