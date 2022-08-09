@@ -33,6 +33,10 @@ const GlobalStyles = createGlobalStyle`
     text-decoration: none;
     color: inherit;
   }
+
+  img, button {
+    user-select: none;
+  }
 `;
 
 export default GlobalStyles;
