@@ -9,7 +9,6 @@ const StyledContactSection = styled.section`
   height: 100vh;
 
   padding: 1.5rem 15vw;
-  border-top: 1px solid black;
 
   overflow: hidden;
 

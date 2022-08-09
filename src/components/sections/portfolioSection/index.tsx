@@ -9,6 +9,8 @@ const StyledPortfolioSection = styled.section`
   height: 200vh;
 
   padding: 1.5 0;
+  border-bottom: 1px solid ${({ theme }: any) => theme.text};
+  box-sizing: border-box;
 
   @media only screen and (max-width: ${screens.mobileMax}) {
     height: 100vh;

@@ -16,7 +16,8 @@ const StyledExpertiseSection = styled.section`
   height: 100vh;
 
   padding: 1.5 0;
-  border-top: 1px solid black;
+  border-bottom: 1px solid ${({ theme }: any) => theme.text};
+  box-sizing: border-box;
 
   overflow: hidden;
 
