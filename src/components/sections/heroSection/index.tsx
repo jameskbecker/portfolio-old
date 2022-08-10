@@ -12,17 +12,6 @@ const StyledHeroSection = styled.section`
   height: 92vh;
 
   background: transparent;
-
-  a {
-    display: flex;
-    flex-direction: column;
-  }
-
-  p {
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: ${({ theme }: any) => theme.text};
-  }
 `;
 
 const HeroSectionContent = styled.div`
@@ -34,12 +23,18 @@ const HeroSectionContent = styled.div`
   grid-gap: 2rem;
   height: 100%;
 
-  padding: 10rem 12vw;
+  padding: 12vw;
   box-sizing: border-box;
+
+  a {
+    display: flex;
+    flex-direction: column;
+  }
 
   @media only screen and (max-width: ${screens.tabletMax}) {
     display: flex;
     flex-direction: column;
+    justify-content: center;
   }
 `;
 
@@ -50,12 +45,12 @@ const HeroSection = () => (
   <StyledHeroSection>
     <HeroBanner />
     <HeroSectionContent>
-      <motion.h1 {...textAnimation} transition={{ duration: 0.5, delay: 0 }}>
+      <motion.h2 {...textAnimation} transition={{ duration: 0.5, delay: 0 }}>
         Hello!
-      </motion.h1>
-      <motion.p {...textAnimation} transition={{ duration: 0.5, delay: 0.15 }}>
+      </motion.h2>
+      <motion.h3 {...textAnimation} transition={{ duration: 0.5, delay: 0.15 }}>
         {description}
-      </motion.p>
+      </motion.h3>
       <motion.a
         {...textAnimation}
         transition={{ duration: 0.5, delay: 0.3 }}

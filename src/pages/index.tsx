@@ -1,8 +1,8 @@
+import NavigationBar from '@/components/navigationBar';
 import ContactSection from '@/components/sections/contactSection';
 import ExpertiseSection from '@/components/sections/expertiseSection';
 import HeroSection from '@/components/sections/heroSection';
 import PortfolioSection from '@/components/sections/portfolioSection';
-import NavigationBar from '@/components/navigationBar';
 import GlobalStyles from '@/GlobalStyles';
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -13,11 +13,13 @@ const StyledHome = styled.div`
   flex-direction: column;
   margin: 0;
   padding: 0;
+
+  overflow: scroll;
 `;
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <StyledHome>
       <Head>
         <title>James K. Becker</title>
         <meta name="description" content="My personal portfolio website" />
@@ -25,14 +27,12 @@ const Home: NextPage = () => {
       </Head>
       <GlobalStyles />
 
-      <StyledHome>
-        <NavigationBar />
-        <HeroSection />
-        <PortfolioSection />
-        <ExpertiseSection />
-        <ContactSection />
-      </StyledHome>
-    </div>
+      <NavigationBar />
+      <HeroSection />
+      <PortfolioSection />
+      <ExpertiseSection />
+      <ContactSection />
+    </StyledHome>
   );
 };
 

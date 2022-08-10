@@ -8,12 +8,14 @@ const StyledPortfolioSection = styled.section`
   flex-direction: column;
   height: 200vh;
 
-  padding: 1.5 0;
+  padding: 12vw;
   border-bottom: 1px solid ${({ theme }: any) => theme.text};
   box-sizing: border-box;
 
+  overflow: hidden;
+
   @media only screen and (max-width: ${screens.mobileMax}) {
-    height: 100vh;
+    height: auto;
   }
 `;
 

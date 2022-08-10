@@ -1,3 +1,4 @@
+import screens from '@/screens';
 import styled from 'styled-components';
 
 const StyledPortfolioCover = styled.div`
@@ -7,20 +8,6 @@ const StyledPortfolioCover = styled.div`
   justify-content: center;
   align-items: center;
   gap: 0.75rem;
-
-  padding: 0 5vw;
-
-  h1 {
-    font-size: 10vw;
-    text-transform: uppercase;
-    text-align: center;
-  }
-
-  h4 {
-    font-size: 1.5rem;
-    color: ${({ theme }: any) => theme.subheading};
-    text-align: center;
-  }
 `;
 
 const PortfolioCover = () => (

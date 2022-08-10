@@ -13,17 +13,19 @@ const StyledGalleryFooter = styled.div`
   grid-gap: 0 1.5rem;
   align-self: center;
 
-  padding: 1rem;
+  width: 100%;
+
+  padding: 1rem 0;
   margin: 0;
 
   overflow: hidden;
 
-  h4,
-  h5 {
+  h5,
+  h6 {
     text-transform: uppercase;
   }
 
-  h4 {
+  h5 {
     font-weight: 600;
   }
 
@@ -54,8 +56,8 @@ const GalleryFooter = () => {
 
   return (
     <StyledGalleryFooter>
-      <h4>{data[position].name}</h4>
-      <h5>{data[position].type.join(' • ')}</h5>
+      <h5>{data[position].name}</h5>
+      <h6>{data[position].type.join(' • ')}</h6>
       <Description>{data[position].description}</Description>
     </StyledGalleryFooter>
   );

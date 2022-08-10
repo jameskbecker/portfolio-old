@@ -29,7 +29,6 @@ const StyledGallery = styled.div`
   justify-content: center;
   align-items: center;
   grid-gap: 0 1rem;
-  padding: 0 10vw;
 
   @media only screen and (max-width: ${screens.tabletMax}) {
     grid-template-areas:

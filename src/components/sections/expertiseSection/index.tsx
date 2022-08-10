@@ -14,8 +14,7 @@ const StyledExpertiseSection = styled.section`
   justify-content: center;
   align-items: center;
   height: 100vh;
-
-  padding: 1.5 0;
+  padding: 0 12vw;
   border-bottom: 1px solid ${({ theme }: any) => theme.text};
   box-sizing: border-box;
 
@@ -23,21 +22,21 @@ const StyledExpertiseSection = styled.section`
 
   h1 {
     flex: 0 0 auto;
-
-    text-transform: uppercase;
     text-align: center;
     padding: 2rem 0;
   }
 `;
 
 const UpperText = styled.span`
-  font-size: 15vw;
+  font-size: 10vw;
+  font-weight: 500;
   text-transform: uppercase;
 `;
 
 const LowerText = styled.span`
   font-size: 3vw;
   text-transform: none;
+  color: ${({ theme }: any) => theme.subheading};
 `;
 
 const ExpertiseSection = () => {

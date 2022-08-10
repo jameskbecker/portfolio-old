@@ -16,7 +16,6 @@ const StyledGalleryItem = styled.div`
   align-self: center;
   height: 100%;
 
-  border: box solid red;
   box-sizing: border-box;
   overflow: hidden;
 
