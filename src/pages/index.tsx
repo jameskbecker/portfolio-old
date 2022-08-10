@@ -24,6 +24,19 @@ const Home: NextPage = () => {
         <title>James K. Becker</title>
         <meta name="description" content="My personal portfolio website" />
         <link rel="icon" href="/favicon.ico" />
+
+        <meta property="og:title" content="James's Portfolio" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.jameskbecker.com" />
+        <meta
+          property="og:image"
+          content="https://www.jameskbecker.com/cover.jpg"
+        />
+        <meta
+          property="og:description"
+          content="A full-stack developer specialising in frontend."
+        />
+        <meta name="theme-color" content="#d55347"></meta>
       </Head>
       <GlobalStyles />
 
