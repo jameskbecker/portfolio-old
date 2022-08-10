@@ -8,7 +8,7 @@ const StyledPortfolioSection = styled.section`
   flex-direction: column;
   height: 200vh;
 
-  padding: 12vw;
+  padding: 0 12vw;
   border-bottom: 1px solid ${({ theme }: any) => theme.text};
   box-sizing: border-box;
 
