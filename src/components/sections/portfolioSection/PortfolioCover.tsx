@@ -13,10 +13,10 @@ const StyledPortfolioCover = styled.div`
 const PortfolioCover = () => (
   <StyledPortfolioCover>
     <h1>My Portfolio</h1>
-    <h4>
+    <h3>
       I&apos;ve completed many projects throughout my journey so far. Here are
       the ones I am the proudest of!
-    </h4>
+    </h3>
   </StyledPortfolioCover>
 );
 

@@ -39,7 +39,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: min-max(1.5rem, 3vw);
     font-weight: 300;
     color: ${({ theme }: any) => theme.text};
     text-align: left;
@@ -50,6 +50,8 @@ const GlobalStyles = createGlobalStyle`
   a {
     text-decoration: none;
     color: inherit;
+
+    cursor: pointer;
   }
 
   img, button {
