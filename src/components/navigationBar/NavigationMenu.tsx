@@ -18,11 +18,10 @@ const StyledNavigationMenu = styled.ul`
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0.7;
     cursor: pointer;
 
     :hover {
-      opacity: 1;
+      color: ${({ theme }: any) => theme.brand};
       transiton: 100ms ease-in;
     }
   }
