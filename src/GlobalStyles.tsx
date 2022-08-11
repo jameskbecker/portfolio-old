@@ -39,7 +39,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h3 {
-    font-size: min-max(1.5rem, 3vw);
+    font-size: 1.5rem;
     font-weight: 300;
     color: ${({ theme }: any) => theme.text};
     text-align: left;
