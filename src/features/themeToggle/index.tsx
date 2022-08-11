@@ -18,6 +18,11 @@ const StyledThemeToggle = styled(motion.div)`
   :hover {
     opacity: 1;
     transition: 250ms ease-in-out;
+
+    svg,
+    svg path {
+      color: ${({ theme }: any) => theme.brand};
+    }
   }
 `;
 
