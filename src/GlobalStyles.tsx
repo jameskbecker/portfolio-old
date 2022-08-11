@@ -26,7 +26,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h1 {
-    font-size: 8vw;
+    font-size: 6vw;
     font-weight: 600;
     text-transform: uppercase;
     text-align: center;
