@@ -11,17 +11,12 @@ const StyledHeroBanner = styled.div`
 
 const Overlay = styled.div`
   position: absolute;
-
   width: 100%;
   height: 100%;
 
   z-index: -2;
 
-  background: linear-gradient(
-    365deg,
-    rgba(255, 255, 255, 0) 60%,
-    rgba(255, 255, 255, 1) 100%
-  );
+  background: linear-gradient(365deg, #ffffff00 60%, #ffffff 100%);
 `;
 
 const HeroBanner = () => (
