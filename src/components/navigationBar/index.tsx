@@ -8,12 +8,12 @@ const StyledNavigationBar = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  height: 8vh;
+  height: 64px;
 
   background: ${({ theme }: any) => theme.navigation};
   padding: 0 2rem;
   border-bottom: 1px solid ${({ theme }: any) => theme.text};
-  /* box-shadow: 1px 1px 3px ${({ theme }: any) => theme.shadow}; */
+  box-sizing: border-box;
   z-index: 1;
 `;
 
