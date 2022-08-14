@@ -14,17 +14,11 @@ const StyledExpertiseSection = styled.section`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  padding: 0 12vw;
+  padding: 6vw 12vw;
   border-bottom: 1px solid ${({ theme }: any) => theme.text};
   box-sizing: border-box;
 
   overflow: hidden;
-
-  h1 {
-    flex: 0 0 auto;
-    text-align: center;
-    padding: 2rem 0;
-  }
 `;
 
 const UpperText = styled.span`

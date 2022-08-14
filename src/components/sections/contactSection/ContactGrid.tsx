@@ -11,10 +11,14 @@ import styled from 'styled-components';
 library.add(faGithub, faDiscord, faLinkedin, faEnvelope);
 
 const StyledContactGrid = styled.div`
+  flex: 0 0 auto;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   justify-content: center;
+  align-items: center;
+  margin: auto;
   gap: 1rem;
 
   width: 15vw;

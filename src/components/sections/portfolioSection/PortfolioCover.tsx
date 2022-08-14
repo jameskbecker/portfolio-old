@@ -8,6 +8,7 @@ const StyledPortfolioCover = styled.div`
   justify-content: center;
   align-items: center;
   gap: 0.75rem;
+  height: 50%;
 `;
 
 const PortfolioCover = () => (

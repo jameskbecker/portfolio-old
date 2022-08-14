@@ -4,21 +4,14 @@ import styled from 'styled-components';
 const StyledContactSection = styled.section`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   height: 100vh;
 
-  padding: 1.5rem 15vw;
+  padding: 12vw 6vw;
+  margin: 0 auto;
+  box-sizing: border-box;
 
   overflow: hidden;
-
-  h1 {
-    flex: 0 0 auto;
-
-    text-transform: uppercase;
-    text-align: center;
-    padding: 2rem 0;
-  }
 `;
 
 const ContactSection = () => {
