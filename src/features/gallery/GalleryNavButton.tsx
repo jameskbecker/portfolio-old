@@ -1,32 +1,32 @@
-import screens from '@/screens';
-import styled from 'styled-components';
+import { AppDispatch } from '@/app/store';
+import {
+  faChevronLeft,
+  faChevronRight,
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useDispatch } from 'react-redux';
+import { nextItem, previousItem } from './gallerySlice';
+import { StyledGalleryNavButton } from './styles';
 
-const GalleryNavButton = styled.div`
-  grid-row: span 3;
+const GalleryNavButton = ({ prev }: any) => {
+  const dispatch = useDispatch<AppDispatch>();
 
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
-  width: 4rem;
-  height: 4rem;
+  const handleNext = () => {
+    dispatch(nextItem());
+  };
 
-  border-radius: 50%;
+  const handlePrevious = () => {
+    dispatch(previousItem());
+  };
 
-  cursor: pointer;
-
-  :hover {
-    background: ${({ theme }: any) => theme.brand};
-    color: #ffffff;
-    transition: 250ms ease-in-out;
-  }
-
-  @media only screen and (max-width: ${screens.mobileMax}) {
-    background: ${({ theme }: any) => theme.brand};
-    color: #ffffff;
-    transition: 250ms ease-in-out;
-  }
-`;
+  return (
+    <StyledGalleryNavButton
+      prev={prev}
+      onClick={prev ? handlePrevious : handleNext}
+    >
+      <FontAwesomeIcon icon={prev ? faChevronLeft : faChevronRight} />
+    </StyledGalleryNavButton>
+  );
+};
 
 export default GalleryNavButton;

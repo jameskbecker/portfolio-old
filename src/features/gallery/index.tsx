@@ -18,13 +18,6 @@ import { StyledGallery } from './styles';
 
 const Gallery = () => {
   const dispatch = useDispatch<AppDispatch>();
-  const handleNext = () => {
-    dispatch(nextItem());
-  };
-
-  const handlePrevious = () => {
-    dispatch(previousItem());
-  };
 
   useEffect(() => {
     dispatch(fetchGalleryData());
@@ -34,12 +27,8 @@ const Gallery = () => {
     <StyledGallery>
       <GalleryItem />
       <GalleryDetails />
-      <GalleryNavButton style={{ gridArea: 'prev' }} onClick={handlePrevious}>
-        <FontAwesomeIcon icon={faChevronLeft} />
-      </GalleryNavButton>
-      <GalleryNavButton style={{ gridArea: 'next' }} onClick={handleNext}>
-        <FontAwesomeIcon icon={faChevronRight} />
-      </GalleryNavButton>
+      <GalleryNavButton prev />
+      <GalleryNavButton />
     </StyledGallery>
   );
 };
