@@ -6,7 +6,7 @@ import {
   Subheading,
 } from './styles';
 
-const GalleryFooter = () => {
+const GalleryDetails = () => {
   const { position, data, isLoading } = useSelector(
     (state: any) => state.gallery
   );
@@ -24,4 +24,4 @@ const GalleryFooter = () => {
   );
 };
 
-export default GalleryFooter;
+export default GalleryDetails;

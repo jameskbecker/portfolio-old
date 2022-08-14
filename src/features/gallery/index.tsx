@@ -1,5 +1,5 @@
 import { AppDispatch } from '@/app/store';
-import GalleryFooter from '@/features/gallery/GalleryFooter';
+import GalleryDetails from '@/features/gallery/GalleryDetails';
 import GalleryItem from '@/features/gallery/GalleryItem';
 import {
   fetchGalleryData,
@@ -33,7 +33,7 @@ const Gallery = () => {
   return (
     <StyledGallery>
       <GalleryItem />
-      <GalleryFooter />
+      <GalleryDetails />
       <GalleryNavButton style={{ gridArea: 'prev' }} onClick={handlePrevious}>
         <FontAwesomeIcon icon={faChevronLeft} />
       </GalleryNavButton>
