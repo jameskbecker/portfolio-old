@@ -2,7 +2,15 @@ This is the source code for my [portfolio website](https://www.jameskbecker.com/
 
 ## Running Locally
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm i
+# or
+yarn
+```
+
+Next, run the development server:
 
 ```bash
 npm run dev
