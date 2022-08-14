@@ -1,13 +1,10 @@
-import Button from '@/components/button';
-import screens from '@/screens';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import styled from 'styled-components';
-import { heroImageAnimation, textAnimation } from './animations';
+import { heroImageAnimation } from './animations';
 import HeroBanner from './HeroBanner';
 import HeroContent from './HeroContent';
 import HeroImageContainer from './HeroImageContainer';
-import HeroInfo from './HeroInfo';
+import HeroInfo from './heroInfo';
 
 const StyledHeroSection = styled.section`
   position: relative;

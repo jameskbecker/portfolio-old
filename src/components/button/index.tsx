@@ -22,8 +22,10 @@ const StyledButton = styled.button`
   }
 `;
 
-const Button = ({ label }: ButtonProps) => (
-  <StyledButton draggable="false">{label}</StyledButton>
+const Button = ({ label, ...props }: ButtonProps) => (
+  <StyledButton draggable="false" {...props}>
+    {label}
+  </StyledButton>
 );
 
 export default Button;
