@@ -20,11 +20,13 @@ export const gallerySlice = createSlice({
   reducers: {
     previousItem: (state) => {
       const { position, data } = state;
-      state.position = position === 0 ? position - 1 : data.length - 1;
+      const isFirst = position === 0;
+      state.position = isFirst ? data.length - 1 : position - 1;
     },
     nextItem: (state) => {
       const { position, data } = state;
-      state.position = position === data.length - 1 ? 0 : position + 1;
+      const isLast = position === data.length - 1;
+      state.position = isLast ? 0 : position + 1;
     },
   },
   extraReducers(builder) {
