@@ -31,6 +31,7 @@ export const StyledExpertiseSection = styled.section`
 export const UpperText = styled.span`
   font-size: 10vw;
   font-weight: 500;
+  color: ${({ theme }) => theme.text};
   text-transform: uppercase;
 `;
 

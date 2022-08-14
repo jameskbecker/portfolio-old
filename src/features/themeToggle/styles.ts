@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 export const StyledThemeToggle = styled(motion.div)`
+  color: ${({ theme }) => theme.text};
+
   opacity: 0.8;
   cursor: pointer;
 

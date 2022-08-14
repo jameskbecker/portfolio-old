@@ -19,6 +19,7 @@ export const StyledNavigationHeader = styled.div`
   flex: 1 1;
 
   font-weight: 700;
+  color: ${({ theme }) => theme.text};
   text-transform: uppercase;
 `;
 

@@ -85,16 +85,20 @@ export const StyledGalleryImage = styled.div`
 
 export const Heading = styled.h5`
   font-weight: 600;
+  color: ${({ theme }) => theme.text};
   text-transform: uppercase;
 `;
 
 export const Subheading = styled.h6`
+  color: ${({ theme }) => theme.text};
   text-transform: uppercase;
 `;
 
 export const Description = styled.p`
-  font-weight: 300;
   grid-row: span 3;
+
+  font-weight: 300;
+  color: ${({ theme }) => theme.text};
 
   @media only screen and (max-width: ${screens.tabletMax}) {
     display: none;
@@ -129,6 +133,7 @@ export const StyledGalleryNavButton = styled.div<any>`
   width: 4rem;
   height: 4rem;
 
+  color: ${({ theme }) => theme.text};
   border-radius: 50%;
 
   cursor: pointer;

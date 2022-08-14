@@ -35,6 +35,7 @@ const GlobalStyles = createGlobalStyle`
   h2 {
     font-size: 3rem;
     font-weight: 600;
+    color: ${({ theme }) => theme.text};
   }
 
   h3 {
@@ -48,7 +49,7 @@ const GlobalStyles = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: inherit;
+    color: ${({ theme }) => theme.text};
 
     cursor: pointer;
   }
