@@ -1,5 +1,10 @@
 import { useSelector } from 'react-redux';
-import { Description, StyledGalleryFooter } from './styles';
+import {
+  Description,
+  Heading,
+  StyledGalleryFooter,
+  Subheading,
+} from './styles';
 
 const GalleryFooter = () => {
   const { position, data, isLoading } = useSelector(
@@ -12,8 +17,8 @@ const GalleryFooter = () => {
 
   return (
     <StyledGalleryFooter>
-      <h5>{data[position].name}</h5>
-      <h6>{data[position].type.join(' • ')}</h6>
+      <Heading>{data[position].name}</Heading>
+      <Subheading>{data[position].type.join(' • ')}</Subheading>
       <Description>{data[position].description}</Description>
     </StyledGalleryFooter>
   );
