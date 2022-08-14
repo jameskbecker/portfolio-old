@@ -4,7 +4,6 @@ import screens from './screens';
 const GlobalStyles = createGlobalStyle`
   * {
     font: 500 1rem sans-serif;
-    color: ${({ theme }: any) => theme.text};
     margin: 0;
     padding: 0;
    
@@ -49,7 +48,7 @@ const GlobalStyles = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: inherit;
+    /* color: inherit; */
 
     cursor: pointer;
   }
