@@ -1,24 +1,8 @@
-import screens from '@/screens';
 import Image from 'next/image';
-import styled from 'styled-components';
-
-const GalleryImageContainer = styled.div`
-  position: relative;
-  flex: 1 1;
-  height: 100%;
-  width: auto;
-
-  border-radius: 0.75rem;
-  overflow: hidden;
-
-  @media only screen and (max-width: ${screens.tabletMax}) {
-    width: 100%;
-    /* height: auto; */
-  }
-`;
+import { StyledGalleryImage } from './styles';
 
 const GalleryImage = (props: any) => (
-  <GalleryImageContainer>
+  <StyledGalleryImage>
     <Image
       layout="fill"
       className="rounded-full"
@@ -27,7 +11,7 @@ const GalleryImage = (props: any) => (
       draggable="false"
       {...props}
     />
-  </GalleryImageContainer>
+  </StyledGalleryImage>
 );
 
 export default GalleryImage;

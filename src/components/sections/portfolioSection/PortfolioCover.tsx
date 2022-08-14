@@ -1,15 +1,4 @@
-import screens from '@/screens';
-import styled from 'styled-components';
-
-const StyledPortfolioCover = styled.div`
-  flex: 1 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0.75rem;
-  height: 50%;
-`;
+import { StyledPortfolioCover } from './styles';
 
 const PortfolioCover = () => (
   <StyledPortfolioCover>

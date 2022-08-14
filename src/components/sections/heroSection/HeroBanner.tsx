@@ -1,23 +1,5 @@
 import Image from 'next/image';
-import styled from 'styled-components';
-
-const StyledHeroBanner = styled.div`
-  position: absolute;
-  display: flex;
-  height: 100%;
-  width: 100%;
-  opacity: 0.4;
-`;
-
-const Overlay = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-
-  z-index: -2;
-
-  background: linear-gradient(365deg, #ffffff00 60%, #ffffff 100%);
-`;
+import { StyledHeroBanner, StyledOverlay } from './styles';
 
 const HeroBanner = () => (
   <StyledHeroBanner>
@@ -28,7 +10,7 @@ const HeroBanner = () => (
       objectFit="cover"
       draggable="false"
     />
-    <Overlay />
+    <StyledOverlay />
   </StyledHeroBanner>
 );
 

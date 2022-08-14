@@ -1,30 +1,10 @@
 import { toggleTheme } from '@/features/themeToggle/themeToggleSlice';
 import { faAdjust } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  motion,
-  useAnimationControls,
-  useInView,
-  Variants,
-} from 'framer-motion';
+import { useAnimationControls, Variants } from 'framer-motion';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import styled from 'styled-components';
-
-const StyledThemeToggle = styled(motion.div)`
-  opacity: 0.8;
-  cursor: pointer;
-
-  :hover {
-    opacity: 1;
-    transition: 250ms ease-in-out;
-
-    svg,
-    svg path {
-      color: ${({ theme }: any) => theme.brand};
-    }
-  }
-`;
+import { StyledThemeToggle } from './styles';
 
 const variants: Variants = {
   default: { transform: 'rotate(0deg)', transition: { duration: 0.25 } },

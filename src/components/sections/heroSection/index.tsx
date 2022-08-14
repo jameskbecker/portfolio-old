@@ -2,16 +2,8 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import { heroImageAnimation } from './animations';
 import HeroBanner from './HeroBanner';
-import HeroContent from './HeroContent';
-import HeroImageContainer from './HeroImageContainer';
 import HeroInfo from './heroInfo';
-
-const StyledHeroSection = styled.section`
-  position: relative;
-  height: 92vh;
-
-  background: transparent;
-`;
+import { HeroContent, HeroImageContainer, StyledHeroSection } from './styles';
 
 const description =
   "My name is James, I'm a full-stack engineer specialising in frontend development and graduate of KU London. I have been programming for over 4 years, intending to use my skills to enhance other people's lives.";
