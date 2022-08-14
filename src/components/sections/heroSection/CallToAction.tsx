@@ -1,6 +1,6 @@
 import Button from '@/components/button';
 import { motion } from 'framer-motion';
-import { textAnimation } from '../animations';
+import { textAnimation } from './animations';
 
 const CallToAction = (props: any) => (
   <motion.a

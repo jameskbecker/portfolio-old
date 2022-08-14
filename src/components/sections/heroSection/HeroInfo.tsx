@@ -1,4 +1,4 @@
-import { textAnimation } from '../animations';
+import { textAnimation } from './animations';
 import CallToAction from './CallToAction';
 import { Body, Heading, StyledHeroInfo } from './styles';
 import { HeroInfoProps } from './types';

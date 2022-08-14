@@ -1,8 +1,7 @@
 import Image from 'next/image';
-import styled from 'styled-components';
 import { heroImageAnimation } from './animations';
 import HeroBanner from './HeroBanner';
-import HeroInfo from './heroInfo';
+import HeroInfo from './HeroInfo';
 import { HeroContent, HeroImageContainer, StyledHeroSection } from './styles';
 
 const description =
