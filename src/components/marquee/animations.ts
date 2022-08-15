@@ -1,23 +1,17 @@
-import { keyframes } from 'styled-components';
+import { Variants } from 'framer-motion';
 
-const scrollAnimation = keyframes`
-  0% {
-    transform: translate(50%, 0);
-  }
+export const scrollVariants: Variants = {
+  start: { transform: 'translate(50%, 0)' },
+  end: {
+    transform: 'translate(-50%, 0)',
+    transition: { duration: 30, repeat: Infinity },
+  },
+};
 
-  100% {
-    transform: translate(-50%, 0)
-  }
-`;
-
-const scrollReverseAnimation = keyframes`
-  0% {
-    transform: translate(-50%, 0);
-  }
-
-  100% {
-    transform: translate(50%, 0)
-  }
-`;
-
-export { scrollAnimation, scrollReverseAnimation };
+export const scrollReverseVariants: Variants = {
+  start: { transform: 'translate(-50%, 0)' },
+  end: {
+    transform: 'translate(50%, 0)',
+    transition: { duration: 30, repeat: Infinity },
+  },
+};

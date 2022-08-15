@@ -1,9 +1,14 @@
+import { scrollReverseVariants, scrollVariants } from './animations';
 import { StyledMarquee } from './styles';
 import { MarqueeProps } from './types';
 
-const Marquee = ({ children, ...props }: MarqueeProps) => {
+const Marquee = ({ children, reverse }: MarqueeProps) => {
   return (
-    <StyledMarquee {...props}>
+    <StyledMarquee
+      initial="start"
+      animate="end"
+      variants={reverse ? scrollReverseVariants : scrollVariants}
+    >
       <div>
         {children}
         {children}

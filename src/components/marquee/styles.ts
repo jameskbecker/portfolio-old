@@ -1,8 +1,7 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
-import { scrollAnimation, scrollReverseAnimation } from './animations';
-import { StyledMarqueeProps } from './types';
 
-export const StyledMarquee = styled.div<StyledMarqueeProps>`
+export const StyledMarquee = styled(motion.div)`
   overflow: hidden;
   white-space: nowrap;
 
@@ -12,9 +11,5 @@ export const StyledMarquee = styled.div<StyledMarqueeProps>`
     flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: center;
-
-    animation: ${({ reverse }) =>
-        reverse ? scrollReverseAnimation : scrollAnimation}
-      60s linear infinite;
   }
 `;
