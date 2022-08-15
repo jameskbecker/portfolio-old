@@ -34,7 +34,7 @@ const Home: NextPage = () => {
         <meta property="og:url" content="https://www.jameskbecker.com" />
         <meta
           property="og:image"
-          content="https://www.jameskbecker.com/cover.jpg"
+          content="https://www.jameskbecker.com/thumbnail.jpeg"
         />
         <meta
           property="og:description"
