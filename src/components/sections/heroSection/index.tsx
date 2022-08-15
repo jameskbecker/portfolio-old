@@ -5,7 +5,7 @@ import HeroInfo from './HeroInfo';
 import { HeroContent, HeroImageContainer, StyledHeroSection } from './styles';
 
 const description =
-  "My name is James, I'm a full-stack engineer specialising in frontend development and graduate of KU London. I have been programming for over 4 years, intending to use my skills to enhance other people's lives.";
+  "My name is James, I'm a full-stack engineer specialising in frontend development and graduate of KU London. I have been programming for over 4 years, intending to use my skills to better other people's lives.";
 
 const HeroSection = () => (
   <StyledHeroSection>
