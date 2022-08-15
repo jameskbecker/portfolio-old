@@ -4,7 +4,12 @@ export const scrollVariants: Variants = {
   start: { transform: 'translate(50%, 0)' },
   end: {
     transform: 'translate(-50%, 0)',
-    transition: { duration: 30, repeat: Infinity },
+    transition: {
+      duration: 60,
+      repeat: Infinity,
+      type: 'linear',
+      ease: 'linear',
+    },
   },
 };
 
@@ -12,6 +17,11 @@ export const scrollReverseVariants: Variants = {
   start: { transform: 'translate(-50%, 0)' },
   end: {
     transform: 'translate(50%, 0)',
-    transition: { duration: 30, repeat: Infinity },
+    transition: {
+      duration: 60,
+      repeat: Infinity,
+      type: 'linear',
+      ease: 'linear',
+    },
   },
 };
