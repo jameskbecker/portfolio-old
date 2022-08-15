@@ -3,18 +3,22 @@ import ContactSection from '@/components/sections/contactSection';
 import ExpertiseSection from '@/components/sections/expertiseSection';
 import HeroSection from '@/components/sections/heroSection';
 import PortfolioSection from '@/components/sections/portfolioSection';
+import Sidebar from '@/components/sidebar';
 import GlobalStyles from '@/GlobalStyles';
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 
 const StyledHome = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
+
   margin: 0;
   padding: 0;
 
-  overflow: scroll;
+  overflow: hidden;
 `;
 
 const Home: NextPage = () => {
@@ -39,7 +43,7 @@ const Home: NextPage = () => {
         <meta name="theme-color" content="#d55347"></meta>
       </Head>
       <GlobalStyles />
-
+      <Sidebar />
       <NavigationBar />
       <HeroSection />
       <PortfolioSection />

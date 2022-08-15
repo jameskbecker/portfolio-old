@@ -1,6 +1,4 @@
 import ThemeToggle from '@/features/themeToggle';
-import screens from '@/screens';
-import styled from 'styled-components';
 import { StyledNavigationMenu } from './styles';
 
 const NavigationMenu = () => (

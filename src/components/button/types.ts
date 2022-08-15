@@ -9,11 +9,12 @@ import {
 } from 'framer-motion';
 
 export type ButtonProps = {
-  as: ForwardRefComponent<HTMLButtonElement, HTMLMotionProps<'button'>>;
+  as?: ForwardRefComponent<HTMLButtonElement, HTMLMotionProps<'button'>>;
   initial?: any;
   animate?: boolean | VariantLabels | AnimationControls | TargetAndTransition;
   variants?: Variants;
   transition?: Transition;
   label?: string;
+  ghost?: boolean;
   onClick?: any;
 };

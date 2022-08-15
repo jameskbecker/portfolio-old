@@ -1,4 +1,5 @@
 import screens from '@/screens';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
 
 export const StyledNavigationBar = styled.div`
@@ -6,6 +7,7 @@ export const StyledNavigationBar = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  gap: 1rem;
   height: 64px;
 
   background: ${({ theme }: any) => theme.navigation};
@@ -57,4 +59,13 @@ export const StyledNavigationOptions = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+`;
+
+export const StyledIcon = styled(FontAwesomeIcon)`
+  display: none;
+  color: ${({ theme }) => theme.text};
+
+  @media only screen and (max-width: ${screens.tabletMax}) {
+    display: block;
+  }
 `;
