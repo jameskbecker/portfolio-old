@@ -1,12 +1,14 @@
 import ThemeToggle from '@/features/themeToggle';
-import { StyledNavigationMenu } from './styles';
+import routes from '@/routes';
+import { NavigationLink, StyledNavigationMenu } from './styles';
 
 const NavigationMenu = () => (
   <StyledNavigationMenu>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#expertise">Expertise</a>
-    {/* <a href="#services">Services</a> */}
-    <a href="#contact">Contact</a>
+    {routes.map((route, i) => (
+      <NavigationLink key={i} href={route.to}>
+        {route.name}
+      </NavigationLink>
+    ))}
     <ThemeToggle />
   </StyledNavigationMenu>
 );

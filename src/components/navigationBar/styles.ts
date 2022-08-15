@@ -36,19 +36,6 @@ export const StyledNavigationMenu = styled.ul`
   font: 500 1rem -apple-system;
   text-transform: uppercase;
 
-  a {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-
-    :hover {
-      color: ${({ theme }: any) => theme.brand};
-      transiton: 100ms ease-in;
-    }
-  }
-
   @media only screen and (max-width: ${screens.tabletMax}) {
     display: none;
   }
@@ -67,5 +54,18 @@ export const StyledIcon = styled(FontAwesomeIcon)`
 
   @media only screen and (max-width: ${screens.tabletMax}) {
     display: block;
+  }
+`;
+
+export const NavigationLink = styled.a`
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  :hover {
+    color: ${({ theme }: any) => theme.brand};
+    transiton: 100ms ease-in;
   }
 `;
