@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { heroImageAnimation } from './animations';
+import { imageVariants } from './animations';
 import HeroBanner from './HeroBanner';
 import HeroInfo from './HeroInfo';
 import { HeroContent, HeroImageContainer, StyledHeroSection } from './styles';
@@ -13,8 +13,9 @@ const HeroSection = () => (
     <HeroContent>
       <HeroInfo heading="Hello!" description={description} href="#contact" />
       <HeroImageContainer
-        {...heroImageAnimation}
-        transition={{ duration: 0.8 }}
+        initial="hidden"
+        animate="visible"
+        variants={imageVariants}
       >
         <Image
           src="/cover.jpg"
