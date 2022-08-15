@@ -1,7 +1,7 @@
 import { Variants } from 'framer-motion';
 
 export const scrollVariants: Variants = {
-  start: { transform: 'translate(50%, 0)' },
+  start: { transform: 'translate(0, 0)' },
   end: {
     transform: 'translate(-50%, 0)',
     transition: {
@@ -14,7 +14,7 @@ export const scrollVariants: Variants = {
 };
 
 export const scrollReverseVariants: Variants = {
-  start: { transform: 'translate(-50%, 0)' },
+  start: { transform: 'translate(0, 0)' },
   end: {
     transform: 'translate(50%, 0)',
     transition: {
