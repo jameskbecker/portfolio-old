@@ -3,17 +3,17 @@ import Image from 'next/image';
 import styled from 'styled-components';
 
 export const StyledGallery = styled.div`
-  flex: 1 1;
+  flex: 0 0 100%;
   display: grid;
   grid-template-areas:
     'prev view next'
     'prev view next'
-    '. details .';
-  grid-auto-columns: 4rem auto 4rem;
-  grid-auto-rows: auto;
-  justify-content: center;
-  align-items: center;
-  grid-gap: 0 1rem;
+    'prev details next';
+
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-rows: 4fr 4fr 2fr;
+  grid-gap: 0.5rem;
+  max-height: 100vh;
 
   @media only screen and (max-width: ${screens.tabletMax}) {
     grid-template-areas:
@@ -27,16 +27,14 @@ export const StyledGallery = styled.div`
 `;
 
 export const StyledGalleryFooter = styled.div`
-  flex-basis: 15vh;
   grid-area: details;
-  width: 100%;
 
   display: grid;
   grid-template-columns: 3fr 6fr;
   grid-auto-rows: min-content min-content;
   grid-auto-flow: column;
   grid-gap: 0 1.5rem;
-  align-self: center;
+  overflow: auto;
 
   padding: 1rem 0;
   margin: 0;
@@ -149,4 +147,20 @@ export const StyledGalleryNavButton = styled.div<any>`
     color: #ffffff;
     transition: 250ms ease-in-out;
   }
+`;
+
+export const PrevContainer = styled.div`
+  display: flex;
+  flex-dirction: row;
+  justify-content: center;
+  align-items: center;
+  grid-area: prev;
+`;
+
+export const NextContainer = styled.div`
+  display: flex;
+  flex-dirction: row;
+  justify-content: center;
+  align-items: center;
+  grid-area: next;
 `;

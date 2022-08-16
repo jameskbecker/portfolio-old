@@ -14,7 +14,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import GalleryNavButton from './GalleryNavButton';
-import { StyledGallery } from './styles';
+import {
+  NavContainer,
+  NextContainer,
+  PrevContainer,
+  StyledGallery,
+} from './styles';
 
 const Gallery = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -26,9 +31,16 @@ const Gallery = () => {
   return (
     <StyledGallery>
       <GalleryItem />
+
       <GalleryDetails />
-      <GalleryNavButton prev />
-      <GalleryNavButton />
+
+      <PrevContainer>
+        <GalleryNavButton prev />
+      </PrevContainer>
+      <NextContainer>
+        {' '}
+        <GalleryNavButton />
+      </NextContainer>
     </StyledGallery>
   );
 };
