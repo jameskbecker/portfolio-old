@@ -1,5 +1,6 @@
 import screens from '@/screens';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 export const StyledContactSection = styled.section`
@@ -31,23 +32,7 @@ export const StyledContactContent = styled.div`
   }
 `;
 
-export const ContactIcon = styled(FontAwesomeIcon)`
+export const ContactIcon = styled(motion(FontAwesomeIcon))`
   font-size: max(4rem, 3vw);
   margin: auto;
-
-  opacity: 0.8;
-
-  * {
-    color: ${({ theme }: any) => theme.text};
-  }
-
-  :hover {
-    opacity: 1;
-    transition: 250ms ease-in-out;
-
-    * {
-      color: ${({ theme }: any) => theme.brand};
-      transition: 250ms ease-in-out;
-    }
-  }
 `;
