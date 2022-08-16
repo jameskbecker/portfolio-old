@@ -1,4 +1,4 @@
-const topFour = ['TypeScript', 'ReactJS', 'Figma', 'NodeJS'];
+const topFour = ['TypeScript', 'React', 'Figma', 'NodeJS'];
 const other = [
   'HTML',
   'CSS',
@@ -6,16 +6,16 @@ const other = [
   'Redux',
   'React Native',
   'Styled Components',
-  'ExpressJS',
+  'Express',
   'Electron',
   'MySQL',
   'MongoDB',
   'Webpack',
   'Babel AST Manipulation',
   'Go',
-  'Python',
-  'Swift',
-  'Java',
+  // 'Python',
+  // 'Swift',
+  // 'Java',
   'Webflow',
 ].reverse();
 
