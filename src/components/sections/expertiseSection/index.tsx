@@ -1,4 +1,4 @@
-import Marquee from '@/components/marquee';
+import ParallaxText from '@/components/parallaxText';
 import {
   other,
   topFour,
@@ -17,16 +17,12 @@ const ExpertiseSection = () => {
     <StyledExpertiseSection id="expertise">
       <h1>My Expertise</h1>
       <StyledExpertiseContent>
-        <Marquee>
-          <UpperText>
-            {topFour.join(space)} {space}
-          </UpperText>
-        </Marquee>
-        <Marquee reverse>
-          <LowerText>
-            {other.join(space)} {space}
-          </LowerText>
-        </Marquee>
+        <ParallaxText baseSpeed={-1}>
+          <UpperText>{topFour.join(space)}</UpperText>
+        </ParallaxText>
+        <ParallaxText baseSpeed={0.5}>
+          <LowerText>{other.join(space)}</LowerText>
+        </ParallaxText>
       </StyledExpertiseContent>
     </StyledExpertiseSection>
   );
