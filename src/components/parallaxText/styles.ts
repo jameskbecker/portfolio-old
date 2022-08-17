@@ -2,10 +2,7 @@ import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 export const StyledParallaxText = styled.div`
-  span {
-    display: block;
-    margin-right: 30px;
-  }
+  overflow: hidden;
 `;
 
 export const Scroller = styled(motion.div)`
@@ -13,4 +10,5 @@ export const Scroller = styled(motion.div)`
   white-space: nowrap;
   display: flex;
   flex-wrap: nowrap;
+  overflow: hidden;
 `;

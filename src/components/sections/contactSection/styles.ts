@@ -9,8 +9,9 @@ export const StyledContactSection = styled.section`
   align-items: center;
   height: 100vh;
 
-  padding: 12vw 6vw;
-  margin: 0 auto;
+  padding: 12vw 0;
+
+  border-top: 1px solid ${({ theme }: any) => theme.text};
   box-sizing: border-box;
 
   overflow: hidden;

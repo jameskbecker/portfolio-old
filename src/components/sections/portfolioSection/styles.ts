@@ -6,8 +6,7 @@ export const StyledPortfolioSection = styled.section`
   flex-direction: column;
   height: 200vh;
 
-  padding: 0 12vw;
-  margin: 0 auto;
+  padding: 0 0;
   border-bottom: 1px solid ${({ theme }: any) => theme.text};
   box-sizing: border-box;
 
@@ -25,5 +24,6 @@ export const StyledPortfolioCover = styled.div`
   justify-content: center;
   align-items: center;
   gap: 0.75rem;
-  height: 50%;
+
+  margin: 0 auto;
 `;
