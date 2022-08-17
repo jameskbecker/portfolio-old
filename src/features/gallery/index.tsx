@@ -1,25 +1,11 @@
 import { AppDispatch } from '@/app/store';
 import GalleryDetails from '@/features/gallery/GalleryDetails';
 import GalleryItem from '@/features/gallery/GalleryItem';
-import {
-  fetchGalleryData,
-  nextItem,
-  previousItem,
-} from '@/features/gallery/gallerySlice';
-import {
-  faChevronLeft,
-  faChevronRight,
-} from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { fetchGalleryData } from '@/features/gallery/gallerySlice';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import GalleryNavButton from './GalleryNavButton';
-import {
-  NavContainer,
-  NextContainer,
-  PrevContainer,
-  StyledGallery,
-} from './styles';
+import { NextContainer, PrevContainer, StyledGallery } from './styles';
 
 const Gallery = () => {
   const dispatch = useDispatch<AppDispatch>();
