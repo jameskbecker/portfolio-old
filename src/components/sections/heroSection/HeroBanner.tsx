@@ -6,6 +6,7 @@ const HeroBanner = () => (
     <Image
       style={{ zIndex: '-2' }}
       src="/hero-banner.png"
+      alt=""
       layout="fill"
       objectFit="cover"
       draggable="false"

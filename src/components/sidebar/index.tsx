@@ -17,7 +17,7 @@ const Sidebar = () => {
   useEffect(() => {
     console.log(isOpen);
     controls.start(isOpen ? 'open' : 'closed');
-  }, [isOpen]);
+  }, [isOpen, controls]);
 
   const handleClose = () => {
     controls.start('closed');

@@ -19,6 +19,7 @@ const HeroSection = () => (
       >
         <Image
           src="/cover.jpg"
+          alt="A mid-shot of James"
           layout="fill"
           objectFit="cover"
           draggable="false"
