@@ -1,5 +1,5 @@
 export const lightTheme = {
-  navigation: 'transparent',
+  navigation: '#FFFFFF',
   heroSection: 'transparent',
   background: '#FFFFFF',
   brand: '#d55347',
@@ -12,7 +12,7 @@ export const lightTheme = {
 };
 
 export const darkTheme = {
-  navigation: 'transparent  ',
+  navigation: '#000000',
   heroSection: 'transparent',
   background: '#000000',
   brand: '#d55347',

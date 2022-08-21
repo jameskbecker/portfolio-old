@@ -17,12 +17,12 @@ export const StyledGallery = styled.div`
 
   @media only screen and (max-width: ${screens.tabletMax}) {
     grid-template-areas:
-      'details details details'
       'view view view'
-      'prev . next';
+      'view view view'
+      'prev details  next';
 
     grid-template-rows: 1fr 4fr 2fr;
-    grid-gap: 0;
+    text-align: center;
   }
 `;
 
@@ -143,9 +143,9 @@ export const StyledGalleryNavButton = styled.div<any>`
   }
 
   @media only screen and (max-width: ${screens.mobileMax}) {
-    background: ${({ theme }: any) => theme.brand};
+    /* background: ${({ theme }: any) => theme.brand};
     color: #ffffff;
-    transition: 250ms ease-in-out;
+    transition: 250ms ease-in-out; */
   }
 `;
 

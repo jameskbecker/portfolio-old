@@ -3,6 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
 
 export const StyledNavigationBar = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -14,6 +19,7 @@ export const StyledNavigationBar = styled.div`
   padding: 0 2rem;
   border-bottom: 1px solid ${({ theme }: any) => theme.text};
   box-sizing: border-box;
+
   z-index: 1;
 `;
 

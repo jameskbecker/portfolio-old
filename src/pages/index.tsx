@@ -27,6 +27,10 @@ const Home: NextPage = () => {
       <Head>
         <title>James K. Becker</title>
         <meta name="description" content="My personal portfolio website" />
+        <meta
+          name="viewport"
+          content="initial-scale=1.0, width=device-width, minimum-scale=1.0"
+        ></meta>
         <link rel="icon" href="/favicon.ico" />
 
         <meta property="og:title" content="James's Portfolio" />

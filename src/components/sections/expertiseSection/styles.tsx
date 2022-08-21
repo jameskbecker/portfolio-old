@@ -7,12 +7,10 @@ export const StyledExpertiseSection = styled.section`
   align-items: center;
   height: 100vh;
 
-  padding: 6vw 0;
+  padding: 12vw;
   margin: 0;
 
   box-sizing: border-box;
-
-  overflow: hidden;
 `;
 
 export const StyledExpertiseContent = styled.div`
@@ -23,12 +21,11 @@ export const StyledExpertiseContent = styled.div`
   align-items: center;
   gap: 5rem;
 
-  overflow: hidden !important;
   width: 100%;
 `;
 
 export const UpperText = styled.span`
-  font-size: 10vw;
+  font-size: clamp(5rem, 10vw + 1rem, 10rem);
   font-weight: 500;
   padding: 0 4rem;
   color: ${({ theme }) => theme.text};
@@ -37,7 +34,7 @@ export const UpperText = styled.span`
 `;
 
 export const LowerText = styled.span`
-  font-size: 3vw;
+  font-size: clamp(1.5rem, 10vw + 1rem, 2.5rem);
   padding: 0 4rem;
   text-transform: none;
   color: ${({ theme }: any) => theme.subheading};

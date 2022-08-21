@@ -24,8 +24,14 @@ const GlobalStyles = createGlobalStyle`
     overflow: hidden;
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   h1 {
-    font-size: 6vw;
+    font-size: clamp(2rem, 6vw + 1rem, 3rem);
     font-weight: 600;
     text-transform: uppercase;
     text-align: center;
@@ -33,19 +39,17 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h2 {
-    font-size: 3rem;
+    font-size: clamp(3rem, 3vw + 1rem, 6rem);
     font-weight: 600;
     color: ${({ theme }) => theme.text};
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: clamp(1.25rem, 2vw + 1rem, 1.5rem);
     font-weight: 300;
     color: ${({ theme }: any) => theme.text};
     text-align: left;
   }
-
-  
 
   a {
     text-decoration: none;
@@ -57,17 +61,6 @@ const GlobalStyles = createGlobalStyle`
   img, button {
     user-select: none;
   }
-
- @media only screen and (max-width: ${screens.tabletMax}) {
-  h2 {
-    font-size: 2.5rem;
-  }
-
-  h3 {
-      font-size: 1.25rem;
-    }
-
- }
 `;
 
 export default GlobalStyles;

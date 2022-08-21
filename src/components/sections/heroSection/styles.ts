@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 export const StyledHeroSection = styled.section`
   position: relative;
-  height: 92vh;
+  height: 100vh;
 
   background: transparent;
 `;
