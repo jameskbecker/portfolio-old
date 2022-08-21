@@ -24,11 +24,11 @@ const GlobalStyles = createGlobalStyle`
     overflow: hidden;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  /* h1, h2, h3, h4, h5, h6 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
+  } */
 
   h1 {
     font-size: clamp(2rem, 6vw + 1rem, 3rem);
