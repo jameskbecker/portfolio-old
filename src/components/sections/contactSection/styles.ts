@@ -1,5 +1,4 @@
 import screens from '@/screens';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
@@ -7,6 +6,7 @@ export const StyledContactSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   height: 100vh;
 
   padding: 12vw 0;
@@ -22,10 +22,12 @@ export const StyledContactContent = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: space-evenly;
   gap: 3vw;
 
-  margin: auto;
+  font-size: clamp(3rem, 3vw + 1rem, 4rem);;
+  mid-width: 50vw
+  box-sizing: border-box;
 
   @media only screen and (max-width: ${screens.tabletMax}) {
     flex-direction: column;
@@ -33,7 +35,14 @@ export const StyledContactContent = styled.div`
   }
 `;
 
-export const ContactIcon = styled(motion(FontAwesomeIcon))`
-  font-size: max(4rem, 3vw);
-  margin: auto;
+export const StyledContactButton = styled(motion.a)`
+  height: 1em;
+  width: 1em;
+  font-size: inherit;
+
+  svg {
+    height: 1em;
+    width: 1em;
+    font-size: inherit;
+  }
 `;

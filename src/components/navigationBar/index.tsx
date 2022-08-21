@@ -1,10 +1,9 @@
 import { AppDispatch } from '@/app/store';
 import NavigationMenu from '@/components/navigationBar/NavigationMenu';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { useDispatch } from 'react-redux';
 import { open } from '../sidebar/sidebarSlice';
 import {
-  StyledIcon,
+  StyledBars,
   StyledNavigationBar,
   StyledNavigationHeader,
 } from './styles';
@@ -19,7 +18,7 @@ const NavigationBar = () => {
     <StyledNavigationBar>
       <StyledNavigationHeader>James K. Becker</StyledNavigationHeader>
       <NavigationMenu />
-      <StyledIcon icon={faBars} onClick={openSidebar} />
+      <StyledBars />
     </StyledNavigationBar>
   );
 };

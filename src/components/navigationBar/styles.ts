@@ -1,5 +1,5 @@
+import Bars from '@/assets/icons/bars.svg';
 import screens from '@/screens';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
 
 export const StyledNavigationBar = styled.div`
@@ -54,7 +54,7 @@ export const StyledNavigationOptions = styled.div`
   justify-content: flex-end;
 `;
 
-export const StyledIcon = styled(FontAwesomeIcon)`
+export const StyledBars = styled(Bars)`
   display: none;
   color: ${({ theme }) => theme.text};
 

@@ -1,10 +1,20 @@
-import { useAnimationControls, useInView } from 'framer-motion';
+import Discord from '@/assets/icons/discord.svg';
+import Envelope from '@/assets/icons/envelope.svg';
+import Github from '@/assets/icons/github.svg';
+import LinkedIn from '@/assets/icons/linkedin.svg';
+import { motion, useAnimationControls, useInView } from 'framer-motion';
 import { useContext, useEffect, useRef } from 'react';
 import { ThemeContext } from 'styled-components';
 import { flashVariants } from './animations';
-import { ContactIcon } from './styles';
+import { StyledContactButton } from './styles';
 
-const ContactButton = (props: any) => {
+type ContactButtonProps = {
+  label: string;
+  href: string;
+  delay: number;
+};
+
+const ContactButton = (props: ContactButtonProps) => {
   const controls = useAnimationControls();
   const ref = useRef(null);
   const inView = useInView(ref);
@@ -18,17 +28,43 @@ const ContactButton = (props: any) => {
     controls.start('flash');
   });
 
+  const handleHover = () => {
+    controls.start('hover');
+  };
+
+  const handleHoverEnd = () => {
+    controls.start('initial');
+  };
+
+  const RenderIcon = ({ label }: any) => {
+    switch (label.toLowerCase()) {
+      case 'github':
+        return <Github />;
+
+      case 'discord':
+        return <Discord />;
+
+      case 'linkedin':
+        return <LinkedIn />;
+
+      case 'email':
+        return <Envelope />;
+    }
+  };
+
   return (
-    <a href={props.href} target="-1">
-      <ContactIcon
-        ref={ref}
-        icon={props.icon}
-        initial="initial"
-        animate={controls}
-        whileHover="hover"
-        variants={flashVariants(theme, props.delay)}
-      />
-    </a>
+    <StyledContactButton
+      href={props.href}
+      target="-1"
+      ref={ref}
+      initial="initial"
+      animate={controls}
+      onHoverStart={handleHover}
+      onHoverEnd={handleHoverEnd}
+      variants={flashVariants(theme, props.delay)}
+    >
+      {<RenderIcon label={props.label} />}
+    </StyledContactButton>
   );
 };
 

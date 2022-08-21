@@ -1,19 +1,13 @@
-import { motion } from 'framer-motion';
+import AdjustIcon from '@/assets/icons/adjust.svg';
 import styled from 'styled-components';
 
-export const StyledThemeToggle = styled(motion.div)`
-  color: ${({ theme }) => theme.text};
-
-  opacity: 0.8;
+export const StyledAdjustIcon = styled(AdjustIcon)`
   cursor: pointer;
+  transform-origin: center;
+
+  fill: ${({ theme }: any) => theme.text};
 
   :hover {
-    opacity: 1;
-    transition: 250ms ease-in-out;
-
-    svg,
-    svg path {
-      color: ${({ theme }: any) => theme.brand};
-    }
+    fill: ${({ theme }: any) => theme.brand};
   }
 `;

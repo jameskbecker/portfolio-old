@@ -1,9 +1,6 @@
 import { AppDispatch } from '@/app/store';
-import {
-  faChevronLeft,
-  faChevronRight,
-} from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ChevronLeft from '@/assets/icons/chevron-left.svg';
+import ChevronRight from '@/assets/icons/chevron-right.svg';
 import { useDispatch } from 'react-redux';
 import { nextItem, previousItem } from './gallerySlice';
 import { StyledGalleryNavButton } from './styles';
@@ -24,7 +21,7 @@ const GalleryNavButton = ({ prev }: any) => {
       prev={prev}
       onClick={prev ? handlePrevious : handleNext}
     >
-      <FontAwesomeIcon icon={prev ? faChevronLeft : faChevronRight} />
+      {prev ? <ChevronLeft /> : <ChevronRight />}
     </StyledGalleryNavButton>
   );
 };

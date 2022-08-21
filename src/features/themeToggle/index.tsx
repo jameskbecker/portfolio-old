@@ -1,10 +1,8 @@
 import { toggleTheme } from '@/features/themeToggle/themeToggleSlice';
-import { faAdjust } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useAnimationControls } from 'framer-motion';
+import { motion, useAnimationControls } from 'framer-motion';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleVariants } from './animations';
-import { StyledThemeToggle } from './styles';
+import { StyledAdjustIcon } from './styles';
 
 const ThemeToggle = () => {
   const dispatch = useDispatch();
@@ -12,7 +10,7 @@ const ThemeToggle = () => {
   const { isDark } = useSelector((state: any) => state.theme);
 
   const handleClick = () => {
-    controls.set(!isDark ? 'dark' : 'light');
+    controls.start(!isDark ? 'dark' : 'light');
     dispatch(toggleTheme());
   };
 
@@ -21,20 +19,21 @@ const ThemeToggle = () => {
   };
 
   const handleHoverEnd = () => {
-    controls.set(isDark ? 'dark' : 'light');
+    controls.start(isDark ? 'dark' : 'light');
   };
 
   return (
-    <StyledThemeToggle
+    <motion.div
       initial="light"
       animate={controls}
       variants={toggleVariants}
       onHoverStart={handleHover}
       onHoverEnd={handleHoverEnd}
       onClick={handleClick}
+      style={{ height: '1em' }}
     >
-      <FontAwesomeIcon icon={faAdjust} />
-    </StyledThemeToggle>
+      <StyledAdjustIcon />
+    </motion.div>
   );
 };
 
