@@ -85,4 +85,9 @@ export const StyledHeroInfo = styled.div`
 
 export const Heading = styled(motion.h2)``;
 
-export const Body = styled(motion.h3)``;
+export const Body = styled(motion.p)`
+  font-size: clamp(1.25rem, 2vw + 1rem, 1.5rem);
+  font-weight: 300;
+  color: ${({ theme }: any) => theme.text};
+  text-align: left;
+`;
