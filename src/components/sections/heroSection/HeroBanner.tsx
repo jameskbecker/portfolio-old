@@ -10,6 +10,7 @@ const HeroBanner = () => (
       layout="fill"
       objectFit="cover"
       draggable="false"
+      priority
     />
     <StyledOverlay />
   </StyledHeroBanner>
