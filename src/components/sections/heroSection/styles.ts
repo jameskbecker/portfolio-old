@@ -16,6 +16,10 @@ export const StyledHeroBanner = styled.div`
   width: 100%;
 
   opacity: 0.4;
+
+  & > * {
+    z-index: -2;
+  }
 `;
 
 export const StyledOverlay = styled.div`
