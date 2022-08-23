@@ -14,6 +14,10 @@ const GlobalStyles = createGlobalStyle`
       background: ${({ theme }) => theme.brand};
       color: #FFFFFF;
     }
+
+    :focus {
+      outline: 1.5px solid ${({ theme }: any) => theme.brand};
+    }
   }
 
   body {
