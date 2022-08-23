@@ -1,30 +1,21 @@
-import Image from 'next/image';
-import { imageVariants } from './animations';
 import HeroBanner from './HeroBanner';
+import HeroImage from './HeroImage';
 import HeroInfo from './HeroInfo';
-import { HeroContent, HeroImageContainer, StyledHeroSection } from './styles';
+import { HeroContent, StyledHeroSection } from './styles';
 
-const description =
-  "My name is James, I'm a full-stack engineer specialising in frontend development and graduate of KU London. I strive to create and deliver amazing user experiences with my passion for technology.";
+const data = {
+  heading: 'Hello!',
+  description:
+    "My name is James, I'm a full-stack engineer specialising in frontend development and graduate of KU London. I strive to create and deliver amazing user experiences with my passion for technology.",
+  href: '#contact',
+};
 
 const HeroSection = () => (
   <StyledHeroSection>
     <HeroBanner />
     <HeroContent>
-      <HeroInfo heading="Hello!" description={description} href="#contact" />
-      <HeroImageContainer
-        initial="hidden"
-        animate="visible"
-        variants={imageVariants}
-      >
-        <Image
-          src="/cover.jpg"
-          alt="A mid-shot of James"
-          layout="fill"
-          objectFit="cover"
-          draggable="false"
-        />
-      </HeroImageContainer>
+      <HeroInfo {...data} />
+      <HeroImage />
     </HeroContent>
   </StyledHeroSection>
 );

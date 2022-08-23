@@ -14,6 +14,7 @@ export const StyledHeroBanner = styled.div`
   display: flex;
   height: 100%;
   width: 100%;
+
   opacity: 0.4;
 `;
 
@@ -22,9 +23,9 @@ export const StyledOverlay = styled.div`
   width: 100%;
   height: 100%;
 
-  z-index: -2;
-
   background: linear-gradient(365deg, #ffffff00 60%, #ffffff 100%);
+
+  z-index: -2;
 `;
 
 export const HeroContent = styled.div`
@@ -38,13 +39,12 @@ export const HeroContent = styled.div`
   box-sizing: border-box;
 
   @media only screen and (max-width: ${screens.tabletMax}) {
-    display: flex;
     flex-direction: column;
     justify-content: center;
   }
 `;
 
-export const HeroImageContainer = styled(motion.div)`
+export const StyledHeroImage = styled(motion.div)`
   position: relative;
   flex: 1 1;
   height: 100%;
@@ -63,31 +63,24 @@ export const StyledHeroInfo = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
 
   & > * {
     width: 100%;
   }
-
-  a {
-    display: flex;
-    flex-direction: column;
-  }
-
-  h2 {
-    text-align: left;
-  }
-
-  @media only screen and (max-width: ${screens.tabletMax}) {
-    gap: 2rem;
-  }
 `;
 
-export const Heading = styled(motion.h2)``;
+export const Heading = styled(motion.h2)`
+  color: ${({ theme }: any) => theme.heading};
+`;
 
-export const Body = styled(motion.p)`
+export const Description = styled(motion.p)`
   font-size: clamp(1.25rem, 2vw + 1rem, 1.5rem);
   font-weight: 300;
   color: ${({ theme }: any) => theme.text};
-  text-align: left;
+`;
+
+export const StyledCallToAction = styled(motion.a)`
+  display: flex;
+  flex-direction: column;
 `;

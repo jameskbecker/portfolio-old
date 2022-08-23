@@ -1,9 +1,10 @@
 import Button from '@/components/button';
-import { motion, Variants } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { ctaVariants, pulseVariants } from './animations';
+import { StyledCallToAction } from './styles';
 
 const CallToAction = (props: any) => (
-  <motion.a
+  <StyledCallToAction
     initial="hidden"
     animate="visible"
     variants={ctaVariants}
@@ -17,7 +18,7 @@ const CallToAction = (props: any) => (
       animate="shrink"
       variants={pulseVariants}
     />
-  </motion.a>
+  </StyledCallToAction>
 );
 
 export default CallToAction;

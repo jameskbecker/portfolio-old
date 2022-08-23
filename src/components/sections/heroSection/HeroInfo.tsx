@@ -1,6 +1,6 @@
 import { aboutVariants, headingVariants } from './animations';
 import CallToAction from './CallToAction';
-import { Body, Heading, StyledHeroInfo } from './styles';
+import { Description, Heading, StyledHeroInfo } from './styles';
 import { HeroInfoProps } from './types';
 
 const HeroInfo = (props: HeroInfoProps) => (
@@ -8,9 +8,9 @@ const HeroInfo = (props: HeroInfoProps) => (
     <Heading initial="hidden" animate="visible" variants={headingVariants}>
       {props.heading}
     </Heading>
-    <Body initial="hidden" animate="visible" variants={aboutVariants}>
+    <Description initial="hidden" animate="visible" variants={aboutVariants}>
       {props.description}
-    </Body>
+    </Description>
     <CallToAction href={props.href} label="Get in Touch!" />
   </StyledHeroInfo>
 );
