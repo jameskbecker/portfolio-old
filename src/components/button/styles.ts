@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 export const StyledButton = styled.button`
-  color: ${({ theme, ghost }: any) => (ghost ? theme.text : theme.background)};
+  color: ${({ theme, ghost }: any) => (ghost ? theme.text : theme.brandText)};
 
-  border: 1.5px solid ${({ theme }: any) => theme.text};
+  border: 1.5px solid ${({ theme }: any) => theme.brand};
   border-radius: 0.5rem;
   background: ${({ theme, ghost }: any) =>
-    ghost ? 'transparent' : theme.text};
+    ghost ? 'transparent' : theme.brand};
   padding: 0.5rem 1rem;
   width: 100%;
 
@@ -15,9 +15,6 @@ export const StyledButton = styled.button`
   cursor: pointer;
 
   :hover {
-    background: ${({ theme }: any) => theme.text};
-    color: ${({ theme }: any) => theme.background};
-
     opacity: 1;
     transition: 250ms ease-in-out;
   }
