@@ -48,7 +48,7 @@ const Home: NextPage = () => {
       </Head>
       <GlobalStyles />
       <Sidebar />
-      <NavigationBar />
+      <NavigationBar logoText="James K. Becker" />
       <HeroSection />
       <PortfolioSection />
       <ExpertiseSection />

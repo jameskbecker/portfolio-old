@@ -27,7 +27,8 @@ export const StyledNavigationHeader = styled.div`
   flex: 1 1;
 
   font-weight: 700;
-  color: ${({ theme }) => theme.text};
+  font-size: 1rem;
+  color: ${({ theme }) => theme.navigationText};
   text-transform: uppercase;
 `;
 
@@ -56,7 +57,6 @@ export const StyledNavigationOptions = styled.div`
 
 export const StyledBars = styled(Bars)`
   display: none;
-  color: ${({ theme }) => theme.text};
 
   @media only screen and (max-width: ${screens.tabletMax}) {
     display: block;
@@ -68,6 +68,7 @@ export const NavigationLink = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
+  color: ${({ theme }: any) => theme.navigationText};
   cursor: pointer;
 
   :hover {

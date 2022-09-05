@@ -7,8 +7,9 @@ import {
   StyledNavigationBar,
   StyledNavigationHeader,
 } from './styles';
+import { NavigationBarProps } from './types';
 
-const NavigationBar = () => {
+const NavigationBar = ({ logoText }: NavigationBarProps) => {
   const dispatch = useDispatch<AppDispatch>();
 
   const openSidebar = () => {
@@ -16,7 +17,7 @@ const NavigationBar = () => {
   };
   return (
     <StyledNavigationBar>
-      <StyledNavigationHeader>James K. Becker</StyledNavigationHeader>
+      <StyledNavigationHeader>{logoText}</StyledNavigationHeader>
       <NavigationMenu />
       <StyledBars />
     </StyledNavigationBar>

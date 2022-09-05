@@ -3,7 +3,7 @@ import screens from './screens';
 
 const GlobalStyles = createGlobalStyle`
   * {
-    font: 500 1rem sans-serif;
+    font: 500 1rem -apple-system, sans-serif;
     margin: 0;
     padding: 0;
    
