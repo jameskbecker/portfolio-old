@@ -81,17 +81,6 @@ export const StyledGalleryImage = styled.div`
   }
 `;
 
-export const Heading = styled.h5`
-  font-weight: 600;
-  color: ${({ theme }) => theme.text};
-  text-transform: uppercase;
-`;
-
-export const Subheading = styled.h6`
-  color: ${({ theme }) => theme.text};
-  text-transform: uppercase;
-`;
-
 export const Description = styled.p`
   grid-row: span 3;
 

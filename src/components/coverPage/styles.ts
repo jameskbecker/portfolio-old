@@ -14,7 +14,4 @@ export const StyledCoverPage = styled.div`
     display: flex;
     align-items: flex-end;
   }
-
-  h3 {
-  }
 `;

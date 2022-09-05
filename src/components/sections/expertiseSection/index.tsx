@@ -4,6 +4,7 @@ import {
   other,
   topFour,
 } from '@/components/sections/expertiseSection/expertiseData';
+import { H1 } from '@/components/typography/Headings';
 import {
   LowerText,
   StyledExpertiseContent,
@@ -22,7 +23,7 @@ const ExpertiseSection = () => {
       />
 
       <StyledExpertiseContent>
-        <h1>My Expertise</h1>
+        <H1>My Expertise</H1>
         <ParallaxText baseSpeed={-1}>
           <UpperText>{topFour.join(space)}</UpperText>
         </ParallaxText>
