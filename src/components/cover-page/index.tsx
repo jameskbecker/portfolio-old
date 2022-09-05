@@ -1,44 +1,41 @@
 import { motion, useAnimationControls, useInView } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import { headingVariants, subheadingVariants } from './animations';
-import { StyledPortfolioCover } from './styles';
+import { StyledCoverPage } from './styles';
 
-const PortfolioCover = () => {
+const CoverPage = ({ heading, subheading }: any) => {
   const ref = useRef(null);
   const inView = useInView(ref);
   const controls = useAnimationControls();
 
   useEffect(() => {
     if (inView) {
-      controls.start('fall');
+      controls.start('slideIn');
     } else {
-      controls.start('stand');
+      controls.start('initial');
     }
-  });
+  }, [inView, controls]);
 
   return (
-    <StyledPortfolioCover>
+    <StyledCoverPage>
       <motion.h1
         ref={ref}
-        initial="stand"
+        initial="initial"
         animate={controls}
-        exit="stand"
         variants={headingVariants}
       >
-        My Portfolio
+        {heading}
       </motion.h1>
       <motion.h3
         ref={ref}
-        initial="stand"
+        initial="initial"
         animate={controls}
-        exit="stand"
         variants={subheadingVariants}
       >
-        I&apos;ve completed many projects throughout my journey so far. Here are
-        the ones I am the proudest of!
+        {subheading}
       </motion.h3>
-    </StyledPortfolioCover>
+    </StyledCoverPage>
   );
 };
 
-export default PortfolioCover;
+export default CoverPage;
