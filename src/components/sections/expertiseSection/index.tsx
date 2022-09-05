@@ -1,4 +1,4 @@
-import CoverPage from '@/components/cover-page';
+import CoverPage from '@/components/coverPage';
 import ParallaxText from '@/components/parallaxText';
 import {
   other,
