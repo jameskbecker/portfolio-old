@@ -1,8 +1,11 @@
 export const lightTheme = {
-  navigation: '#FFFFFF',
+  navigation: '#1A1A1A',
+  navigationText: '#FFFFFF',
+
   heroSection: 'transparent',
   background: '#FFFFFF',
-  brand: '#d55347',
+  brand: '#DC5970',
+  brandText: '#FFFFFF',
 
   heading: '#000000',
   subheading: '#1A1A1A',
@@ -12,10 +15,13 @@ export const lightTheme = {
 };
 
 export const darkTheme = {
-  navigation: '#000000',
+  navigation: '#E6E6E6',
+  navigationText: '#000000',
+
   heroSection: 'transparent',
   background: '#000000',
-  brand: '#d55347',
+  brand: '#DC5970',
+  brandText: '#FFFFFF',
 
   heading: '#FFFFFF',
   subheading: '#E6E6E6',

@@ -5,7 +5,6 @@ export const StyledExpertiseSection = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 
   padding: 12vw;
   margin: 0;
@@ -20,6 +19,7 @@ export const StyledExpertiseContent = styled.div`
   justify-content: center;
   align-items: center;
   gap: 5rem;
+  height: 100vh;
 
   width: 100%;
 `;

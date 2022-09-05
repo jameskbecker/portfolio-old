@@ -5,7 +5,7 @@ export const StyledAdjustIcon = styled(AdjustIcon)`
   cursor: pointer;
   transform-origin: center;
 
-  fill: ${({ theme }: any) => theme.text};
+  fill: ${({ theme }: any) => theme.navigationText};
 
   :hover {
     fill: ${({ theme }: any) => theme.brand};
