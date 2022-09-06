@@ -8,8 +8,8 @@ const OtherSkills = () => {
   return (
     <OtherSkillsContainer>
       <H2>Other Skills</H2>
-      {other.map((skill) => (
-        <Body>{skill}</Body>
+      {other.map((skill, i) => (
+        <Body key={i}>{skill}</Body>
       ))}
     </OtherSkillsContainer>
   );

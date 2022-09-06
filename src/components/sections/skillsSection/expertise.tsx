@@ -7,8 +7,8 @@ const Expertise = () => {
   return (
     <ExpertiseContainer>
       <H2>My Expertise</H2>
-      {topFour.map((skill) => (
-        <BodyLarge>{skill}</BodyLarge>
+      {topFour.map((skill, i) => (
+        <BodyLarge key={i}>{skill}</BodyLarge>
       ))}
     </ExpertiseContainer>
   );
