@@ -1,3 +1,4 @@
+import { BodySmall } from '@/components/typography/Body';
 import screens from '@/screens';
 import Image from 'next/image';
 import styled from 'styled-components';
@@ -81,11 +82,8 @@ export const StyledGalleryImage = styled.div`
   }
 `;
 
-export const Description = styled.p`
+export const Description = styled(BodySmall)`
   grid-row: span 3;
-
-  font-weight: 300;
-  color: ${({ theme }) => theme.text};
 
   @media only screen and (max-width: ${screens.tabletMax}) {
     display: none;

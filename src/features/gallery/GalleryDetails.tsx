@@ -1,3 +1,4 @@
+import { BodySmall } from '@/components/typography/Body';
 import { H4, H5 } from '@/components/typography/Headings';
 import { useSelector } from 'react-redux';
 import { Description, StyledGalleryFooter } from './styles';
