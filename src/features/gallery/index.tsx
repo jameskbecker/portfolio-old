@@ -24,7 +24,6 @@ const Gallery = () => {
         <GalleryNavButton prev />
       </PrevContainer>
       <NextContainer>
-        {' '}
         <GalleryNavButton />
       </NextContainer>
     </StyledGallery>

@@ -74,10 +74,6 @@ export const StyledHeroInfo = styled.div`
   }
 `;
 
-export const Heading = styled(motion.h2)`
-  color: ${({ theme }: any) => theme.heading};
-`;
-
 export const Description = styled(motion.p)`
   font-size: clamp(1.25rem, 2vw + 1rem, 1.5rem);
   font-weight: 300;

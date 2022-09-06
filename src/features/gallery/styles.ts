@@ -1,3 +1,4 @@
+import { BodySmall } from '@/components/typography/Body';
 import screens from '@/screens';
 import Image from 'next/image';
 import styled from 'styled-components';
@@ -81,22 +82,8 @@ export const StyledGalleryImage = styled.div`
   }
 `;
 
-export const Heading = styled.h5`
-  font-weight: 600;
-  color: ${({ theme }) => theme.text};
-  text-transform: uppercase;
-`;
-
-export const Subheading = styled.h6`
-  color: ${({ theme }) => theme.text};
-  text-transform: uppercase;
-`;
-
-export const Description = styled.p`
+export const Description = styled(BodySmall)`
   grid-row: span 3;
-
-  font-weight: 300;
-  color: ${({ theme }) => theme.text};
 
   @media only screen and (max-width: ${screens.tabletMax}) {
     display: none;

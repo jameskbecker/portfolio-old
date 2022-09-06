@@ -1,5 +1,6 @@
 import { motion, useAnimationControls, useInView } from 'framer-motion';
 import { useEffect, useRef } from 'react';
+import { H1, H3 } from '../typography/Headings';
 import { headingVariants, subheadingVariants } from './animations';
 import { StyledCoverPage } from './styles';
 
@@ -18,22 +19,24 @@ const CoverPage = ({ heading, subheading }: any) => {
 
   return (
     <StyledCoverPage>
-      <motion.h1
+      <H1
+        as={motion.h1}
         ref={ref}
         initial="initial"
         animate={controls}
         variants={headingVariants}
       >
         {heading}
-      </motion.h1>
-      <motion.h3
+      </H1>
+      <H3
+        as={motion.h3}
         ref={ref}
         initial="initial"
         animate={controls}
         variants={subheadingVariants}
       >
         {subheading}
-      </motion.h3>
+      </H3>
     </StyledCoverPage>
   );
 };

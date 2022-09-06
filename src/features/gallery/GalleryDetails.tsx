@@ -1,10 +1,6 @@
+import { H4, H5 } from '@/components/typography/Headings';
 import { useSelector } from 'react-redux';
-import {
-  Description,
-  Heading,
-  StyledGalleryFooter,
-  Subheading,
-} from './styles';
+import { Description, StyledGalleryFooter } from './styles';
 
 const GalleryDetails = () => {
   const { position, data, isLoading } = useSelector(
@@ -15,11 +11,13 @@ const GalleryDetails = () => {
     return <div>Loading</div>;
   }
 
+  const { name, type, description } = data[position];
+
   return (
     <StyledGalleryFooter>
-      <Heading>{data[position].name}</Heading>
-      <Subheading>{data[position].type.join(' • ')}</Subheading>
-      <Description>{data[position].description}</Description>
+      <H4>{name}</H4>
+      <H5>{type.join(' • ')}</H5>
+      <Description>{description}</Description>
     </StyledGalleryFooter>
   );
 };
