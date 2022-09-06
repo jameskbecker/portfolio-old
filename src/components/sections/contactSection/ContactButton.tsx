@@ -2,6 +2,7 @@ import Discord from '@/assets/icons/discord.svg';
 import Envelope from '@/assets/icons/envelope.svg';
 import Github from '@/assets/icons/github.svg';
 import LinkedIn from '@/assets/icons/linkedin.svg';
+import { BodySmall } from '@/components/typography/Body';
 import { motion, useAnimationControls, useInView } from 'framer-motion';
 import { useContext, useEffect, useRef } from 'react';
 import { ThemeContext } from 'styled-components';
@@ -63,7 +64,8 @@ const ContactButton = (props: ContactButtonProps) => {
       onHoverEnd={handleHoverEnd}
       variants={flashVariants(theme, props.delay)}
     >
-      {<RenderIcon label={props.label} />}
+      <RenderIcon label={props.label} />
+      <BodySmall>{props.label}</BodySmall>
     </StyledContactButton>
   );
 };

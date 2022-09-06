@@ -10,11 +10,21 @@ export const StyledContactSection = styled.section`
   height: 100vh;
 
   padding: 12vw 0;
+  background: ${({ theme }: any) => theme.brand};
 
   border-top: 1px solid ${({ theme }: any) => theme.text};
   box-sizing: border-box;
 
   overflow: hidden;
+
+  h1,
+  h3 {
+    color: ${({ theme }: any) => theme.brandText};
+  }
+
+  h3 {
+    opacity: 0.7;
+  }
 `;
 
 export const StyledContactContent = styled.div`
@@ -39,10 +49,19 @@ export const StyledContactButton = styled(motion.a)`
   height: 1em;
   width: 1em;
   font-size: inherit;
+  opacity: 0.7;
+
+  div {
+    color: ${({ theme }) => theme.brandText};
+    text-align: center;
+    opacity: inherit;
+  }
 
   svg {
     height: 1em;
     width: 1em;
+    fill: white;
     font-size: inherit;
+    opacity: inherit;
   }
 `;
