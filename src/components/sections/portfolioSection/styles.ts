@@ -7,7 +7,6 @@ export const StyledPortfolioSection = styled.section`
   height: 200vh;
 
   padding: 0 12vw;
-  border-bottom: 1px solid ${({ theme }: any) => theme.text};
   box-sizing: border-box;
 
   overflow: hidden;

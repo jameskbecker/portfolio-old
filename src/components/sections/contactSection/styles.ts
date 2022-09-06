@@ -12,7 +12,6 @@ export const StyledContactSection = styled.section`
   padding: 12vw 0;
   background: ${({ theme }: any) => theme.brand};
 
-  border-top: 1px solid ${({ theme }: any) => theme.text};
   box-sizing: border-box;
 
   overflow: hidden;
