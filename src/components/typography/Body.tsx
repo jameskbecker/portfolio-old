@@ -18,3 +18,13 @@ export const Body = styled.div`
     font-size: 1.25rem;
   }
 `;
+
+export const BodyLarge = styled.div`
+  font-size: 6rem;
+  text-transform: uppercase;
+  color: ${({ theme }: any) => theme.text};
+
+  @media only screen and (max-width: ${screens.mobileMax}) {
+    font-size: 4rem;
+  }
+`;

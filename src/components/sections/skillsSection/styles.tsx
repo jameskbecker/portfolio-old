@@ -15,13 +15,34 @@ export const StyledSkillsSection = styled.section`
 export const StyledSkillsContent = styled.div`
   flex: 1 1;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 5rem;
   height: 100vh;
 
   width: 100%;
+`;
+
+export const ExpertiseContainer = styled.div`
+  flex: 1 1;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  overflow: hidden;
+`;
+
+export const OtherSkillsContainer = styled.div`
+  flex: 0 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  overflow: hidden;
 `;
 
 export const UpperText = styled.span`
