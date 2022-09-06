@@ -1,48 +1,57 @@
 import { Variants } from 'framer-motion';
 
 export const imageVariants: Variants = {
-  hidden: { opacity: 0, transform: 'translate(0,100%)' },
+  hidden: {
+    y: '0%',
+    opacity: 0,
+  },
   visible: {
+    y: '0%',
     opacity: 1,
-    transform: 'translate(0,0%)',
     transition: { duration: 0.8 },
   },
 };
 
 export const headingVariants: Variants = {
-  hidden: { opacity: 0, transform: 'translate(-100%, 0)' },
+  hidden: {
+    x: '-100%',
+    opacity: 0,
+  },
   visible: {
+    x: '0%',
     opacity: 1,
-    transform: 'translate(0%, 0)',
     transition: { duration: 0.5, delay: 0 },
   },
 };
 
 export const aboutVariants: Variants = {
-  hidden: { opacity: 0, transform: 'translate(-100%, 0)' },
+  hidden: {
+    x: '0%',
+    opacity: 0,
+  },
   visible: {
+    x: '100%',
     opacity: 1,
-    transform: 'translate(0%, 0)',
     transition: { duration: 0.5, delay: 0.15 },
   },
 };
 
 export const ctaVariants: Variants = {
   hidden: {
+    x: '100%',
     opacity: 0,
-    transform: 'translate(-100%, 0)',
   },
   visible: {
+    x: '0',
     opacity: 1,
-    transform: 'translate(0%, 0)',
     transition: { duration: 0.5, delay: 0.3 },
   },
 };
 
 export const pulseVariants: Variants = {
-  grow: { transform: 'scale(1)' },
+  grow: { scale: 1 },
   shrink: {
-    transform: 'scale(0.99)',
+    scale: 0.99,
     transition: {
       type: 'spring',
       repeat: Infinity,

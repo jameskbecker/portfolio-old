@@ -2,22 +2,22 @@ import { Variants } from 'framer-motion';
 
 export const toggleVariants: Variants = {
   light: {
+    rotate: 0,
     opacity: 0.8,
-    transform: 'rotate(0deg)',
     transition: { duration: 0.25 },
   },
   dark: {
+    rotate: 180,
     opacity: 0.8,
-    transform: 'rotate(180deg)',
     transition: { duration: 0.25 },
   },
   hover: {
-    transform: 'rotate(15deg)',
-    transition: {
-      opacity: 1,
-      duration: 0.25,
-      ease: 'easeInOut',
-    },
+    rotate: 15,
+    opacity: 1,
+    transition: { duration: 0.25 },
   },
-  hoverDark: { transform: 'rotate(195deg)', transition: { duration: 0 } },
+  hoverDark: {
+    rotate: 195,
+    transition: { duration: 0.25 },
+  },
 };
