@@ -6,11 +6,12 @@ const GalleryDetails = () => {
   const { position, data, isLoading } = useSelector(
     (state: any) => state.gallery
   );
-  const { name, type, description } = data[position];
 
   if (isLoading) {
     return <div>Loading</div>;
   }
+
+  const { name, type, description } = data[position];
 
   return (
     <StyledGalleryFooter>
