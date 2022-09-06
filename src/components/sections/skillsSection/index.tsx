@@ -1,28 +1,25 @@
 import CoverPage from '@/components/coverPage';
 import ParallaxText from '@/components/parallaxText';
-import {
-  other,
-  topFour,
-} from '@/components/sections/expertiseSection/expertiseData';
+import { other, topFour } from '@/components/sections/skillsSection/skillsData';
 import { H1 } from '@/components/typography/Headings';
 import {
   LowerText,
-  StyledExpertiseContent,
-  StyledExpertiseSection,
+  StyledSkillsContent,
+  StyledSkillsSection,
   UpperText,
 } from './styles';
 
 const space = '\xA0\xA0\xA0';
 
-const ExpertiseSection = () => {
+const SkillsSection = () => {
   return (
-    <StyledExpertiseSection id="expertise">
+    <StyledSkillsSection id="skills">
       <CoverPage
         heading="My Skills"
         subheading="The opportunity to work with many different technologies has allowed me to discover where my interests lie and specialise in what I'm great at."
       />
 
-      <StyledExpertiseContent>
+      <StyledSkillsContent>
         <H1>My Expertise</H1>
         <ParallaxText baseSpeed={-1}>
           <UpperText>{topFour.join(space)}</UpperText>
@@ -30,9 +27,9 @@ const ExpertiseSection = () => {
         <ParallaxText baseSpeed={0.5}>
           <LowerText>{other.join(space)}</LowerText>
         </ParallaxText>
-      </StyledExpertiseContent>
-    </StyledExpertiseSection>
+      </StyledSkillsContent>
+    </StyledSkillsSection>
   );
 };
 
-export default ExpertiseSection;
+export default SkillsSection;

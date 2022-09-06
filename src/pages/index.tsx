@@ -1,13 +1,12 @@
 import NavigationBar from '@/components/navigationBar';
 import ContactSection from '@/components/sections/contactSection';
-import ExpertiseSection from '@/components/sections/expertiseSection';
 import HeroSection from '@/components/sections/heroSection';
 import PortfolioSection from '@/components/sections/portfolioSection';
+import SkillsSection from '@/components/sections/skillsSection';
 import Sidebar from '@/components/sidebar';
 import GlobalStyles from '@/GlobalStyles';
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 
 const StyledHome = styled.div`
@@ -51,7 +50,7 @@ const Home: NextPage = () => {
       <NavigationBar logoText="James K. Becker" />
       <HeroSection />
       <PortfolioSection />
-      <ExpertiseSection />
+      <SkillsSection />
       <ContactSection />
     </StyledHome>
   );

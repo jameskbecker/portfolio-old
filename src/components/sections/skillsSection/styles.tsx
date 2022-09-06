@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledExpertiseSection = styled.section`
+export const StyledSkillsSection = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,7 +12,7 @@ export const StyledExpertiseSection = styled.section`
   box-sizing: border-box;
 `;
 
-export const StyledExpertiseContent = styled.div`
+export const StyledSkillsContent = styled.div`
   flex: 1 1;
   display: flex;
   flex-direction: column;
