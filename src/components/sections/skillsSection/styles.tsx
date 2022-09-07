@@ -1,3 +1,4 @@
+import screens from '@/screens';
 import styled from 'styled-components';
 
 export const StyledSkillsSection = styled.section`
@@ -43,6 +44,10 @@ export const OtherSkillsContainer = styled.div`
   gap: 0.5rem;
 
   overflow: hidden;
+
+  @media only screen and (max-width: ${screens.mobileMax}) {
+    display: none;
+  }
 `;
 
 export const UpperText = styled.span`
