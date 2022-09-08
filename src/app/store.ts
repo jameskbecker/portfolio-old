@@ -1,5 +1,6 @@
 import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit';
 
+import navigationReducer from '@/components/navigationBar/navigationSlice';
 import galleryReducer from '@/features/gallery/gallerySlice';
 import themeReducer from '@/features/themeToggle/themeToggleSlice';
 
@@ -8,6 +9,7 @@ export function makeStore() {
     reducer: {
       gallery: galleryReducer,
       theme: themeReducer,
+      navigation: navigationReducer,
     },
   });
 }

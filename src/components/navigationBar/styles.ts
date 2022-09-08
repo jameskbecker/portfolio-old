@@ -1,13 +1,37 @@
 import Bars from '@/assets/icons/bars.svg';
 import screens from '@/screens';
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
-export const StyledNavigationBar = styled.div`
+export const NavigationContainer = styled.div`
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1;
 
+  display: flex;
+  flex-direction: column;
+`;
+
+export const StyledMobileMenu = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  background: ${({ theme }) => theme.background};
+  box-shadow: 0 0.5px 3px black;
+
+  overflow: hidden;
+  box-sizing: border-box;
+
+  & > * {
+    color: ${({ theme }) => theme.heading} !important;
+  }
+`;
+
+export const StyledNavigationBar = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -18,8 +42,6 @@ export const StyledNavigationBar = styled.div`
   background: ${({ theme }: any) => theme.navigation};
   padding: 0 2rem;
   box-sizing: border-box;
-
-  z-index: 1;
 `;
 
 export const StyledNavigationHeader = styled.div`
@@ -54,7 +76,7 @@ export const StyledNavigationOptions = styled.div`
   justify-content: flex-end;
 `;
 
-export const StyledBars = styled(Bars)`
+export const StyledBars = styled(motion(Bars))`
   display: none;
   fill: ${({ theme }) => theme.navigationText};
 
