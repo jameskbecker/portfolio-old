@@ -2,7 +2,7 @@ import { Variants } from 'framer-motion';
 
 export const imageVariants: Variants = {
   hidden: {
-    y: '0%',
+    y: '100%',
     opacity: 0,
   },
   visible: {
@@ -26,11 +26,11 @@ export const headingVariants: Variants = {
 
 export const aboutVariants: Variants = {
   hidden: {
-    x: '0%',
+    x: '-100%',
     opacity: 0,
   },
   visible: {
-    x: '100%',
+    x: '0%',
     opacity: 1,
     transition: { duration: 0.5, delay: 0.15 },
   },
@@ -38,11 +38,11 @@ export const aboutVariants: Variants = {
 
 export const ctaVariants: Variants = {
   hidden: {
-    x: '100%',
+    x: '-100%',
     opacity: 0,
   },
   visible: {
-    x: '0',
+    x: '0%',
     opacity: 1,
     transition: { duration: 0.5, delay: 0.3 },
   },
