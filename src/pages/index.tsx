@@ -42,7 +42,7 @@ const Home: NextPage = () => {
           property="og:description"
           content="A full-stack developer specialising in frontend."
         />
-        <meta name="theme-color" content="#d55347"></meta>
+        <meta name="theme-color" content="#DC5970"></meta>
       </Head>
       <GlobalStyles />
       <NavigationBar logoText="James K. Becker" />
