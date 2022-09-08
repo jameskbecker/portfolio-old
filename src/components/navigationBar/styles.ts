@@ -56,6 +56,7 @@ export const StyledNavigationOptions = styled.div`
 
 export const StyledBars = styled(Bars)`
   display: none;
+  fill: ${({ theme }) => theme.navigationText};
 
   @media only screen and (max-width: ${screens.tabletMax}) {
     display: block;
