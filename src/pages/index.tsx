@@ -3,7 +3,6 @@ import ContactSection from '@/components/sections/contactSection';
 import HeroSection from '@/components/sections/heroSection';
 import PortfolioSection from '@/components/sections/portfolioSection';
 import SkillsSection from '@/components/sections/skillsSection';
-import Sidebar from '@/components/sidebar';
 import GlobalStyles from '@/GlobalStyles';
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -46,7 +45,6 @@ const Home: NextPage = () => {
         <meta name="theme-color" content="#d55347"></meta>
       </Head>
       <GlobalStyles />
-      <Sidebar />
       <NavigationBar logoText="James K. Becker" />
       <HeroSection />
       <PortfolioSection />
