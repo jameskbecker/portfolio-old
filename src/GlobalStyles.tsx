@@ -1,9 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
-import screens from './screens';
 
 const GlobalStyles = createGlobalStyle`
   * {
-    font: 500 1rem -apple-system, sans-serif;
+    font-family: -apple-system, sans-serif;
     margin: 0;
     padding: 0;
    
@@ -12,7 +11,7 @@ const GlobalStyles = createGlobalStyle`
 
     ::selection {
       background: ${({ theme }) => theme.brand};
-      color: #FFFFFF;
+      color: ${({ theme }) => theme.brandText};
     }
 
     :focus {
@@ -22,10 +21,6 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     background: ${({ theme }: any) => theme.background};
-  }
-
-  section {
-    overflow: hidden;
   }
 
   a {

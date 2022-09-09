@@ -1,9 +1,9 @@
-import { StyledButton } from './styles';
+import { ButtonText, StyledButton } from './styles';
 import { ButtonProps } from './types';
 
 const Button = ({ label, ...props }: ButtonProps) => (
   <StyledButton draggable="false" {...props}>
-    {label}
+    <ButtonText>{label}</ButtonText>
   </StyledButton>
 );
 
