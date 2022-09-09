@@ -7,7 +7,7 @@ export const H1 = styled.h1`
   text-transform: uppercase;
   color: ${({ theme }: any) => theme.heading};
 
-  @media only screen and (max-width: ${screens.mobileMax}) {
+  @media only screen and (max-width: ${screens.tabletMax}) {
     font-size: 3rem;
   }
 `;
