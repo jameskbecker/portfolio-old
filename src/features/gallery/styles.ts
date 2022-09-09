@@ -1,5 +1,5 @@
 import { BodySmall } from '@/components/typography/Body';
-import screens from '@/screens';
+import { mobileMax, tabletMax } from '@/screens';
 import Image from 'next/image';
 import styled from 'styled-components';
 
@@ -16,7 +16,7 @@ export const StyledGallery = styled.div`
   grid-gap: 0.5rem;
   max-height: 100vh;
 
-  @media only screen and (max-width: ${screens.tabletMax}) {
+  @media only screen and (${tabletMax}) {
     grid-template-areas:
       'view view view'
       'view view view'
@@ -42,7 +42,7 @@ export const StyledGalleryFooter = styled.div`
 
   overflow: hidden;
 
-  @media only screen and (max-width: ${screens.tabletMax}) {
+  @media only screen and (${tabletMax}) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,7 +63,7 @@ export const StyledGalleryItem = styled.div`
   box-sizing: border-box;
   overflow: hidden;
 
-  @media only screen and (max-width: ${screens.mobileMax}) {
+  @media only screen and (${mobileMax}) {
     align-items: flex-end;
   }
 `;
@@ -77,7 +77,7 @@ export const StyledGalleryImage = styled.div`
   border-radius: 0.75rem;
   overflow: hidden;
 
-  @media only screen and (max-width: ${screens.tabletMax}) {
+  @media only screen and (${tabletMax}) {
     width: 100%;
   }
 `;
@@ -85,7 +85,7 @@ export const StyledGalleryImage = styled.div`
 export const Description = styled(BodySmall)`
   grid-row: span 3;
 
-  @media only screen and (max-width: ${screens.tabletMax}) {
+  @media only screen and (${tabletMax}) {
     display: none;
   }
 `;
@@ -101,7 +101,7 @@ export const StyledGalleryBackdrop = styled(Image)`
   overflow: hidden;
   z-index: -1;
 
-  @media only screen and (max-width: ${screens.mobileMax}) {
+  @media only screen and (${mobileMax}) {
     display: none;
   }
 `;
@@ -129,7 +129,7 @@ export const StyledGalleryNavButton = styled.div<any>`
     transition: 250ms ease-in-out;
   }
 
-  @media only screen and (max-width: ${screens.mobileMax}) {
+  @media only screen and (${mobileMax}) {
     /* background: ${({ theme }: any) => theme.brand};
     color: #ffffff;
     transition: 250ms ease-in-out; */

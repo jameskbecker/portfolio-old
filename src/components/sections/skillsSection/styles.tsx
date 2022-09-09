@@ -1,4 +1,4 @@
-import screens from '@/screens';
+import { mobileMax } from '@/screens';
 import styled from 'styled-components';
 
 export const StyledSkillsSection = styled.section`
@@ -45,7 +45,7 @@ export const OtherSkillsContainer = styled.div`
 
   overflow: hidden;
 
-  @media only screen and (max-width: ${screens.mobileMax}) {
+  @media only screen and (${mobileMax}) {
     display: none;
   }
 `;

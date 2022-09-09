@@ -1,4 +1,4 @@
-import screens from '@/screens';
+import { mobileMax, tabletMax } from '@/screens';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
@@ -25,11 +25,11 @@ export const StyledContactSection = styled.section`
     opacity: 0.7;
   }
 
-  @media only screen and (max-width: ${screens.tabletMax}) {
+  @media only screen and (${tabletMax}) {
     padding: 6rem;
   }
 
-  @media only screen and (max-width: ${screens.mobileMax}) {
+  @media only screen and (${mobileMax}) {
     padding: 2rem;
   }
 `;
@@ -45,12 +45,12 @@ export const StyledContactContent = styled.div`
 
   box-sizing: border-box;
 
-  @media only screen and (max-width: ${screens.tabletMax}) {
+  @media only screen and (${tabletMax}) {
     flex-direction: column;
     gap: 4vh;
   }
 
-  @media only screen and (max-width: ${screens.mobileMax}) {
+  @media only screen and (${mobileMax}) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;

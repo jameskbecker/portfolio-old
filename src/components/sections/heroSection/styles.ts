@@ -1,4 +1,4 @@
-import screens from '@/screens';
+import { tabletMax } from '@/screens';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
@@ -42,7 +42,7 @@ export const HeroContent = styled.div`
   padding: 12vw;
   box-sizing: border-box;
 
-  @media only screen and (max-width: ${screens.tabletMax}) {
+  @media only screen and (${tabletMax}) {
     flex-direction: column;
     justify-content: center;
   }
@@ -56,7 +56,7 @@ export const StyledHeroImage = styled(motion.div)`
   border-radius: 0.75rem;
   overflow: hidden;
 
-  @media only screen and (max-width: ${screens.tabletMax}) {
+  @media only screen and (${tabletMax}) {
     display: none;
   }
 `;
