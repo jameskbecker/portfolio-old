@@ -5,7 +5,7 @@ export const StyledButton = styled.button`
   border-radius: 0.5rem;
   background: ${({ theme, ghost }: any) =>
     ghost ? 'transparent' : theme.brand};
-  padding: 0.5rem 1rem;
+  padding: 8px 16px;
   width: 100%;
 
   appearance: none;

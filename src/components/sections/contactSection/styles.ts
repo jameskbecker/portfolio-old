@@ -10,7 +10,7 @@ export const StyledContactSection = styled.section`
   height: 100vh;
 
   background: ${({ theme }: any) => theme.brand};
-  padding: 6rem 12.5rem;
+  padding: 96px 200px;
   box-sizing: border-box;
 
   overflow: hidden;
@@ -26,11 +26,11 @@ export const StyledContactSection = styled.section`
   }
 
   @media only screen and (${tabletMax}) {
-    padding: 6rem;
+    padding: 36px;
   }
 
   @media only screen and (${mobileMax}) {
-    padding: 2rem;
+    padding: 32px;
   }
 `;
 

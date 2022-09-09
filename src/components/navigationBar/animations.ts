@@ -7,7 +7,7 @@ export const mobileMenuVariants: Variants = {
   },
   open: {
     height: 'auto',
-    padding: '2rem 0',
+    padding: '24px 0',
     transition: {
       duration: 0.25,
     },

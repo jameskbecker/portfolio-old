@@ -40,7 +40,7 @@ export const StyledNavigationBar = styled.div`
   height: 64px;
 
   background: ${({ theme }: any) => theme.navigation};
-  padding: 0 2rem;
+  padding: 0 24px;
   box-sizing: border-box;
 `;
 

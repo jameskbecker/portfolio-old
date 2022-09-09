@@ -37,7 +37,7 @@ export const StyledGalleryFooter = styled.div`
   grid-gap: 0 1.5rem;
   overflow: auto;
 
-  padding: 1rem 0;
+  padding: 16px 0;
   margin: 0;
 
   overflow: hidden;
