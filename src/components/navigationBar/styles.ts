@@ -1,5 +1,5 @@
 import Bars from '@/assets/icons/bars.svg';
-import screens from '@/screens';
+import { tabletMax } from '@/screens';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
@@ -40,7 +40,7 @@ export const StyledNavigationBar = styled.div`
   height: 64px;
 
   background: ${({ theme }: any) => theme.navigation};
-  padding: 0 2rem;
+  padding: 0 24px;
   box-sizing: border-box;
 `;
 
@@ -64,7 +64,7 @@ export const StyledNavigationMenu = styled.ul`
   font: 500 1rem -apple-system;
   text-transform: uppercase;
 
-  @media only screen and (max-width: ${screens.tabletMax}) {
+  @media only screen and (${tabletMax}) {
     display: none;
   }
 `;
@@ -80,7 +80,7 @@ export const StyledBars = styled(motion(Bars))`
   display: none;
   fill: ${({ theme }) => theme.navigationText};
 
-  @media only screen and (max-width: ${screens.tabletMax}) {
+  @media only screen and (${tabletMax}) {
     display: block;
   }
 `;

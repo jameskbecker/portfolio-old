@@ -1,4 +1,4 @@
-import screens from '@/screens';
+import { mobileMax } from '@/screens';
 import styled from 'styled-components';
 
 export const StyledPortfolioSection = styled.section`
@@ -11,7 +11,7 @@ export const StyledPortfolioSection = styled.section`
 
   overflow: hidden;
 
-  @media only screen and (max-width: ${screens.mobileMax}) {
+  @media only screen and (${mobileMax}) {
     height: auto;
   }
 `;

@@ -1,4 +1,4 @@
-import screens from '@/screens';
+import { mobileMax, tabletMax } from '@/screens';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
@@ -9,9 +9,8 @@ export const StyledContactSection = styled.section`
   justify-content: space-evenly;
   height: 100vh;
 
-  padding: 12vw 0;
   background: ${({ theme }: any) => theme.brand};
-
+  padding: 96px 200px;
   box-sizing: border-box;
 
   overflow: hidden;
@@ -19,10 +18,19 @@ export const StyledContactSection = styled.section`
   h1,
   h3 {
     color: ${({ theme }: any) => theme.brandText};
+    text-align: center;
   }
 
   h3 {
     opacity: 0.7;
+  }
+
+  @media only screen and (${tabletMax}) {
+    padding: 36px;
+  }
+
+  @media only screen and (${mobileMax}) {
+    padding: 32px;
   }
 `;
 
@@ -32,23 +40,34 @@ export const StyledContactContent = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: space-evenly;
-  gap: 3vw;
+  gap: 3rem;
+  width: 100%;
 
-  font-size: clamp(3rem, 3vw + 1rem, 4rem);;
-  mid-width: 50vw
   box-sizing: border-box;
 
-  @media only screen and (max-width: ${screens.tabletMax}) {
+  @media only screen and (${tabletMax}) {
     flex-direction: column;
     gap: 4vh;
+  }
+
+  @media only screen and (${mobileMax}) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 4rem;
+    width: auto;
   }
 `;
 
 export const StyledContactButton = styled(motion.a)`
-  height: 1em;
-  width: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
   font-size: inherit;
   opacity: 0.7;
+
+  overflow: hidden;
 
   div {
     color: ${({ theme }) => theme.brandText};
@@ -57,8 +76,8 @@ export const StyledContactButton = styled(motion.a)`
   }
 
   svg {
-    height: 1em;
-    width: 1em;
+    height: 3em;
+    width: 3em;
     fill: white;
     font-size: inherit;
     opacity: inherit;

@@ -1,4 +1,4 @@
-import screens from '@/screens';
+import { mobileMax } from '@/screens';
 import styled from 'styled-components';
 
 export const StyledSkillsSection = styled.section`
@@ -45,7 +45,7 @@ export const OtherSkillsContainer = styled.div`
 
   overflow: hidden;
 
-  @media only screen and (max-width: ${screens.mobileMax}) {
+  @media only screen and (${mobileMax}) {
     display: none;
   }
 `;
@@ -53,7 +53,7 @@ export const OtherSkillsContainer = styled.div`
 export const UpperText = styled.span`
   font-size: clamp(5rem, 10vw + 1rem, 10rem);
   font-weight: 500;
-  padding: 0 4rem;
+  padding: 0 64px;
   color: ${({ theme }) => theme.text};
   text-transform: uppercase;
   overflow: hidden;
@@ -61,7 +61,7 @@ export const UpperText = styled.span`
 
 export const LowerText = styled.span`
   font-size: clamp(1.5rem, 10vw + 1rem, 2.5rem);
-  padding: 0 4rem;
+  padding: 0 64px;
   text-transform: none;
   color: ${({ theme }: any) => theme.subheading};
   overflow: hidden;
