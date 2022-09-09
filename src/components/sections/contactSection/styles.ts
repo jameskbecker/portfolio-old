@@ -40,7 +40,7 @@ export const StyledContactContent = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: space-evenly;
-  gap: 1rem;
+  gap: 3rem;
   width: 100%;
 
   box-sizing: border-box;
