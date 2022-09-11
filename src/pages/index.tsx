@@ -6,7 +6,8 @@ import SkillsSection from '@/components/sections/skillsSection';
 import GlobalStyles from '@/GlobalStyles';
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import styled from 'styled-components';
+import { useContext } from 'react';
+import styled, { ThemeContext } from 'styled-components';
 
 const StyledHome = styled.div`
   position: relative;
@@ -20,6 +21,7 @@ const StyledHome = styled.div`
 `;
 
 const Home: NextPage = () => {
+  const theme = useContext(ThemeContext);
   return (
     <StyledHome>
       <Head>
@@ -42,7 +44,7 @@ const Home: NextPage = () => {
           property="og:description"
           content="A full-stack developer specialising in frontend."
         />
-        <meta name="theme-color" content="#DC5970"></meta>
+        <meta name="theme-color" content={theme.navigation}></meta>
       </Head>
       <GlobalStyles />
       <NavigationBar logoText="James K. Becker" />
