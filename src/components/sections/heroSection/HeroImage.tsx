@@ -10,6 +10,7 @@ const HeroImage = () => (
       layout="fill"
       objectFit="cover"
       draggable="false"
+      priority
     />
   </StyledHeroImage>
 );
