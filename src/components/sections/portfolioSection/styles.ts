@@ -6,7 +6,7 @@ export const StyledPortfolioSection = styled.section`
   flex-direction: column;
   height: 200vh;
 
-  padding: 0 12vw;
+  padding: 0;
   box-sizing: border-box;
 
   overflow: hidden;

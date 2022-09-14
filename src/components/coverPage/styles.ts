@@ -5,6 +5,8 @@ export const StyledCoverPage = styled.div`
   flex-direction: column;
   height: 100vh;
 
+  margin: 0 200px;
+
   h1,
   h3 {
     flex: 1 1;
