@@ -23,6 +23,7 @@ export default function handler(
       name: 'NFT Automation',
       type: ['Front End'],
       image: '/nft-automation.png',
+      timeframe: 'December 2021 - January 2022',
       alt: 'Screenshot of NFT Automation',
       description: `This project involved creating a React front end based on a provided design. It needed to be done in a way where it was ready to be plugged into the back end.
 
