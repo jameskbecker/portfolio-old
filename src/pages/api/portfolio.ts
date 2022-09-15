@@ -12,7 +12,7 @@ export default function handler(
   res.status(200).json([
     {
       name: 'KU Project Manager',
-      type: ['Frontend', 'Backend', 'Design'],
+      type: ['Front End', 'Back End', 'Design'],
       image: '/kupm-mbp.png',
       alt: 'Screenshot of KU Project Manager',
       description:
@@ -20,17 +20,17 @@ export default function handler(
     },
     {
       name: 'NFT Automation',
-      type: ['Frontend'],
+      type: ['Front End'],
       image: '/nft-mbp.png',
       alt: 'Screenshot of NFT Automation',
-      description: `This project involved creating a React frontend based on a provided design. It needed to be done in a way where it was ready to be plugged into the backend.
+      description: `This project involved creating a React front end based on a provided design. It needed to be done in a way where it was ready to be plugged into the back end.
 
         The project involved several complex tasks such as creating dynamic charts and performant lists.`,
     },
 
     {
       name: 'ProsperAIO',
-      type: ['Frontend', 'Backend', 'Design', 'R. Engineering'],
+      type: ['Front End', 'Back End', 'Design', 'R. Engineering'],
       image: '/prosper-mbp.png',
       alt: 'Screenshot of Prosper AIO',
       description: `This was my first big side project. It played a key role in developing both my initial knowledge and passion for web development.
