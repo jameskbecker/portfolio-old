@@ -4,41 +4,29 @@ import Image from 'next/image';
 import styled from 'styled-components';
 
 export const StyledGallery = styled.div`
-  flex: 0 0 100%;
-  display: grid;
-  grid-template-areas:
-    'prev view next'
-    'prev view next'
-    'prev details next';
+  flex: 0 0 100vh;
+  display: flex;
+  flex-direction: column;
 
-  grid-template-columns: 1fr 8fr 1fr;
-  grid-template-rows: 4fr 4fr 2fr;
-  grid-gap: 0.5rem;
-  max-height: 100vh;
+  max-height: calc(100vh - 64px);
+  padding-top: 64px;
 
   @media only screen and (${tabletMax}) {
-    grid-template-areas:
-      'view view view'
-      'view view view'
-      'prev details  next';
-
-    grid-template-rows: 1fr 4fr 2fr;
     text-align: center;
   }
 `;
 
-export const StyledGalleryFooter = styled.div`
-  grid-area: details;
+export const StyledGalleryCaption = styled.div`
+  flex: 0 0 10rem;
 
-  display: grid;
-  grid-template-columns: 3fr 6fr;
-  grid-auto-rows: min-content min-content;
-  grid-auto-flow: column;
-  grid-gap: 0 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   overflow: auto;
+  gap: 24px;
 
   padding: 16px 0;
-  margin: 0;
+  margin: 0 200px;
 
   overflow: hidden;
 
@@ -51,14 +39,16 @@ export const StyledGalleryFooter = styled.div`
 
 export const StyledGalleryItem = styled.div`
   position: relative;
-  grid-area: view;
+  /* grid-area: view; */
+  flex: 1 1;
 
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   align-self: center;
-  height: 100%;
+
+  width: 100%;
 
   box-sizing: border-box;
   overflow: hidden;
@@ -74,7 +64,6 @@ export const StyledGalleryImage = styled.div`
   height: 100%;
   width: auto;
 
-  border-radius: 0.75rem;
   overflow: hidden;
 
   @media only screen and (${tabletMax}) {
@@ -83,7 +72,7 @@ export const StyledGalleryImage = styled.div`
 `;
 
 export const Description = styled(BodySmall)`
-  grid-row: span 3;
+  flex: 0 1 70%;
 
   @media only screen and (${tabletMax}) {
     display: none;
@@ -106,10 +95,7 @@ export const StyledGalleryBackdrop = styled(Image)`
   }
 `;
 
-export const StyledGalleryNavButton = styled.div<any>`
-  grid-area: ${({ prev }: any) => (prev ? 'prev' : 'next')};
-  grid-row: span 3;
-
+export const StyledGalleryNavButton = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -118,21 +104,14 @@ export const StyledGalleryNavButton = styled.div<any>`
   width: 4rem;
   height: 4rem;
 
-  color: ${({ theme }) => theme.text};
+  fill: ${({ theme }) => theme.text};
   border-radius: 50%;
 
   cursor: pointer;
 
   :hover {
-    background: ${({ theme }: any) => theme.brand};
-    color: #ffffff;
+    fill: ${({ theme }: any) => theme.brand};
     transition: 250ms ease-in-out;
-  }
-
-  @media only screen and (${mobileMax}) {
-    /* background: ${({ theme }: any) => theme.brand};
-    color: #ffffff;
-    transition: 250ms ease-in-out; */
   }
 `;
 

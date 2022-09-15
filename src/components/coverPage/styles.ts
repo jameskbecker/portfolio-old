@@ -4,7 +4,7 @@ export const StyledCoverPage = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
-
+  flex: 0 0 100vh;
   margin: 0 200px;
 
   h1,

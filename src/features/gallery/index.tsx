@@ -1,5 +1,5 @@
 import { AppDispatch } from '@/app/store';
-import GalleryDetails from '@/features/gallery/GalleryDetails';
+import GalleryCaption from '@/features/gallery/GalleryCaption';
 import GalleryItem from '@/features/gallery/GalleryItem';
 import { fetchGalleryData } from '@/features/gallery/gallerySlice';
 import { useEffect } from 'react';
@@ -17,15 +17,7 @@ const Gallery = () => {
   return (
     <StyledGallery>
       <GalleryItem />
-
-      <GalleryDetails />
-
-      <PrevContainer>
-        <GalleryNavButton prev />
-      </PrevContainer>
-      <NextContainer>
-        <GalleryNavButton />
-      </NextContainer>
+      <GalleryCaption />
     </StyledGallery>
   );
 };

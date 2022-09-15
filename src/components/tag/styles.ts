@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledTag = styled.div`
-  flex: 1 1 auto;
+  flex: 0 1 auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -11,7 +11,12 @@ export const StyledTag = styled.div`
   border-radius: 0.25rem;
   padding: 0.25rem 0.5rem;
 
-  white-space: nowrap;
-  text-wrap: nowrap;
+  & > * {
+    white-space: nowrap;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
   overflow: hidden;
 `;

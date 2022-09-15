@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const StyledPortfolioSection = styled.section`
   display: flex;
   flex-direction: column;
-  height: 200vh;
+  height: auto;
 
   padding: 0;
   box-sizing: border-box;
