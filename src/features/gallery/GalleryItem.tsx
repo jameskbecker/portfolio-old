@@ -13,7 +13,6 @@ const GalleryItem = () => {
 
   return (
     <StyledGalleryItem>
-      {/* <GalleryBackdrop src={data[position].image} /> */}
       <GalleryImage src={data[position].image} alt={data[position].alt} />
     </StyledGalleryItem>
   );

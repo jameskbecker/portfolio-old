@@ -4,29 +4,23 @@ import styled from 'styled-components';
 export const StyledSkillsSection = styled.section`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  padding: 12vw;
-  margin: 0;
-
-  box-sizing: border-box;
+  align-items: stretch;
 `;
 
 export const StyledSkillsContent = styled.div`
-  flex: 1 1;
+  flex: 0 0 calc(100vh - 200px);
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
   gap: 5rem;
-  height: 100vh;
 
-  width: 100%;
+  margin: 100px 200px;
+  box-sizing: border-box;
 `;
 
 export const ExpertiseContainer = styled.div`
-  flex: 1 1;
+  flex: 1 1 auto;
   height: 100%;
 
   display: flex;

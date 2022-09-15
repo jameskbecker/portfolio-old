@@ -17,10 +17,7 @@ const GalleryNavButton = ({ prev }: any) => {
   };
 
   return (
-    <StyledGalleryNavButton
-      prev={prev}
-      onClick={prev ? handlePrevious : handleNext}
-    >
+    <StyledGalleryNavButton onClick={prev ? handlePrevious : handleNext}>
       {prev ? <ChevronLeft /> : <ChevronRight />}
     </StyledGalleryNavButton>
   );
