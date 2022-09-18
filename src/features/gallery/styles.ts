@@ -16,7 +16,7 @@ export const StyledGallery = styled.div`
   }
 `;
 
-export const StyledGalleryCaption = styled.div`
+export const StyledGalleryDetails = styled.div`
   flex: 0 0 10rem;
 
   display: flex;
@@ -24,51 +24,11 @@ export const StyledGalleryCaption = styled.div`
   align-items: center;
   overflow: auto;
   gap: 24px;
-
+  justify-content: spread-evenly;
   padding: 16px 0;
-  margin: 0 200px;
+  margin: 0 clamp(32px, 12vw, 192px);
 
   overflow: hidden;
-
-  @media only screen and (${tabletMax}) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-`;
-
-export const StyledGalleryItem = styled.div`
-  position: relative;
-  /* grid-area: view; */
-  flex: 1 1;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
-
-  width: 100%;
-
-  box-sizing: border-box;
-  overflow: hidden;
-
-  @media only screen and (${mobileMax}) {
-    align-items: flex-end;
-  }
-`;
-
-export const StyledGalleryImage = styled.div`
-  position: relative;
-  flex: 1 1;
-  height: 100%;
-  width: auto;
-
-  overflow: hidden;
-
-  @media only screen and (${tabletMax}) {
-    width: 100%;
-  }
 `;
 
 export const Description = styled(BodySmall)`
@@ -76,22 +36,7 @@ export const Description = styled(BodySmall)`
 
   @media only screen and (${tabletMax}) {
     display: none;
-  }
-`;
-
-export const StyledGalleryBackdrop = styled(Image)`
-  position: absolute;
-  top: 0;
-  width: 100%;
-
-  filter: blur(5px);
-  object-fit: cover;
-  object-position: top;
-  overflow: hidden;
-  z-index: -1;
-
-  @media only screen and (${mobileMax}) {
-    display: none;
+    flex: 0 0;
   }
 `;
 
@@ -120,7 +65,6 @@ export const PrevContainer = styled.div`
   flex-dirction: row;
   justify-content: center;
   align-items: center;
-  grid-area: prev;
 `;
 
 export const NextContainer = styled.div`
@@ -128,5 +72,62 @@ export const NextContainer = styled.div`
   flex-dirction: row;
   justify-content: center;
   align-items: center;
-  grid-area: next;
+`;
+
+export const StyledGalleryView = styled.div`
+  position: relative;
+  flex: 1 1;
+  height: 100%;
+  width: auto;
+  background: black;
+  overflow: hidden;
+
+  @media only screen and (${tabletMax}) {
+    width: 100%;
+  }
+`;
+
+export const MainImage = styled(Image)`
+  position: absolute;
+  z-index: 2;
+`;
+
+export const BlurredImage = styled(Image)`
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+
+  filter: blur(5px);
+  opacity: 0.6;
+`;
+
+export const StyledHeader = styled.div`
+  flex: 0 1 30%;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  overflow: hidden;
+  flex-wrap: wrap;
+
+  @media screen and (${tabletMax}) {
+    flex: 1 1;
+    align-items: center;
+
+    & > * {
+      justify-content: center;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  }
+`;
+
+export const TagContainer = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+
+  @media only screen and (${mobileMax}) {
+    display: none;
+  }
 `;

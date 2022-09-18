@@ -1,11 +1,10 @@
 import { AppDispatch } from '@/app/store';
-import GalleryCaption from '@/features/gallery/GalleryCaption';
-import GalleryItem from '@/features/gallery/GalleryItem';
+import GalleryDetails from '@/features/gallery/GalleryDetails';
 import { fetchGalleryData } from '@/features/gallery/gallerySlice';
+import GalleryView from '@/features/gallery/GalleryView';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import GalleryNavButton from './GalleryNavButton';
-import { NextContainer, PrevContainer, StyledGallery } from './styles';
+import { StyledGallery } from './styles';
 
 const Gallery = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -16,8 +15,8 @@ const Gallery = () => {
 
   return (
     <StyledGallery>
-      <GalleryItem />
-      <GalleryCaption />
+      <GalleryView />
+      <GalleryDetails />
     </StyledGallery>
   );
 };

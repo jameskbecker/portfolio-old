@@ -12,11 +12,7 @@ export default function handler(
   res.status(200).json([
     {
       name: 'KU Project Manager',
-
-      type: ['Front End', 'Back End', 'Design'],
-
       tags: ['Frontend', 'Backend', 'Design'],
-
       image: '/kupm.png',
       alt: 'Screenshot of KU Project Manager',
       timeframe: 'September 2021 - April 2022',
@@ -25,11 +21,7 @@ export default function handler(
     },
     {
       name: 'NFT Automation',
-
-      type: ['Front End'],
-
       tags: ['Frontend'],
-
       image: '/nft-automation.png',
       timeframe: 'December 2021 - January 2022',
       alt: 'Screenshot of NFT Automation',
@@ -40,11 +32,7 @@ export default function handler(
 
     {
       name: 'ProsperAIO',
-
-      type: ['Front End', 'Back End', 'Design', 'R. Engineering'],
-
       tags: ['Frontend', 'Backend', 'Design', 'R. Engineering'],
-
       image: '/prosperaio.png',
       alt: 'Screenshot of Prosper AIO',
       timeframe: 'March 2018 - May 2021',

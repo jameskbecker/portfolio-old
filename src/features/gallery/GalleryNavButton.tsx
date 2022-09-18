@@ -3,9 +3,13 @@ import ChevronLeft from '@/assets/icons/chevron-left.svg';
 import ChevronRight from '@/assets/icons/chevron-right.svg';
 import { useDispatch } from 'react-redux';
 import { nextItem, previousItem } from './gallerySlice';
-import { StyledGalleryNavButton } from './styles';
+import { NextContainer, PrevContainer, StyledGalleryNavButton } from './styles';
 
-const GalleryNavButton = ({ prev }: any) => {
+type GalleryNavButtonProps = {
+  prev?: boolean;
+};
+
+const GalleryNavButton = ({ prev }: GalleryNavButtonProps) => {
   const dispatch = useDispatch<AppDispatch>();
 
   const handleNext = () => {
@@ -16,10 +20,22 @@ const GalleryNavButton = ({ prev }: any) => {
     dispatch(previousItem());
   };
 
+  if (prev) {
+    return (
+      <PrevContainer>
+        <StyledGalleryNavButton onClick={handlePrevious}>
+          <ChevronLeft />
+        </StyledGalleryNavButton>
+      </PrevContainer>
+    );
+  }
+
   return (
-    <StyledGalleryNavButton onClick={prev ? handlePrevious : handleNext}>
-      {prev ? <ChevronLeft /> : <ChevronRight />}
-    </StyledGalleryNavButton>
+    <NextContainer>
+      <StyledGalleryNavButton onClick={handleNext}>
+        <ChevronRight />
+      </StyledGalleryNavButton>
+    </NextContainer>
   );
 };
 

@@ -1,8 +1,7 @@
-import ParallaxText from '@/components/parallaxText';
 import { Body } from '@/components/typography/Body';
 import { H2 } from '@/components/typography/Headings';
 import { other } from './skillsData';
-import { OtherSkillsContainer, UpperText } from './styles';
+import { OtherSkillsContainer } from './styles';
 
 const OtherSkills = () => {
   return (
