@@ -2,7 +2,11 @@ import { motion, useAnimationControls, useInView } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import { H1, H3 } from '../typography/Headings';
 import { headingVariants, subheadingVariants } from './animations';
-import { StyledCoverPage } from './styles';
+import {
+  HeadingContainer,
+  StyledCoverPage,
+  SubheadingContainer,
+} from './styles';
 
 const CoverPage = ({ heading, subheading }: any) => {
   const ref = useRef(null);
@@ -19,24 +23,28 @@ const CoverPage = ({ heading, subheading }: any) => {
 
   return (
     <StyledCoverPage>
-      <H1
-        as={motion.h1}
-        ref={ref}
-        initial="initial"
-        animate={controls}
-        variants={headingVariants}
-      >
-        {heading}
-      </H1>
-      <H3
-        as={motion.h3}
-        ref={ref}
-        initial="initial"
-        animate={controls}
-        variants={subheadingVariants}
-      >
-        {subheading}
-      </H3>
+      <HeadingContainer>
+        <H1
+          as={motion.h1}
+          ref={ref}
+          initial="initial"
+          animate={controls}
+          variants={headingVariants}
+        >
+          {heading}
+        </H1>
+      </HeadingContainer>
+      <SubheadingContainer>
+        <H3
+          as={motion.h3}
+          ref={ref}
+          initial="initial"
+          animate={controls}
+          variants={subheadingVariants}
+        >
+          {subheading}
+        </H3>
+      </SubheadingContainer>
     </StyledCoverPage>
   );
 };

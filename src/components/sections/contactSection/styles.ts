@@ -10,7 +10,8 @@ export const StyledContactSection = styled.section`
   height: 100vh;
 
   background: ${({ theme }: any) => theme.brand};
-  padding: 96px clamp(32px, 12vw, 196px);
+
+  padding: 0 clamp(32px, 12vw, 192px);
   box-sizing: border-box;
 
   overflow: hidden;

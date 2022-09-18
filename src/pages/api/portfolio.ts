@@ -23,10 +23,9 @@ export default function handler(
       name: 'NFT Automation',
       tags: ['Frontend'],
       image: '/nft-automation.png',
-      alt: 'Screenshot of NFT Automation',
       timeframe: 'December 2021 - January 2022',
-
-      description: `This project involved creating a React frontend based on a provided design. It needed to be done in a way where it was ready to be plugged into the backend.
+      alt: 'Screenshot of NFT Automation',
+      description: `This project involved creating a React front end based on a provided design. It needed to be done in a way where it was ready to be plugged into the back end.
 
         The project involved several complex tasks such as creating dynamic charts and performant lists.`,
     },

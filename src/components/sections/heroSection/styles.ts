@@ -39,7 +39,8 @@ export const HeroContent = styled.div`
   gap: 2rem;
   height: 100%;
 
-  padding: 12vw;
+  padding: clamp(32px, 12vw, 192px);
+  margin: auto 0;
   box-sizing: border-box;
 
   @media only screen and (${tabletMax}) {
