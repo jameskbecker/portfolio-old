@@ -1,15 +1,7 @@
 import CoverPage from '@/components/coverPage';
-import ParallaxText from '@/components/parallaxText';
-import { other, topFour } from '@/components/sections/skillsSection/skillsData';
-import { H2 } from '@/components/typography/Headings';
 import Expertise from './expertise';
 import OtherSkills from './OtherSkills';
-import {
-  LowerText,
-  StyledSkillsContent,
-  StyledSkillsSection,
-  UpperText,
-} from './styles';
+import { StyledSkillsContent, StyledSkillsSection } from './styles';
 
 const SkillsSection = () => {
   return (
