@@ -15,7 +15,7 @@ export const StyledSkillsContent = styled.div`
   align-items: flex-start;
   gap: 5rem;
 
-  margin: 100px 200px;
+  margin: 96px clamp(32px, 12vw, 192px);
   box-sizing: border-box;
 `;
 
