@@ -1,6 +1,15 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-const initialState: any = {
+export type GalleryState = {
+  position: number;
+  data: {
+    image: string;
+    alt: string;
+  }[];
+  isLoading: boolean;
+};
+
+const initialState: GalleryState = {
   position: 0,
   data: [],
   isLoading: true,

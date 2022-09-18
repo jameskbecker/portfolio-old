@@ -1,4 +1,4 @@
-import { mobileMax } from '@/screens';
+import { tabletMax } from '@/screens';
 import styled from 'styled-components';
 
 export const StyledSkillsSection = styled.section`
@@ -15,7 +15,7 @@ export const StyledSkillsContent = styled.div`
   align-items: flex-start;
   gap: 5rem;
 
-  margin: 100px 200px;
+  margin: 100px clamp(32px, 12vw, 196px);
   box-sizing: border-box;
 `;
 
@@ -39,24 +39,7 @@ export const OtherSkillsContainer = styled.div`
 
   overflow: hidden;
 
-  @media only screen and (${mobileMax}) {
+  @media only screen and (${tabletMax}) {
     display: none;
   }
-`;
-
-export const UpperText = styled.span`
-  font-size: clamp(5rem, 10vw + 1rem, 10rem);
-  font-weight: 500;
-  padding: 0 64px;
-  color: ${({ theme }) => theme.text};
-  text-transform: uppercase;
-  overflow: hidden;
-`;
-
-export const LowerText = styled.span`
-  font-size: clamp(1.5rem, 10vw + 1rem, 2.5rem);
-  padding: 0 64px;
-  text-transform: none;
-  color: ${({ theme }: any) => theme.subheading};
-  overflow: hidden;
 `;
