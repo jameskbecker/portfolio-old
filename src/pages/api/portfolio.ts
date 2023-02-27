@@ -5,10 +5,7 @@ type Data = {
   name: string;
 };
 
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<any[]>
-) {
+export default function handler(req: NextApiRequest, res: NextApiResponse<any[]>) {
   res.status(200).json([
     {
       name: 'KU Project Manager',
@@ -32,7 +29,7 @@ export default function handler(
 
     {
       name: 'ProsperAIO',
-      tags: ['Frontend', 'Backend', 'Design', 'R. Engineering'],
+      tags: ['Frontend', 'Backend', 'Design' /*'R. Engineering'*/],
       image: '/prosperaio.png',
       alt: 'Screenshot of Prosper AIO',
       timeframe: 'March 2018 - May 2021',
