@@ -18,6 +18,10 @@ export const StyledSkillsContent = styled.div`
   margin: 96px clamp(32px, 12vw, 192px);
 
   box-sizing: border-box;
+
+  @media only screen and (${tabletMax}) {
+    margin: 96px 32px;
+  }
 `;
 
 export const ExpertiseContainer = styled.div`

@@ -20,8 +20,17 @@ const StyledHome = styled.div`
   overflow: hidden;
 `;
 
-const Home: NextPage = () => {
+export const getStaticProps = async () => {
+  return {
+    props: {
+      doo: 'da',
+    },
+  };
+};
+
+const Home: NextPage = (props) => {
   const theme = useContext(ThemeContext);
+  console.log(props);
   return (
     <StyledHome>
       <Head>

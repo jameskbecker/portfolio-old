@@ -1,3 +1,4 @@
+import { mobileMax, tabletMax } from '@/screens';
 import styled from 'styled-components';
 
 export const StyledCoverPage = styled.div`
@@ -7,6 +8,10 @@ export const StyledCoverPage = styled.div`
   height: 100vh;
 
   margin: 0 clamp(32px, 12vw, 192px);
+
+  @media only screen and (${tabletMax}) {
+    margin: 0 32px;
+  }
 `;
 
 export const HeadingContainer = styled.div`

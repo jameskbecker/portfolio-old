@@ -25,6 +25,7 @@ export const H2 = styled.h2`
 export const H3 = styled.h3`
   font-size: 2.25rem;
   font-weight: 300;
+  line-height: 52px;
   color: ${({ theme }: any) => theme.text};
 
   @media only screen and (${mobileMax}) {

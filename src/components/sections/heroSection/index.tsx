@@ -12,7 +12,7 @@ const data = {
 
 const HeroSection = () => (
   <StyledHeroSection>
-    <HeroBanner />
+    {/* <HeroBanner /> */}
     <HeroContent>
       <HeroInfo {...data} />
       <HeroImage />

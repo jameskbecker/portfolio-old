@@ -3,15 +3,15 @@ import { StyledHeroBanner, StyledOverlay } from './styles';
 
 const HeroBanner = () => (
   <StyledHeroBanner>
-    <Image
+    {/* <Image
       src="/hero-banner.png"
       alt=""
       layout="fill"
       objectFit="cover"
       draggable="false"
       priority
-    />
-    <StyledOverlay />
+    /> */}
+    {/* <StyledOverlay /> */}
   </StyledHeroBanner>
 );
 

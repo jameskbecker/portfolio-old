@@ -7,7 +7,7 @@ export const StyledTag = styled.div`
   justify-content: center;
   align-items: center;
 
-  border: 0.5px solid ${({ theme }) => theme.heading};
+  border: 0.5px solid ${({ theme }) => theme.brand};
   border-radius: 0.25rem;
   padding: 0.25rem 0.5rem;
 
@@ -16,6 +16,7 @@ export const StyledTag = styled.div`
     text-wrap: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    color: ${({ theme }) => theme.brand};
   }
 
   overflow: hidden;

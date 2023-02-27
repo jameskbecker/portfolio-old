@@ -11,6 +11,7 @@ const HeroImage = () => (
       objectFit="cover"
       draggable="false"
       priority
+      sizes={'520px'}
     />
   </StyledHeroImage>
 );

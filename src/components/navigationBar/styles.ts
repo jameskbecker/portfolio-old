@@ -39,7 +39,7 @@ export const StyledNavigationBar = styled.div`
   gap: 1rem;
   height: 64px;
 
-  background: ${({ theme }: any) => theme.navigation};
+  background: ${({ theme }: any) => theme.heroSection};
   padding: 0 24px;
   box-sizing: border-box;
 `;

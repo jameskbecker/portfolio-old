@@ -20,10 +20,18 @@ export const StyledContactSection = styled.section`
   h3 {
     color: ${({ theme }: any) => theme.brandText};
     text-align: center;
+
+    @media only screen and (${mobileMax}) {
+      text-align: left;
+    }
   }
 
   h3 {
     opacity: 0.7;
+  }
+
+  @media only screen and (${tabletMax}) {
+    padding: 0 32px;
   }
 `;
 

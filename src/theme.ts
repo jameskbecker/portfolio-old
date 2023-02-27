@@ -1,10 +1,10 @@
 export const lightTheme = {
-  navigation: '#050505',
-  navigationText: '#FFFFFF',
+  navigation: 'transparent',
+  navigationText: '#000000',
 
-  heroSection: 'transparent',
+  heroSection: '#f8f8f8',
   background: '#FFFFFF',
-  brand: '#DC5970',
+  brand: '#263793',
   brandText: '#FFFFFF',
 
   heading: '#000000',
@@ -15,12 +15,12 @@ export const lightTheme = {
 };
 
 export const darkTheme = {
-  navigation: '#FAFAFA',
-  navigationText: '#000000',
+  navigation: 'transparent',
+  navigationText: '#FFFFFF',
 
   heroSection: 'transparent',
-  background: '#000000',
-  brand: '#DC5970',
+  background: '#161616',
+  brand: '#5A6BC4',
   brandText: '#FFFFFF',
 
   heading: '#FFFFFF',
