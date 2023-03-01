@@ -1,4 +1,4 @@
-import Button from '@/components/button';
+import Button from '@/components/Button/Button';
 import { motion } from 'framer-motion';
 import { ctaVariants, pulseVariants } from './animations';
 import { StyledCallToAction } from './styles';
@@ -11,13 +11,7 @@ const CallToAction = (props: any) => (
     href={props.href}
     draggable="false"
   >
-    <Button
-      label={props.label}
-      as={motion.button}
-      initial="grow"
-      animate="shrink"
-      variants={pulseVariants}
-    />
+    <Button label={props.label} initial="grow" animate="shrink" variants={pulseVariants} />
   </StyledCallToAction>
 );
 
