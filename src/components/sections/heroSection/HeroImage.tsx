@@ -1,9 +1,14 @@
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { imageVariants } from './animations';
-import { StyledHeroImage } from './styles';
 
 const HeroImage = () => (
-  <StyledHeroImage initial="hidden" animate="visible" variants={imageVariants}>
+  <motion.div
+    initial="hidden"
+    animate="visible"
+    variants={imageVariants}
+    className="h-fill relative box-border flex-grow basis-1/2 overflow-hidden rounded-xl border border-gray-200"
+  >
     <Image
       src="/cover.jpg"
       alt="A mid-shot of James"
@@ -11,9 +16,9 @@ const HeroImage = () => (
       objectFit="cover"
       draggable="false"
       priority
-      sizes={'520px'}
+      sizes={'520px, 50vw'}
     />
-  </StyledHeroImage>
+  </motion.div>
 );
 
 export default HeroImage;

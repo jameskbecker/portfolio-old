@@ -1,18 +1,18 @@
-import Button from '@/components/Button/Button';
+import Button from '@/components/Button';
 import { motion } from 'framer-motion';
 import { ctaVariants, pulseVariants } from './animations';
-import { StyledCallToAction } from './styles';
 
 const CallToAction = (props: any) => (
-  <StyledCallToAction
+  <motion.a
     initial="hidden"
     animate="visible"
     variants={ctaVariants}
     href={props.href}
     draggable="false"
+    className="flex flex-col"
   >
     <Button label={props.label} initial="grow" animate="shrink" variants={pulseVariants} />
-  </StyledCallToAction>
+  </motion.a>
 );
 
 export default CallToAction;
