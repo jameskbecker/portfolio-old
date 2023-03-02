@@ -1,4 +1,4 @@
-import CoverPage from '@/components/CoverPage-';
+import CoverPage from '@/components/CoverPage';
 import Gallery from '@/features/gallery';
 import { StyledPortfolioSection } from './styles';
 
