@@ -1,5 +1,5 @@
 import CoverPage from '@/components/CoverPage';
-import Expertise from './Expertise-';
+import Expertise from './Expertise';
 import OtherSkills from './OtherSkills';
 
 const SkillsSection = () => {
