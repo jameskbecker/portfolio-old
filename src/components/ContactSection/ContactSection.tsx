@@ -1,4 +1,4 @@
-import ContactGrid from '@/components/sections/ContactSection-/ContactGrid';
+import ContactGrid from '@/components/ContactSection/ContactGrid';
 
 const ContactSection = () => {
   return (
