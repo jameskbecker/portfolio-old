@@ -1,8 +1,8 @@
 import ContactSection from '@/components/ContactSection';
 import HeroSection from '@/components/HeroSection';
 import NavigationBar from '@/components/NavigationBar';
-import PortfolioSection from '@/components/sections/portfolioSection';
-import SkillsSection from '@/components/sections/skillsSection';
+import PortfolioSection from '@/components/PortfolioSection';
+import SkillsSection from '@/components/SkillsSection';
 import GlobalStyles from '@/GlobalStyles';
 import type { NextPage } from 'next';
 import Head from 'next/head';
