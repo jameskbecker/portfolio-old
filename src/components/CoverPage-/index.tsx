@@ -1,12 +1,6 @@
 import { motion, useAnimationControls, useInView } from 'framer-motion';
 import { useEffect, useRef } from 'react';
-import { H1, H3 } from '../typography/Headings';
 import { headingVariants, subheadingVariants } from './animations';
-import {
-  HeadingContainer,
-  StyledCoverPage,
-  SubheadingContainer,
-} from './styles';
 
 const CoverPage = ({ heading, subheading }: any) => {
   const ref = useRef(null);
@@ -22,30 +16,30 @@ const CoverPage = ({ heading, subheading }: any) => {
   }, [inView, controls]);
 
   return (
-    <StyledCoverPage>
-      <HeadingContainer>
-        <H1
-          as={motion.h1}
+    <div className="mx-8 flex h-screen flex-col gap-8">
+      <div className="flex flex-1 items-end">
+        <motion.h1
           ref={ref}
           initial="initial"
           animate={controls}
           variants={headingVariants}
+          className="text-5xl uppercase text-heading lg:text-6xl"
         >
           {heading}
-        </H1>
-      </HeadingContainer>
-      <SubheadingContainer>
-        <H3
-          as={motion.h3}
+        </motion.h1>
+      </div>
+      <div className="flex-1">
+        <motion.h3
           ref={ref}
           initial="initial"
           animate={controls}
           variants={subheadingVariants}
+          className="lg:4xl text-3xl font-light text-text "
         >
           {subheading}
-        </H3>
-      </SubheadingContainer>
-    </StyledCoverPage>
+        </motion.h3>
+      </div>
+    </div>
   );
 };
 

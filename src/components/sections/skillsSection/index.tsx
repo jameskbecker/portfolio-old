@@ -1,4 +1,4 @@
-import CoverPage from '@/components/coverPage';
+import CoverPage from '@/components/CoverPage-';
 import Expertise from './expertise';
 import OtherSkills from './OtherSkills';
 import { StyledSkillsContent, StyledSkillsSection } from './styles';
