@@ -1,4 +1,4 @@
-import ThemeToggle from '@/features/themeToggle';
+import ThemeToggle from '@/components/ThemeToggle';
 import routes from '@/routes';
 
 const NavigationMenu = () => {

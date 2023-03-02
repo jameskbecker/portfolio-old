@@ -1,5 +1,5 @@
 import { AppDispatch } from '@/app/store';
-import { toggleTheme } from '@/features/themeToggle/themeToggleSlice';
+import { toggleTheme } from '@/components/ThemeToggle/themeToggleSlice';
 import routes from '@/routes';
 import { motion, useAnimationControls } from 'framer-motion';
 import { useEffect } from 'react';
