@@ -34,7 +34,7 @@ const CoverPage = ({ heading, subheading }: any) => {
           initial="initial"
           animate={controls}
           variants={subheadingVariants}
-          className="lg:4xl text-3xl font-light text-text "
+          className="lg:4xl text-3xl font-light text-text"
         >
           {subheading}
         </motion.h3>
