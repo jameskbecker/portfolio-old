@@ -1,4 +1,4 @@
-import Tag from '@/components/tag';
+import Tag from '@/components/Tag-';
 import { H4, H5 } from '@/components/typography/Headings';
 import { StyledHeader, TagContainer } from './styles';
 
