@@ -1,21 +1,20 @@
 import CoverPage from '@/components/CoverPage';
 import Expertise from './expertise';
 import OtherSkills from './OtherSkills';
-import { StyledSkillsContent, StyledSkillsSection } from './styles';
 
 const SkillsSection = () => {
   return (
-    <StyledSkillsSection id="skills">
+    <section id="skills" className="flex flex-col items-stretch">
       <CoverPage
         heading="My Skills"
         subheading="The opportunity to work with many different technologies has allowed me to discover where my interests lie and specialise in what I'm great at."
       />
 
-      <StyledSkillsContent>
+      <div className="my-24 mx-8 box-border flex h-full flex-row items-start justify-center gap-20">
         <Expertise />
         <OtherSkills />
-      </StyledSkillsContent>
-    </StyledSkillsSection>
+      </div>
+    </section>
   );
 };
 
