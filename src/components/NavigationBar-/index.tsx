@@ -1,17 +1,15 @@
 import { AppDispatch } from '@/app/store';
-import NavigationMenu from '@/components/navigationBar/NavigationMenu';
+import Bars from '@/assets/icons/bars.svg';
+import NavigationMenu from '@/components/NavigationBar-/NavigationMenu';
 import { motion, useAnimationControls } from 'framer-motion';
 import { useDispatch, useSelector } from 'react-redux';
 import { menuButtonVariants } from './animations';
 import MobileMenu from './MobileMenu';
 import { toggleMenu } from './navigationSlice';
-import {
-  NavigationContainer,
-  StyledBars,
-  StyledNavigationBar,
-  StyledNavigationHeader,
-} from './styles';
-import { NavigationBarProps } from './types';
+
+export type NavigationBarProps = {
+  logoText: string;
+};
 
 const NavigationBar = ({ logoText }: NavigationBarProps) => {
   const controls = useAnimationControls();
@@ -24,9 +22,9 @@ const NavigationBar = ({ logoText }: NavigationBarProps) => {
   };
 
   return (
-    <NavigationContainer>
-      <StyledNavigationBar>
-        <StyledNavigationHeader>{logoText}</StyledNavigationHeader>
+    <nav className="fixed top-0 z-50 flex w-full flex-col">
+      <div className="box-border flex h-16 flex-row items-center justify-evenly gap-8 bg-white bg-opacity-20 px-6 backdrop-blur">
+        <div className="flex-1 text-base font-bold uppercase text-navigationText">{logoText}</div>
         <NavigationMenu />
         <motion.div
           initial="close"
@@ -34,11 +32,11 @@ const NavigationBar = ({ logoText }: NavigationBarProps) => {
           variants={menuButtonVariants}
           onClick={handleMenuClick}
         >
-          <StyledBars />
+          <Bars className="fill-navigationText lg:hidden" />
         </motion.div>
-      </StyledNavigationBar>
-      <MobileMenu></MobileMenu>
-    </NavigationContainer>
+      </div>
+      <MobileMenu />
+    </nav>
   );
 };
 

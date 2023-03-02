@@ -5,7 +5,6 @@ import { motion, useAnimationControls } from 'framer-motion';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { mobileMenuVariants } from './animations';
-import { NavigationLink, StyledMobileMenu } from './styles';
 
 const MobileMenu = () => {
   const controls = useAnimationControls();
@@ -13,28 +12,33 @@ const MobileMenu = () => {
   const { isOpen } = useSelector((state: any) => state.navigation);
 
   useEffect(() => {
-    console.log('IS OPEN', isOpen);
     controls.start(isOpen ? 'open' : 'close');
-  }, [isOpen]);
+  }, [controls, isOpen]);
 
   const handleToggleTheme = () => {
     dispatch(toggleTheme());
   };
 
+  const renderRoutes = (route: any, i: number) => (
+    <a
+      key={i}
+      href={route.to}
+      className="text-navigationText opacity-60 hover:opacity-100 hover:duration-300 hover:ease-in"
+    >
+      {route.name}
+    </a>
+  );
+
   return (
-    <StyledMobileMenu
-      as={motion.div}
+    <motion.ul
       initial="close"
       animate={controls}
       variants={mobileMenuVariants}
+      className="box-border flex flex-col items-center gap-8 overflow-hidden bg-background shadow-sm"
     >
-      {routes.map((route, i) => (
-        <NavigationLink key={i} href={route.to}>
-          {route.name}
-        </NavigationLink>
-      ))}
+      {routes.map(renderRoutes)}
       <a onClick={handleToggleTheme}>Toggle Theme</a>
-    </StyledMobileMenu>
+    </motion.ul>
   );
 };
 export default MobileMenu;

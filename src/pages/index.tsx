@@ -1,4 +1,4 @@
-import NavigationBar from '@/components/navigationBar';
+import NavigationBar from '@/components/NavigationBar-';
 import ContactSection from '@/components/sections/contactSection';
 import HeroSection from '@/components/sections/HeroSection';
 import PortfolioSection from '@/components/sections/portfolioSection';
@@ -30,7 +30,7 @@ export const getStaticProps = async () => {
 
 const Home: NextPage = props => {
   const theme = useContext(ThemeContext);
-  console.log(props);
+
   return (
     <StyledHome>
       <Head>
