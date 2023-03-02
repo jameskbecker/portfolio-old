@@ -1,7 +1,7 @@
+import AdjustIcon from '@/assets/icons/adjust.svg';
 import { motion, useAnimationControls } from 'framer-motion';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleVariants } from './animations';
-import { StyledAdjustIcon } from './styles';
 import { toggleTheme } from './themeToggleSlice';
 
 const ThemeToggle = () => {
@@ -30,9 +30,8 @@ const ThemeToggle = () => {
       onHoverStart={handleHover}
       onHoverEnd={handleHoverEnd}
       onClick={handleClick}
-      style={{ height: '1em' }}
     >
-      <StyledAdjustIcon />
+      <AdjustIcon className="origin-center cursor-pointer fill-navigationText hover:fill-brand hover:duration-300 hover:ease-in-out dark:hover:fill-brandDark" />
     </motion.div>
   );
 };
