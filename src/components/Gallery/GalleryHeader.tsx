@@ -1,6 +1,4 @@
 import Tag from '@/components/Tag';
-import { H4, H5 } from '@/components/typography/Headings';
-import { StyledHeader, TagContainer } from './styles';
 
 type GalleryHeaderProps = {
   name: string;
@@ -13,11 +11,11 @@ const GalleryHeader = (props: GalleryHeaderProps) => {
   const tagContent = tags.map((t, i) => <Tag key={i} label={t} />);
 
   return (
-    <StyledHeader>
-      <H4>{name}</H4>
-      <H5>{timeframe}</H5>
-      <TagContainer>{tagContent}</TagContainer>
-    </StyledHeader>
+    <header className="flex flex-1 flex-shrink flex-col flex-wrap items-center gap-2 overflow-hidden lg:flex-grow-0 lg:basis-1/3">
+      <h4 className="mx-auto max-w-full justify-center">{name}</h4>
+      <h5 className="mx-auto max-w-full justify-center">{timeframe}</h5>
+      <div className="hidden gap-2 md:flex">{tagContent}</div>
+    </header>
   );
 };
 

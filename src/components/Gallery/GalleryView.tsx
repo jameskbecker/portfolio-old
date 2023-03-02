@@ -1,6 +1,6 @@
+import Image from 'next/image';
 import { useSelector } from 'react-redux';
 import { GalleryState } from './gallerySlice';
-import { BlurredImage, MainImage, StyledGalleryView } from './styles';
 
 const GalleryView = () => {
   const gallery = useSelector((state: any) => state.gallery);
@@ -13,24 +13,26 @@ const GalleryView = () => {
   if (!data[position]) return <div>No Data</div>;
 
   return (
-    <StyledGalleryView>
-      <MainImage
+    <div className="relative h-full w-full flex-1 overflow-hidden bg-black lg:w-auto">
+      <Image
         layout="fill"
         draggable="false"
         objectFit="scale-down"
         objectPosition="center"
         src={data[position].image}
         alt={data[position].alt}
+        className="absolute z-10"
       />
-      <BlurredImage
+      <Image
         layout="fill"
         draggable="false"
         objectFit="cover"
         objectPosition="top"
         src={data[position].image}
         alt={data[position].alt}
+        className="absolute w-full opacity-60 blur-sm"
       />
-    </StyledGalleryView>
+    </div>
   );
 };
 

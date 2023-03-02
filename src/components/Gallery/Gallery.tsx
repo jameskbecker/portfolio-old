@@ -4,7 +4,6 @@ import { useDispatch } from 'react-redux';
 import GalleryDetails from './GalleryDetails';
 import { fetchGalleryData } from './gallerySlice';
 import GalleryView from './GalleryView';
-import { StyledGallery } from './styles';
 
 const Gallery = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -14,10 +13,10 @@ const Gallery = () => {
   }, [dispatch]);
 
   return (
-    <StyledGallery>
+    <div className="flex h-screen flex-col text-center lg:text-left">
       <GalleryView />
       <GalleryDetails />
-    </StyledGallery>
+    </div>
   );
 };
 

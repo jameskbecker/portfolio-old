@@ -3,7 +3,6 @@ import ChevronLeft from '@/assets/icons/chevron-left.svg';
 import ChevronRight from '@/assets/icons/chevron-right.svg';
 import { useDispatch } from 'react-redux';
 import { nextItem, previousItem } from './gallerySlice';
-import { NextContainer, PrevContainer, StyledGalleryNavButton } from './styles';
 
 type GalleryNavButtonProps = {
   prev?: boolean;
@@ -20,22 +19,15 @@ const GalleryNavButton = ({ prev }: GalleryNavButtonProps) => {
     dispatch(previousItem());
   };
 
-  if (prev) {
-    return (
-      <PrevContainer>
-        <StyledGalleryNavButton onClick={handlePrevious}>
-          <ChevronLeft />
-        </StyledGalleryNavButton>
-      </PrevContainer>
-    );
-  }
-
   return (
-    <NextContainer>
-      <StyledGalleryNavButton onClick={handleNext}>
-        <ChevronRight />
-      </StyledGalleryNavButton>
-    </NextContainer>
+    <div className="flex flex-row items-center justify-center">
+      <div
+        onClick={prev ? handlePrevious : handleNext}
+        className="flex h-16 w-16 cursor-pointer items-center justify-center self-center rounded-full fill-text hover:fill-brand hover:duration-300 hover:ease-in-out dark:hover:fill-brandDark"
+      >
+        {prev ? <ChevronLeft /> : <ChevronRight />}
+      </div>
+    </div>
   );
 };
 
