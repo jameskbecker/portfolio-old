@@ -1,6 +1,6 @@
+import HeroSection from '@/components/HeroSection';
 import NavigationBar from '@/components/NavigationBar';
 import ContactSection from '@/components/sections/contactSection';
-import HeroSection from '@/components/sections/HeroSection';
 import PortfolioSection from '@/components/sections/portfolioSection';
 import SkillsSection from '@/components/sections/skillsSection';
 import GlobalStyles from '@/GlobalStyles';
