@@ -34,7 +34,7 @@ const MobileMenu = () => {
       initial="close"
       animate={controls}
       variants={mobileMenuVariants}
-      className="box-border flex flex-col items-center gap-8 overflow-hidden bg-background shadow-sm"
+      className="box-border flex flex-col items-center gap-8 overflow-hidden bg-background shadow-sm dark:bg-backgroundDark"
     >
       {routes.map(renderRoutes)}
       <a onClick={handleToggleTheme}>Toggle Theme</a>

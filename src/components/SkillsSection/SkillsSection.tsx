@@ -4,13 +4,13 @@ import OtherSkills from './OtherSkills';
 
 const SkillsSection = () => {
   return (
-    <section id="skills" className="flex flex-col items-stretch">
+    <section id="skills" className="flex flex-col items-stretch bg-gray-100 dark:bg-gray-900">
       <CoverPage
         heading="My Skills"
-        subheading="The opportunity to work with many different technologies has allowed me to discover where my interests lie and specialise in what I'm great at."
+        subheading="The opportunity to work with great people and many different technologies has allowed me to discover where my interests lie and specialise in what I'm great at."
       />
 
-      <div className="my-24 mx-8 box-border flex h-full flex-row items-start justify-center gap-20">
+      <div className="container my-24 mx-auto box-border flex h-full flex-row items-start justify-center gap-20 px-4">
         <Expertise />
         <OtherSkills />
       </div>

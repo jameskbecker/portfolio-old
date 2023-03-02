@@ -4,7 +4,7 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="box-border flex h-screen flex-col items-center justify-evenly overflow-hidden bg-brand px-8 dark:bg-brandDark"
+      className="box-border flex h-screen flex-col items-center justify-evenly overflow-hidden bg-slate-100 px-8 dark:bg-slate-900"
     >
       <h1 className="w-full text-center text-5xl uppercase text-brandText lg:text-6xl">
         Have a project in mind?

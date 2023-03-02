@@ -31,7 +31,7 @@ const ThemeToggle = () => {
       onHoverEnd={handleHoverEnd}
       onClick={handleClick}
     >
-      <AdjustIcon className="origin-center cursor-pointer fill-navigationText hover:fill-brand hover:duration-300 hover:ease-in-out dark:hover:fill-brandDark" />
+      <AdjustIcon className="origin-center cursor-pointer fill-gray-700 hover:fill-brand hover:duration-300 hover:ease-in-out dark:fill-gray-300 dark:hover:fill-brandDark" />
     </motion.div>
   );
 };

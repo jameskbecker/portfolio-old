@@ -6,7 +6,7 @@ const NavigationMenu = () => {
     <a
       key={i}
       href={route.to}
-      className="text-navigationText opacity-60 hover:opacity-100 hover:duration-300 hover:ease-in"
+      className="text-gray-700 opacity-80 hover:opacity-100 hover:duration-300 hover:ease-in dark:text-gray-300"
     >
       {route.name}
     </a>

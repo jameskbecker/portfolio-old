@@ -11,7 +11,11 @@ module.exports = {
         navigationText: '#000000',
 
         heroSection: '#f8f8f8',
+        heroSectionDark: '#161616',
+
         background: '#FFFFFF',
+        backgroundDark: '#161616',
+
         brandText: '#FFFFFF',
 
         heading: '#000000',

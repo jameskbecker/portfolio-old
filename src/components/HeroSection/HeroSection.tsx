@@ -9,14 +9,14 @@ type HeroSectionProps = {
 
 const HeroSection = (props: HeroSectionProps) => {
   const Content = () => (
-    <div className="flex h-full flex-1  flex-col-reverse justify-between gap-16 py-24 align-middle lg:flex-row lg:justify-end lg:py-48">
+    <div className="container mx-auto flex h-full flex-1 flex-col-reverse  justify-between gap-16 px-4 py-24 align-middle lg:flex-row lg:justify-end lg:py-48">
       <HeroInfo {...props} />
       <HeroImage />
     </div>
   );
 
   return (
-    <section className="relative box-border flex h-screen w-full justify-center self-center overflow-hidden bg-heroSection px-4 sm:px-8 lg:px-32">
+    <section className="relative box-border flex h-screen w-full justify-center self-center overflow-hidden bg-slate-100 dark:bg-slate-900">
       <Content />
     </section>
   );
