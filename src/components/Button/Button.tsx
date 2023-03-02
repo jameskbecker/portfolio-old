@@ -7,7 +7,7 @@ const Button = ({ label, ...rest }: ButtonProps) => (
     draggable="false"
     {...rest}
   >
-    <span className="text-white text-base font-medium">{label}</span>
+    <span className="text-base font-medium text-white">{label}</span>
   </motion.button>
 );
 
