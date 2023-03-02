@@ -1,9 +1,9 @@
 import { AppDispatch } from '@/app/store';
-import GalleryDetails from '@/features/gallery/GalleryDetails';
-import { fetchGalleryData } from '@/features/gallery/gallerySlice';
-import GalleryView from '@/features/gallery/GalleryView';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import GalleryDetails from './GalleryDetails';
+import { fetchGalleryData } from './gallerySlice';
+import GalleryView from './GalleryView';
 import { StyledGallery } from './styles';
 
 const Gallery = () => {

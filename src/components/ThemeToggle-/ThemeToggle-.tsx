@@ -1,8 +1,8 @@
-import { toggleTheme } from '@/features/themeToggle/themeToggleSlice';
 import { motion, useAnimationControls } from 'framer-motion';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleVariants } from './animations';
 import { StyledAdjustIcon } from './styles';
+import { toggleTheme } from './themeToggleSlice';
 
 const ThemeToggle = () => {
   const dispatch = useDispatch();

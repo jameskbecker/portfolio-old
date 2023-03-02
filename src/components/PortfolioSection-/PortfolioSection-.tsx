@@ -1,5 +1,5 @@
 import CoverPage from '@/components/CoverPage';
-import Gallery from '@/features/gallery';
+import Gallery from '@/components/Gallery-';
 import { StyledPortfolioSection } from './styles';
 
 const heading = 'My Portfolio';

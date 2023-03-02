@@ -24,7 +24,7 @@ const ParallaxText = ({ children, baseSpeed }: ParallaxTextProps) => {
   const speedFactor = useTransform(smoothSpeed, [0, 1000], [0, 5], {
     clamp: false,
   });
-  const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
+  const x = useTransform(baseX, v => `${wrap(-20, -45, v)}%`);
 
   const directionFactor = useRef<number>(1);
   const prevTs = useRef<number>(0);
@@ -32,7 +32,7 @@ const ParallaxText = ({ children, baseSpeed }: ParallaxTextProps) => {
   const isScrollingUp = () => speedFactor.get() < 0;
   const isScrollingDown = () => speedFactor.get() > 0;
 
-  useAnimationFrame((ts) => {
+  useAnimationFrame(ts => {
     if (!prevTs.current) prevTs.current = ts;
 
     const timeDelta = ts - prevTs.current;
