@@ -1,8 +1,8 @@
-import NavigationBar from '@/components/navigationBar';
-import ContactSection from '@/components/sections/contactSection';
-import HeroSection from '@/components/sections/heroSection';
-import PortfolioSection from '@/components/sections/portfolioSection';
-import SkillsSection from '@/components/sections/skillsSection';
+import ContactSection from '@/components/ContactSection';
+import HeroSection from '@/components/HeroSection';
+import NavigationBar from '@/components/NavigationBar';
+import PortfolioSection from '@/components/PortfolioSection';
+import SkillsSection from '@/components/SkillsSection';
 import GlobalStyles from '@/GlobalStyles';
 import type { NextPage } from 'next';
 import Head from 'next/head';
@@ -28,9 +28,9 @@ export const getStaticProps = async () => {
   };
 };
 
-const Home: NextPage = (props) => {
+const Home: NextPage = props => {
   const theme = useContext(ThemeContext);
-  console.log(props);
+
   return (
     <StyledHome>
       <Head>
@@ -45,10 +45,7 @@ const Home: NextPage = (props) => {
         <meta property="og:title" content="James's Portfolio" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.jameskbecker.com" />
-        <meta
-          property="og:image"
-          content="https://www.jameskbecker.com/thumbnail.jpeg"
-        />
+        <meta property="og:image" content="https://www.jameskbecker.com/thumbnail.jpeg" />
         <meta
           property="og:description"
           content="A full-stack developer specialising in frontend."
@@ -57,7 +54,11 @@ const Home: NextPage = (props) => {
       </Head>
       <GlobalStyles />
       <NavigationBar logoText="James K. Becker" />
-      <HeroSection />
+      <HeroSection
+        heading="Hello!"
+        description="My name is James, I'm a full-stack engineer specialising in frontend development and graduate of KU London. I strive to create and deliver amazing user experiences with my passion for technology."
+        href="#contact"
+      />
       <PortfolioSection />
       <SkillsSection />
       <ContactSection />
