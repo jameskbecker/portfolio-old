@@ -7,7 +7,7 @@ const HeroImage = () => (
     initial="hidden"
     animate="visible"
     variants={imageVariants}
-    className="h-fill relative box-border flex-grow basis-1/2 overflow-hidden rounded-xl border border-gray-200"
+    className="h-fill y relative box-border flex-grow basis-1/2 overflow-hidden rounded-xl border border-gray-200 filter"
   >
     <Image
       src="/cover.jpg"
@@ -17,6 +17,7 @@ const HeroImage = () => (
       draggable="false"
       priority
       sizes={'520px, 50vw'}
+      className="bg-slate-600 bg-blend-overlay"
     />
   </motion.div>
 );

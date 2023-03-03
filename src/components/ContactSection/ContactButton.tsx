@@ -38,16 +38,16 @@ const ContactButton = (props: ContactButtonProps) => {
   const RenderIcon = ({ label }: any) => {
     switch (label.toLowerCase()) {
       case 'github':
-        return <Github className="fill-brandText" />;
+        return <Github className="fill-gray-700 dark:fill-gray-300" />;
 
       case 'discord':
-        return <Discord className="fill-brandText" />;
+        return <Discord className="fill-gray-700 dark:fill-gray-300" />;
 
       case 'linkedin':
-        return <LinkedIn className="fill-brandText" />;
+        return <LinkedIn className="fill-gray-700 dark:fill-gray-300" />;
 
       case 'email':
-        return <Envelope className="fill-brandText" />;
+        return <Envelope className="fill-gray-700 dark:fill-gray-300" />;
     }
   };
 
@@ -64,7 +64,7 @@ const ContactButton = (props: ContactButtonProps) => {
       className="hov:opacity-100 flex flex-col items-center gap-3 overflow-hidden  text-5xl opacity-70"
     >
       <RenderIcon label={props.label} />
-      <div className="overflow-hidden text-ellipsis whitespace-nowrap text-base font-light text-brandText md:text-lg">
+      <div className="overflow-hidden text-ellipsis whitespace-nowrap text-base font-light text-gray-700 dark:text-gray-300 md:text-lg">
         {props.label}
       </div>
     </motion.a>

@@ -6,10 +6,10 @@ const ContactSection = () => {
       id="contact"
       className="box-border flex h-screen flex-col items-center justify-evenly overflow-hidden bg-slate-100 px-8 dark:bg-slate-900"
     >
-      <h1 className="w-full text-center text-5xl uppercase text-brandText lg:text-6xl">
+      <h1 className="w-full text-center text-5xl uppercase text-gray-900 dark:text-gray-100 lg:text-6xl">
         Have a project in mind?
       </h1>
-      <h3 className="lg:4xl w-full  text-center text-3xl font-light text-brandText opacity-70">
+      <h3 className="lg:4xl w-full  text-center text-3xl font-light text-gray-700 opacity-70 dark:text-gray-300">
         I&apos;d love to hear about it!
       </h3>
       <ContactGrid />

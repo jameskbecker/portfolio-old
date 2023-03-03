@@ -2,7 +2,7 @@ import CoverPage from '@/components/CoverPage';
 import Gallery from '@/components/Gallery';
 import { StyledPortfolioSection } from './styles';
 
-const heading = 'My Portfolio';
+const heading = 'Showcase';
 const subheading =
   "I've completed many projects in my career so far. Here are the ones I am the proudest of!";
 
