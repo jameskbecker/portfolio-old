@@ -1,8 +1,5 @@
 import ChevronLeft from '@/assets/icons/chevron-left.svg';
 import ChevronRight from '@/assets/icons/chevron-right.svg';
-import { AppDispatch } from '@/store';
-import { Dispatch, SetStateAction } from 'react';
-import { useDispatch } from 'react-redux';
 
 type GalleryNavButtonProps = {
   prev?: true;
