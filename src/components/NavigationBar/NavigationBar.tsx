@@ -1,11 +1,11 @@
-import { AppDispatch } from '@/app/store';
+'use client';
+
 import Bars from '@/assets/icons/bars.svg';
 import NavigationMenu from '@/components/NavigationBar/NavigationMenu';
 import { motion, useAnimationControls } from 'framer-motion';
-import { useDispatch, useSelector } from 'react-redux';
+import { useState } from 'react';
 import { menuButtonVariants } from './animations';
 import MobileMenu from './MobileMenu';
-import { toggleMenu } from './navigationSlice';
 
 export type NavigationBarProps = {
   logoText: string;
@@ -13,12 +13,11 @@ export type NavigationBarProps = {
 
 const NavigationBar = ({ logoText }: NavigationBarProps) => {
   const controls = useAnimationControls();
-  const dispatch = useDispatch<AppDispatch>();
-  const { isOpen } = useSelector((state: any) => state.navigation);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleMenuClick = () => {
-    dispatch(toggleMenu());
     controls.set(!isOpen ? 'open' : 'close');
+    setIsOpen(!isOpen);
   };
 
   return (
@@ -37,7 +36,7 @@ const NavigationBar = ({ logoText }: NavigationBarProps) => {
           <Bars className="fill-navigationText lg:hidden" />
         </motion.div>
       </div>
-      <MobileMenu />
+      <MobileMenu {...{ isOpen, setIsOpen }} />
     </nav>
   );
 };

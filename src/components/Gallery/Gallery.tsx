@@ -1,21 +1,37 @@
-import { AppDispatch } from '@/app/store';
-import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useState } from 'react';
 import GalleryDetails from './GalleryDetails';
-import { fetchGalleryData } from './gallerySlice';
 import GalleryView from './GalleryView';
 
-const Gallery = () => {
-  const dispatch = useDispatch<AppDispatch>();
+export type GalleryProps = {
+  data: {
+    name: string;
+    timeframe: string;
+    tags: string[];
+    description: string;
+    image: string;
+    alt: string;
+  }[];
+};
 
-  useEffect(() => {
-    dispatch(fetchGalleryData());
-  }, [dispatch]);
+const Gallery = ({ data }: GalleryProps) => {
+  const [position, setPosition] = useState(0);
+
+  const handleNext = () => {
+    const isLast = position === data.length - 1;
+    setPosition(isLast ? 0 : position + 1);
+  };
+
+  const handlePrevious = () => {
+    const isFirst = position === 0;
+    setPosition(isFirst ? data.length - 1 : position - 1);
+  };
+
+  const { image, alt, ...detailsProps } = data[position];
 
   return (
     <div className="flex h-screen flex-col text-center lg:text-left">
-      <GalleryView />
-      <GalleryDetails />
+      <GalleryView {...{ image, alt }} />
+      <GalleryDetails {...detailsProps} onPrevious={handlePrevious} onNext={handleNext} />
     </div>
   );
 };
