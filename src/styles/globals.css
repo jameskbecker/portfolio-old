@@ -10,22 +10,32 @@
 }
 
 * ::selection {
-  background: blue;
+  background: theme('colors.brand');
   color: white;
 }
 
-* :focus {
-  outline: 1.5px solid blue;
+* ::selection.dark {
+  background: theme('colors.brandDark');
 }
 
-body {
-  background: red;
+* :focus {
+  outline: 1.5px solid theme('colors.brand');
+}
+
+* :focus.dark {
+  outline: 1.5px solid theme('colors.brandDark');
+}
+
+:root {
+  background: theme('colors.slate.100');
+}
+
+:root.dark {
+  background: theme('colors.slate.900');
 }
 
 a {
   text-decoration: none;
-  color: grey;
-
   cursor: pointer;
 }
 

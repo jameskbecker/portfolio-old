@@ -18,7 +18,7 @@ export const metadata = {
 };
 
 async function getProjects() {
-  const res = await fetch('https://www.jameskbecker.com/api/portfolio', { cache: 'no-store' });
+  const res = await fetch('http://localhost:3000/api/portfolio', { cache: 'no-store' });
   const projects = await res.json();
   return projects.data;
 }
