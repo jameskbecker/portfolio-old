@@ -1,6 +1,6 @@
-import { AppDispatch } from '@/app/store';
 import { toggleTheme } from '@/components/ThemeToggle/themeToggleSlice';
 import routes from '@/routes';
+import { AppDispatch } from '@/store';
 import { motion, useAnimationControls } from 'framer-motion';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';

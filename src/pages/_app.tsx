@@ -1,5 +1,5 @@
-import store from '@/app/store';
 import ThemeProvider from '@/components/ThemeToggle/ThemeProvider';
+import store from '@/store';
 import type { AppProps } from 'next/app';
 import { Provider } from 'react-redux';
 import '../globals.css';

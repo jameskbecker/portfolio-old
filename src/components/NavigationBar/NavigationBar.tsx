@@ -1,6 +1,6 @@
-import { AppDispatch } from '@/app/store';
 import Bars from '@/assets/icons/bars.svg';
 import NavigationMenu from '@/components/NavigationBar/NavigationMenu';
+import { AppDispatch } from '@/store';
 import { motion, useAnimationControls } from 'framer-motion';
 import { useDispatch, useSelector } from 'react-redux';
 import { menuButtonVariants } from './animations';

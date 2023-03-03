@@ -1,6 +1,6 @@
-import { AppDispatch } from '@/app/store';
 import ChevronLeft from '@/assets/icons/chevron-left.svg';
 import ChevronRight from '@/assets/icons/chevron-right.svg';
+import { AppDispatch } from '@/store';
 import { useDispatch } from 'react-redux';
 import { nextItem, previousItem } from './gallerySlice';
 

@@ -1,4 +1,4 @@
-import { AppDispatch } from '@/app/store';
+import { AppDispatch } from '@/store';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import GalleryDetails from './GalleryDetails';
