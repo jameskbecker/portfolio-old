@@ -1,22 +1,24 @@
-import { toggleTheme } from '@/components/ThemeToggle/themeToggleSlice';
+'use client';
+
 import routes from '@/routes';
-import { AppDispatch } from '@/store';
 import { motion, useAnimationControls } from 'framer-motion';
 import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { mobileMenuVariants } from './animations';
 
-const MobileMenu = () => {
+const MobileMenu = (props: any) => {
   const controls = useAnimationControls();
-  const dispatch = useDispatch<AppDispatch>();
-  const { isOpen } = useSelector((state: any) => state.navigation);
 
   useEffect(() => {
-    controls.start(isOpen ? 'open' : 'close');
-  }, [controls, isOpen]);
+    controls.start(props.isOpen ? 'open' : 'close');
+  }, [controls, props.isOpen]);
 
   const handleToggleTheme = () => {
-    dispatch(toggleTheme());
+    const isDark = document.documentElement.classList.contains('dark');
+    if (!isDark) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
   };
 
   const renderRoutes = (route: any, i: number) => (

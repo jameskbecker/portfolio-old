@@ -1,10 +1,11 @@
+'use client';
+
 import Discord from '@/assets/icons/discord.svg';
 import Envelope from '@/assets/icons/envelope.svg';
 import Github from '@/assets/icons/github.svg';
 import LinkedIn from '@/assets/icons/linkedin.svg';
 import { motion, useAnimationControls, useInView } from 'framer-motion';
-import { useContext, useEffect, useRef } from 'react';
-import { ThemeContext } from 'styled-components';
+import { useEffect, useRef } from 'react';
 import { flashVariants } from './animations';
 
 type ContactButtonProps = {
@@ -17,7 +18,6 @@ const ContactButton = (props: ContactButtonProps) => {
   const controls = useAnimationControls();
   const ref = useRef(null);
   const inView = useInView(ref);
-  const theme = useContext(ThemeContext);
 
   useEffect(() => {
     if (!inView) {
@@ -47,6 +47,7 @@ const ContactButton = (props: ContactButtonProps) => {
         return <LinkedIn className="fill-gray-700 dark:fill-gray-300" />;
 
       case 'email':
+      default:
         return <Envelope className="fill-gray-700 dark:fill-gray-300" />;
     }
   };
@@ -60,7 +61,7 @@ const ContactButton = (props: ContactButtonProps) => {
       animate={controls}
       onHoverStart={handleHover}
       onHoverEnd={handleHoverEnd}
-      variants={flashVariants(theme, props.delay)}
+      variants={flashVariants(props.delay)}
       className="hov:opacity-100 flex flex-col items-center gap-3 overflow-hidden  text-5xl opacity-70"
     >
       <RenderIcon label={props.label} />
