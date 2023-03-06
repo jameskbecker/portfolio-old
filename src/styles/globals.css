@@ -26,14 +26,6 @@
   outline: 1.5px solid theme('colors.brandDark');
 }
 
-:root {
-  background: theme('colors.slate.100');
-}
-
-:root.dark {
-  background: theme('colors.slate.900');
-}
-
 a {
   text-decoration: none;
   cursor: pointer;
