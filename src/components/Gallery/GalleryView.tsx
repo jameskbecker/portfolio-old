@@ -9,21 +9,21 @@ type GalleryViewProps = {
 
 const GalleryView = (props: GalleryViewProps) => {
   return (
-    <div className="relative h-full w-full flex-1 overflow-hidden bg-black lg:w-auto">
+    <div className="relative h-full w-full flex-1 overflow-hidden bg-gray-200 dark:bg-slate-800  lg:w-auto">
       <Image
         src={props.image}
         alt={props.alt}
         fill
         draggable="false"
-        className="absolute z-10 object-scale-down object-center"
+        className="container absolute z-10 mx-auto object-scale-down object-center"
       />
-      <Image
+      {/* <Image
         src={props.image}
         alt={props.alt}
         fill
         draggable="false"
-        className="absolute w-full object-cover object-top opacity-60 blur-sm"
-      />
+        className="container absolute mx-auto object-cover object-top opacity-60 blur-sm"
+      /> */}
     </div>
   );
 };
