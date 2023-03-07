@@ -1,22 +1,20 @@
-const topFour = ['TypeScript', 'React', 'Figma', 'NodeJS'];
+const topFour = ['TypeScript', 'React', 'Next.js', 'Node.js'];
 const other = [
-  'HTML',
-  'CSS',
-  'JavaScript',
+  'HTML/CSS/JS',
   'Redux',
-  'React Native',
   'Styled Components',
+  'Tailwind',
+  'Storybook',
+  'Jest',
+  'React Testing Library',
+  'React Native',
+  'Figma',
   'Express',
   'Electron',
+  'Webpack',
+  'Go',
   'MySQL',
   'MongoDB',
-  'Webpack',
-  'Babel AST Manipulation',
-  'Go',
-  // 'Python',
-  // 'Swift',
-  // 'Java',
-  'Webflow',
 ];
 
 export { topFour, other };
