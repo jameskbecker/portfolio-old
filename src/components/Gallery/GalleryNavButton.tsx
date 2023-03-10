@@ -12,6 +12,7 @@ const GalleryNavButton = (props: GalleryNavButtonProps) => {
       <div
         onClick={props.onClick}
         role="button"
+        aria-label={props.prev ? 'Previous Gallery Item' : 'Next Gallery Item'}
         className="flex h-16 w-16 cursor-pointer items-center justify-center self-center rounded-full fill-text hover:fill-brand hover:duration-300 hover:ease-in-out dark:hover:fill-brandDark"
       >
         {props.prev ? <ChevronLeft /> : <ChevronRight />}

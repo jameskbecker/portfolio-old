@@ -38,6 +38,7 @@ const ThemeToggle = () => {
       onHoverEnd={handleHoverEnd}
       onClick={handleClick}
       role="button"
+      aria-label="Toggle Theme"
     >
       {isDark ? (
         <SunIcon className="cursor-pointer stroke-gray-700 text-lg hover:stroke-emerald-500 hover:duration-300 hover:ease-in-out dark:stroke-gray-300 dark:hover:stroke-emerald-400" />

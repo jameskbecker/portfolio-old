@@ -33,6 +33,7 @@ const NavigationBar = ({ logoText }: NavigationBarProps) => {
           variants={menuButtonVariants}
           onClick={handleMenuClick}
           role="button"
+          aria-label="Open Navigation Menu"
         >
           <Bars className="fill-slate-700 dark:fill-slate-300 lg:hidden" />
         </motion.div>
