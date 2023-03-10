@@ -25,7 +25,7 @@ const MobileMenu = (props: any) => {
     <a
       key={i}
       href={route.to}
-      className="text-navigationText opacity-60 hover:opacity-100 hover:duration-300 hover:ease-in"
+      className="text-slate-800 opacity-60 hover:opacity-100 hover:duration-300 hover:ease-in dark:text-zinc-300"
     >
       {route.name}
     </a>
@@ -36,10 +36,16 @@ const MobileMenu = (props: any) => {
       initial="close"
       animate={controls}
       variants={mobileMenuVariants}
-      className="box-border flex flex-col items-center gap-8 overflow-hidden bg-background shadow-sm dark:bg-backgroundDark"
+      className="box-border flex flex-col items-center gap-8 overflow-hidden bg-slate-100 shadow-sm dark:bg-slate-900 lg:hidden"
     >
       {routes.map(renderRoutes)}
-      <a onClick={handleToggleTheme}>Toggle Theme</a>
+      <div
+        role="button"
+        onClick={handleToggleTheme}
+        className="text-slate-800 opacity-60 hover:opacity-100 hover:duration-300 hover:ease-in dark:text-zinc-300"
+      >
+        Toggle Theme
+      </div>
     </motion.ul>
   );
 };

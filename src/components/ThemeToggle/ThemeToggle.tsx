@@ -1,6 +1,7 @@
 'use client';
 
-import AdjustIcon from '@/assets/icons/adjust.svg';
+import MoonIcon from '@/assets/icons/moon.svg';
+import SunIcon from '@/assets/icons/sun.svg';
 import { motion, useAnimationControls } from 'framer-motion';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
@@ -36,8 +37,13 @@ const ThemeToggle = () => {
       onHoverStart={handleHover}
       onHoverEnd={handleHoverEnd}
       onClick={handleClick}
+      className=""
     >
-      <AdjustIcon className="origin-center cursor-pointer fill-gray-700 hover:fill-brand hover:duration-300 hover:ease-in-out dark:fill-gray-300 dark:hover:fill-brandDark" />
+      {isDark ? (
+        <SunIcon className="cursor-pointer stroke-gray-700 text-lg hover:stroke-emerald-500 hover:duration-300 hover:ease-in-out dark:stroke-gray-300 dark:hover:stroke-emerald-400" />
+      ) : (
+        <MoonIcon className="origin-center cursor-pointer stroke-gray-700 text-lg hover:stroke-emerald-500 hover:duration-300 hover:ease-in-out dark:stroke-gray-300 dark:hover:stroke-emerald-400" />
+      )}
     </motion.div>
   );
 };

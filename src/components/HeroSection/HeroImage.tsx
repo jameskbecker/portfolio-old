@@ -7,7 +7,7 @@ const HeroImage = () => (
     initial="hidden"
     animate="visible"
     variants={imageVariants}
-    className="h-fill y relative box-border flex-grow basis-1/2 overflow-hidden rounded-xl border border-gray-200 filter"
+    className="h-fill y relative box-border flex-1 basis-1/2 overflow-hidden rounded-xl border border-gray-200 filter"
   >
     <Image
       src="/cover.jpg"

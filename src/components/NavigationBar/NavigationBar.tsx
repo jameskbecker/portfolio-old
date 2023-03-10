@@ -33,7 +33,7 @@ const NavigationBar = ({ logoText }: NavigationBarProps) => {
           variants={menuButtonVariants}
           onClick={handleMenuClick}
         >
-          <Bars className="fill-navigationText lg:hidden" />
+          <Bars className="fill-slate-700 dark:fill-slate-300 lg:hidden" />
         </motion.div>
       </div>
       <MobileMenu {...{ isOpen, setIsOpen }} />
