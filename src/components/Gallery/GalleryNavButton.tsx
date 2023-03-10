@@ -11,6 +11,7 @@ const GalleryNavButton = (props: GalleryNavButtonProps) => {
     <div className="flex flex-row items-center justify-center">
       <div
         onClick={props.onClick}
+        role="button"
         className="flex h-16 w-16 cursor-pointer items-center justify-center self-center rounded-full fill-text hover:fill-brand hover:duration-300 hover:ease-in-out dark:hover:fill-brandDark"
       >
         {props.prev ? <ChevronLeft /> : <ChevronRight />}

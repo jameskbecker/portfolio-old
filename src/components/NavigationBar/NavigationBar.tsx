@@ -32,6 +32,7 @@ const NavigationBar = ({ logoText }: NavigationBarProps) => {
           animate={controls}
           variants={menuButtonVariants}
           onClick={handleMenuClick}
+          role="button"
         >
           <Bars className="fill-slate-700 dark:fill-slate-300 lg:hidden" />
         </motion.div>
