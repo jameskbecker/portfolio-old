@@ -62,7 +62,7 @@ const ContactButton = (props: ContactButtonProps) => {
       onHoverStart={handleHover}
       onHoverEnd={handleHoverEnd}
       variants={flashVariants(props.delay)}
-      className="hov:opacity-100 flex flex-col items-center gap-3 overflow-hidden  text-5xl opacity-70"
+      className="hov:opacity-100 flex flex-col items-center gap-3 overflow-hidden p-2 text-5xl opacity-70 focus:outline-amber-300 dark:focus:outline-amber-400"
     >
       <RenderIcon label={props.label} />
       <div className="overflow-hidden text-ellipsis whitespace-nowrap text-base font-light text-gray-700 dark:text-gray-300 md:text-lg">

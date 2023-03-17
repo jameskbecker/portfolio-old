@@ -9,7 +9,7 @@ export type HeroInfoProps = {
 };
 
 const HeroInfo = (props: HeroInfoProps) => (
-  <div className="flex flex-shrink basis-1/2 flex-col justify-center gap-8 overflow-hidden align-middle">
+  <div className="box-border flex flex-shrink basis-1/2 flex-col justify-center gap-8 align-middle">
     <motion.h2
       initial="hidden"
       animate="visible"
@@ -22,7 +22,7 @@ const HeroInfo = (props: HeroInfoProps) => (
       initial="hidden"
       animate="visible"
       variants={aboutVariants}
-      className="md:text-md overflow-hidden text-base font-thin text-slate-800 dark:text-zinc-300 lg:text-lg"
+      className="md:text-md overflow-hidden text-base font-thin text-slate-800 dark:text-zinc-300 lg:text-xl"
     >
       {props.description}
     </motion.p>

@@ -9,23 +9,6 @@
   scroll-behavior: smooth;
 }
 
-* ::selection {
-  background: theme('colors.brand');
-  color: white;
-}
-
-* ::selection.dark {
-  background: theme('colors.brandDark');
-}
-
-* :focus {
-  outline: 1.5px solid theme('colors.brand');
-}
-
-* :focus.dark {
-  outline: 1.5px solid theme('colors.brandDark');
-}
-
 a {
   text-decoration: none;
   cursor: pointer;
