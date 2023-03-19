@@ -5,9 +5,10 @@ import HeroSection from '@/components/HeroSection';
 import NavigationBar from '@/components/NavigationBar';
 import PortfolioSection from '@/components/PortfolioSection';
 import SkillsSection from '@/components/SkillsSection';
+import { format, parseISO } from 'date-fns';
 
 type HomePageProps = {
-  portfolioData: any;
+  projectData: any[];
 };
 
 export default function HomePage(props: HomePageProps) {
@@ -19,7 +20,7 @@ export default function HomePage(props: HomePageProps) {
         description="My name is James, I'm a full-stack engineer specialising in frontend development and graduate of KU London. I strive to create and deliver amazing user experiences with my passion for technology."
         href="#contact"
       />
-      <PortfolioSection data={props.portfolioData} />
+      <PortfolioSection {...props} />
       <SkillsSection />
       <ContactSection />
     </div>

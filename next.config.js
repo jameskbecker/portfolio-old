@@ -6,6 +6,9 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  images: {
+    domains: ['cdn.sanity.io'],
+  },
   reactStrictMode: true,
   swcMinify: true,
   webpack: config => {

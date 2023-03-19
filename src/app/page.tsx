@@ -1,3 +1,6 @@
+import client from '@/sanity';
+import { format } from 'date-fns';
+import { groq } from 'next-sanity';
 import HomePage from './home-page';
 
 export const metadata = {
@@ -17,14 +20,26 @@ export const metadata = {
   },
 };
 
-async function getProjects() {
-  const res = await fetch('https://www.jameskbecker.com/api/portfolio', { cache: 'no-store' });
-  const projects = await res.json();
-  return projects.data;
-}
-
 export default async function Page() {
-  const data = await getProjects();
+  const query = groq`
+    *[_type=='project']
+  `;
+  const projects = await client.fetch(query);
+  const data = projects.map(v => {
+    const splitStart = v.start_date.split('-');
+    //@todo once cache expires remove typo version
+    const splitEnd = v.end_date ? v.end_date.split('-') : v.endt_date.split('-');
+    const startDate = new Date(splitStart[0], splitStart[1] - 1);
+    const endDate = new Date(splitEnd[0], splitEnd[1] - 1);
+    return {
+      name: v.project_name,
+      timeframe: `${format(startDate, 'MMMM yyyy')} - ${format(endDate, 'MMMM yyyy')}`,
+      tags: v.tags,
+      description: v.description,
+      image: v.image,
+      alt: `Screenshot of ${v.project_name}`,
+    };
+  });
 
-  return <HomePage portfolioData={data} />;
+  return <HomePage projectData={data} />;
 }

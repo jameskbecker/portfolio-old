@@ -1,5 +1,8 @@
 'use client';
 
+import client from '@/sanity';
+import imageUrlBuilder from '@sanity/image-url';
+import { createClient } from 'next-sanity';
 import Image from 'next/image';
 
 type GalleryViewProps = {
@@ -8,10 +11,13 @@ type GalleryViewProps = {
 };
 
 const GalleryView = (props: GalleryViewProps) => {
+  const builder = imageUrlBuilder(client);
+  const image = builder.image(props.image);
+
   return (
     <div className="relative h-full w-full flex-1 overflow-hidden bg-gray-200 dark:bg-slate-800  lg:w-auto">
       <Image
-        src={props.image}
+        src={image.url()}
         alt={props.alt}
         fill
         draggable="false"

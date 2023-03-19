@@ -6,7 +6,9 @@ const heading = 'Showcase';
 const subheading =
   "I've completed many projects in my career so far. Here are the ones I am the proudest of!";
 
-export type PortfolioSectionProps = GalleryProps;
+export type PortfolioSectionProps = {
+  projectData: GalleryProps['data'];
+};
 
 const PortfolioSection = (props: PortfolioSectionProps) => {
   return (
@@ -15,7 +17,7 @@ const PortfolioSection = (props: PortfolioSectionProps) => {
       className="box-border flex h-auto flex-col overflow-hidden bg-zinc-100 p-0 dark:bg-gray-900"
     >
       <CoverPage heading={heading} subheading={subheading} />
-      <Gallery data={props.data} />
+      <Gallery data={props.projectData} />
     </section>
   );
 };
