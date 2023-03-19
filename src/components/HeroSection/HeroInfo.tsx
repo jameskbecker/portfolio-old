@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { aboutVariants, headingVariants } from './animations';
 import CallToAction from './CallToAction';

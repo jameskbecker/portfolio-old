@@ -1,7 +1,11 @@
+import ContactSection from '@/components/ContactSection';
+import HeroSection from '@/components/HeroSection';
+import NavigationBar from '@/components/NavigationBar';
+import PortfolioSection from '@/components/PortfolioSection';
+import SkillsSection from '@/components/SkillsSection';
 import client from '@/sanity';
 import { format } from 'date-fns';
 import { groq } from 'next-sanity';
-import HomePage from './home-page';
 
 export const metadata = {
   title: 'James K. Becker',
@@ -41,5 +45,17 @@ export default async function Page() {
     };
   });
 
-  return <HomePage projectData={data} />;
+  return (
+    <div className="relative m-0 flex flex-col overflow-hidden p-0 selection:bg-emerald-500 dark:selection:bg-emerald-400">
+      <NavigationBar logoText="James K. Becker" />
+      <HeroSection
+        heading="Hello!"
+        description="My name is James, I'm a full-stack engineer specialising in frontend development and graduate of KU London. I strive to create and deliver amazing user experiences with my passion for technology."
+        href="#contact"
+      />
+      <PortfolioSection projectData={data} />
+      <SkillsSection />
+      <ContactSection />
+    </div>
+  );
 }
