@@ -9,7 +9,7 @@ const HeroImage = () => (
     initial="hidden"
     animate="visible"
     variants={imageVariants}
-    className="h-fil relative box-border flex-1 basis-1/2 overflow-hidden rounded-xl border border-slate-300"
+    className="h-fill relative box-border flex-1 basis-1/2 overflow-hidden rounded-xl border border-slate-300"
   >
     <Image
       src="/cover.jpg"
