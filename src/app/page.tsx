@@ -1,10 +1,9 @@
 import ContactSection from '@/components/ContactSection';
 import HeroSection from '@/components/HeroSection';
-import NavigationBar from '@/components/NavigationBar';
 import PortfolioSection from '@/components/PortfolioSection';
 import SkillsSection from '@/components/SkillsSection';
 import client from '@/sanity';
-import { format } from 'date-fns';
+import { formatDate } from '@/utils/format';
 import { groq } from 'next-sanity';
 
 export const revalidate = 0;
@@ -25,15 +24,7 @@ export const metadata = {
   },
 };
 
-const formatDate = (v: string) => {
-  const splitInput = v.split('-');
-  const [year, month] = splitInput;
-
-  const date = new Date(parseInt(year), parseInt(month) - 1);
-  return format(date, 'MMMM yyyy');
-};
-
-const parseData = v => ({
+const parseProjectData = v => ({
   name: v.project_name,
   timeframe: `${formatDate(v.start_date)} - ${formatDate(v.end_date)}`,
   tags: v.tags,
@@ -47,10 +38,10 @@ export default async function Page() {
   *[_type=='project']
 `;
   const result = await client.fetch(query);
-  const projects = result.map(parseData);
+  const projects = result.map(parseProjectData);
 
   return (
-    <div className="relative m-0 flex flex-col overflow-hidden p-0 selection:bg-emerald-500 dark:selection:bg-emerald-400">
+    <>
       <HeroSection
         heading="Hello!"
         description="My name is James, I'm a full-stack engineer specialising in frontend development and graduate of KU London. I strive to create and deliver amazing user experiences with my passion for technology."
@@ -59,6 +50,6 @@ export default async function Page() {
       <PortfolioSection projectData={projects} />
       <SkillsSection />
       <ContactSection />
-    </div>
+    </>
   );
 }

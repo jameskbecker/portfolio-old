@@ -1,5 +1,5 @@
 import ThemeToggle from '@/components/ThemeToggle';
-import routes from '@/routes';
+import routes from './routes';
 
 const NavigationMenu = () => {
   const renderRoutes = (route: any, i: number) => (

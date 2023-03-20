@@ -1,6 +1,6 @@
 'use client';
 
-import routes from '@/routes';
+import routes from '@/components/NavigationBar/routes';
 import { motion, useAnimationControls } from 'framer-motion';
 import { useEffect } from 'react';
 import { mobileMenuVariants } from './animations';

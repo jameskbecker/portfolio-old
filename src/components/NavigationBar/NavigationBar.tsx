@@ -1,25 +1,12 @@
-'use client';
-
-import Bars from '@/assets/icons/bars.svg';
 import NavigationMenu from '@/components/NavigationBar/NavigationMenu';
-import { motion, useAnimationControls } from 'framer-motion';
-import { useState } from 'react';
-import { menuButtonVariants } from './animations';
 import MobileMenu from './MobileMenu';
+import NavMenuButton from './NavMenuButton';
 
 export type NavigationBarProps = {
   logoText: string;
 };
 
 const NavigationBar = ({ logoText }: NavigationBarProps) => {
-  const controls = useAnimationControls();
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleMenuClick = () => {
-    controls.set(!isOpen ? 'open' : 'close');
-    setIsOpen(!isOpen);
-  };
-
   return (
     <nav className="fixed top-0 z-50 flex w-full flex-col">
       <div className="box-border flex h-16 flex-row items-center justify-evenly gap-8 bg-white bg-opacity-20 px-6 backdrop-blur">
@@ -27,18 +14,10 @@ const NavigationBar = ({ logoText }: NavigationBarProps) => {
           {logoText}
         </div>
         <NavigationMenu />
-        <motion.div
-          initial="close"
-          animate={controls}
-          variants={menuButtonVariants}
-          onClick={handleMenuClick}
-          role="button"
-          aria-label="Open Navigation Menu"
-        >
-          <Bars className="fill-slate-700 dark:fill-slate-300 lg:hidden" />
-        </motion.div>
+
+        <NavMenuButton />
       </div>
-      <MobileMenu {...{ isOpen, setIsOpen }} />
+      {/* <MobileMenu {...{ isOpen, setIsOpen }} /> */}
     </nav>
   );
 };
