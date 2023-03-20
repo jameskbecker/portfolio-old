@@ -9,17 +9,16 @@ const HeroImage = () => (
     initial="hidden"
     animate="visible"
     variants={imageVariants}
-    className="h-fill y filte relative box-border flex-1 basis-1/2 overflow-hidden rounded-xl border-2 border-slate-300"
+    className="h-fill y filte relative box-border flex-1 basis-1/2 overflow-hidden rounded-xl border border-slate-300"
   >
     <Image
       src="/cover.jpg"
       alt="A mid-shot of James"
-      layout="fill"
-      objectFit="cover"
+      fill
       draggable="false"
       priority
-      sizes={'520px, 50vw'}
-      className="bg-slate-600 bg-blend-overlay"
+      sizes={'50vw'}
+      className="bg-slate-600 object-cover bg-blend-overlay"
     />
   </motion.div>
 );
