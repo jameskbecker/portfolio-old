@@ -7,6 +7,7 @@ import client from '@/sanity';
 import { format } from 'date-fns';
 import { groq } from 'next-sanity';
 
+export const revalidate = 0;
 export const metadata = {
   title: 'James K. Becker',
   siteName: 'James K. Becker',
@@ -24,37 +25,38 @@ export const metadata = {
   },
 };
 
-export const revalidate = 0;
+const formatDate = (v: string) => {
+  const splitInput = v.split('-');
+  const [year, month] = splitInput;
+
+  const date = new Date(parseInt(year), parseInt(month) - 1);
+  return format(date, 'MMMM yyyy');
+};
+
+const parseData = v => ({
+  name: v.project_name,
+  timeframe: `${formatDate(v.start_date)} - ${formatDate(v.end_date)}`,
+  tags: v.tags,
+  description: v.description,
+  image: v.image,
+  alt: `Screenshot of ${v.project_name}`,
+});
 
 export default async function Page() {
   const query = groq`
-    *[_type=='project']
-  `;
-  const projects = await client.fetch(query);
-  const data = projects.map(v => {
-    const splitStart = v.start_date.split('-');
-    const splitEnd = v.end_date.split('-');
-    const startDate = new Date(splitStart[0], splitStart[1] - 1);
-    const endDate = new Date(splitEnd[0], splitEnd[1] - 1);
-    return {
-      name: v.project_name,
-      timeframe: `${format(startDate, 'MMMM yyyy')} - ${format(endDate, 'MMMM yyyy')}`,
-      tags: v.tags,
-      description: v.description,
-      image: v.image,
-      alt: `Screenshot of ${v.project_name}`,
-    };
-  });
+  *[_type=='project']
+`;
+  const result = await client.fetch(query);
+  const projects = result.map(parseData);
 
   return (
     <div className="relative m-0 flex flex-col overflow-hidden p-0 selection:bg-emerald-500 dark:selection:bg-emerald-400">
-      <NavigationBar logoText="James K. Becker" />
       <HeroSection
         heading="Hello!"
         description="My name is James, I'm a full-stack engineer specialising in frontend development and graduate of KU London. I strive to create and deliver amazing user experiences with my passion for technology."
         href="#contact"
       />
-      <PortfolioSection projectData={data} />
+      <PortfolioSection projectData={projects} />
       <SkillsSection />
       <ContactSection />
     </div>
