@@ -24,6 +24,8 @@ export const metadata = {
   },
 };
 
+export const revalidate = 0;
+
 export default async function Page() {
   const query = groq`
     *[_type=='project']
@@ -31,8 +33,7 @@ export default async function Page() {
   const projects = await client.fetch(query);
   const data = projects.map(v => {
     const splitStart = v.start_date.split('-');
-    //@todo once cache expires remove typo version
-    const splitEnd = v.end_date ? v.end_date.split('-') : v.endt_date.split('-');
+    const splitEnd = v.end_date.split('-');
     const startDate = new Date(splitStart[0], splitStart[1] - 1);
     const endDate = new Date(splitEnd[0], splitEnd[1] - 1);
     return {
