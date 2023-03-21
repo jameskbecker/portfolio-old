@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import GalleryDetails from './GalleryDetails';
 import GalleryView from './GalleryView';

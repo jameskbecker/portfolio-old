@@ -1,3 +1,5 @@
+'use client';
+
 import { motion, useAnimationControls, useInView } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import { headingVariants, subheadingVariants } from './animations';

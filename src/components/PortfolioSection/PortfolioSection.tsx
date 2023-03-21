@@ -1,5 +1,3 @@
-'use client';
-
 import CoverPage from '@/components/CoverPage';
 import Gallery from '@/components/Gallery';
 import { GalleryProps } from '../Gallery/Gallery';
