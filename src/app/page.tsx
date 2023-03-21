@@ -24,21 +24,33 @@ export const metadata = {
   },
 };
 
-const parseProjectData = v => ({
-  name: v.project_name,
-  timeframe: `${formatDate(v.start_date)} - ${formatDate(v.end_date)}`,
-  tags: v.tags,
-  description: v.description,
-  image: v.image,
-  alt: `Screenshot of ${v.project_name}`,
-});
+const getProjects = async () => {
+  const query = groq`*[_type=='project']`;
+  const result = await client.fetch(query);
+
+  return result.map(v => ({
+    name: v.project_name,
+    timeframe: `${formatDate(v.start_date)} - ${formatDate(v.end_date)}`,
+    tags: v.tags,
+    description: v.description,
+    image: v.image,
+    alt: `Screenshot of ${v.project_name}`,
+  }));
+};
+
+const getSkills = async () => {
+  const query = groq`*[_type=='skillset']`;
+  const result = await client.fetch(query);
+
+  return result.reduce((a, b) => {
+    a[b.name.toLowerCase()] = b.skills;
+    return a;
+  });
+};
 
 export default async function Page() {
-  const query = groq`
-  *[_type=='project']
-`;
-  const result = await client.fetch(query);
-  const projects = result.map(parseProjectData);
+  const projects = await getProjects();
+  const skills = await getSkills();
 
   return (
     <>
@@ -48,7 +60,7 @@ export default async function Page() {
         href="#contact"
       />
       <PortfolioSection projectData={projects} />
-      <SkillsSection />
+      <SkillsSection data={skills} />
       <ContactSection />
     </>
   );
