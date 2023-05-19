@@ -9,7 +9,7 @@ import { toggleVariants } from './animations';
 
 const ThemeToggle = () => {
   const controls = useAnimationControls();
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
 
   const handleClick = () => {
     controls.start(!isDark ? 'dark' : 'light');
