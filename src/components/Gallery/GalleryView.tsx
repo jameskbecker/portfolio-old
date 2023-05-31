@@ -15,7 +15,7 @@ const GalleryView = (props: GalleryViewProps) => {
   const image = builder.image(props.image);
 
   return (
-    <div className="relative h-full w-full flex-1 overflow-hidden bg-gray-200 dark:bg-slate-800  lg:w-auto">
+    <div className="relative h-full w-full flex-1 overflow-hidden bg-zinc-200 dark:bg-zinc-800  lg:w-auto">
       <Image
         src={image.url()}
         alt={props.alt}

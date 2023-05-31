@@ -9,7 +9,7 @@ const HeroImage = () => (
     initial="hidden"
     animate="visible"
     variants={imageVariants}
-    className="h-fill relative box-border flex-1 basis-1/2 overflow-hidden rounded-xl border border-slate-300"
+    className="h-fill relative box-border flex-1 basis-1/2 overflow-hidden rounded-xl border-2 border-zinc-600 dark:border-zinc-400 "
   >
     <Image
       src="/cover.jpg"
@@ -18,7 +18,7 @@ const HeroImage = () => (
       draggable="false"
       priority
       sizes={'50vw'}
-      className="bg-slate-600 object-cover bg-blend-overlay"
+      className="object-cover"
     />
   </motion.div>
 );

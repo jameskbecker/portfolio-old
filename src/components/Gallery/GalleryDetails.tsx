@@ -19,7 +19,7 @@ const GalleryDetails = (props: GalleryDetailsProps) => {
       <GalleryNavButton prev onClick={props.onPrevious} />
 
       <GalleryHeader {...headerProps} />
-      <p className="hidden overflow-hidden text-ellipsis text-base font-light text-zinc-700 dark:text-gray-500 md:text-lg lg:block lg:flex-shrink lg:basis-3/4">
+      <p className="hidden overflow-hidden text-ellipsis text-base font-light text-zinc-700 dark:text-zinc-500 md:text-lg lg:block lg:flex-shrink lg:basis-3/4">
         {description}
       </p>
 

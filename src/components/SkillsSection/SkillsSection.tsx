@@ -18,7 +18,7 @@ type SkillsSectionProps = {
 
 const SkillsSection = ({ data }: SkillsSectionProps) => {
   return (
-    <section id="skills" className="flex flex-col items-stretch bg-gray-100 dark:bg-gray-900">
+    <section id="skills" className="flex flex-col items-stretch bg-zinc-100 dark:bg-zinc-900">
       <CoverPage
         heading="My Skills"
         subheading="The opportunity to work with great people and many different technologies has allowed me to discover where my interests lie and specialise in what I'm great at."

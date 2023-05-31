@@ -16,7 +16,7 @@ const HeroInfo = (props: HeroInfoProps) => (
       initial="hidden"
       animate="visible"
       variants={headingVariants}
-      className="text-4xl font-semibold text-slate-900 dark:text-zinc-100 md:text-5xl"
+      className="text-4xl font-semibold text-zinc-900 dark:text-zinc-100 md:text-5xl"
     >
       {props.heading}
     </motion.h2>
@@ -24,7 +24,7 @@ const HeroInfo = (props: HeroInfoProps) => (
       initial="hidden"
       animate="visible"
       variants={aboutVariants}
-      className="md:text-md overflow-hidden text-base font-thin text-slate-800 dark:text-zinc-300 lg:text-xl"
+      className="md:text-md overflow-hidden text-base font-thin text-zinc-800 dark:text-zinc-300 lg:text-xl"
     >
       {props.description}
     </motion.p>

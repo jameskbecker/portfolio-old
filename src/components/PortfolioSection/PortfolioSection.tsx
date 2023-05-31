@@ -14,7 +14,7 @@ const PortfolioSection = (props: PortfolioSectionProps) => {
   return (
     <section
       id="portfolio"
-      className="box-border flex h-auto flex-col overflow-hidden bg-zinc-100 p-0 dark:bg-gray-900"
+      className="box-border flex h-auto flex-col overflow-hidden bg-zinc-100 p-0 dark:bg-zinc-900"
     >
       <CoverPage heading={heading} subheading={subheading} />
       <Gallery data={props.projectData} />

@@ -9,7 +9,7 @@ import { toggleVariants } from './animations';
 
 const ThemeToggle = () => {
   const controls = useAnimationControls();
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
 
   const handleClick = () => {
     controls.start(!isDark ? 'dark' : 'light');
@@ -41,9 +41,9 @@ const ThemeToggle = () => {
       aria-label="Toggle Theme"
     >
       {isDark ? (
-        <SunIcon className="cursor-pointer stroke-gray-700 text-lg hover:stroke-emerald-500 hover:duration-300 hover:ease-in-out dark:stroke-gray-300 dark:hover:stroke-emerald-400" />
+        <SunIcon className="cursor-pointer stroke-neutral-700 text-lg hover:stroke-violet-500 hover:duration-300 hover:ease-in-out dark:stroke-neutral-300 dark:hover:stroke-violet-400" />
       ) : (
-        <MoonIcon className="origin-center cursor-pointer stroke-gray-700 text-lg hover:stroke-emerald-500 hover:duration-300 hover:ease-in-out dark:stroke-gray-300 dark:hover:stroke-emerald-400" />
+        <MoonIcon className="origin-center cursor-pointer stroke-neutral-700 text-lg hover:stroke-violet-500 hover:duration-300 hover:ease-in-out dark:stroke-neutral-300 dark:hover:stroke-violet-400" />
       )}
     </motion.div>
   );

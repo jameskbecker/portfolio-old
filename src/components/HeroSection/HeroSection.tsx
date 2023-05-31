@@ -16,7 +16,7 @@ const HeroSection = (props: HeroSectionProps) => {
   );
 
   return (
-    <section className="relative box-border flex h-screen w-full justify-center self-center overflow-hidden bg-slate-100 dark:bg-slate-900">
+    <section className="relative box-border flex h-screen w-full justify-center self-center overflow-hidden bg-zinc-50 dark:bg-zinc-900">
       <Content />
     </section>
   );
